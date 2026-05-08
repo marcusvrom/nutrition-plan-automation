@@ -2,38 +2,41 @@
 id: omelete-proteico
 name: Omelete Proteico
 servings: 1
-serving_size: "1 omelete (~250g)"
-prep_time_min: 5
-cook_time_min: 7
-tags: [breakfast, high-protein, quick]
+serving_size: "1 omelete"
+prep_time_min: 3
+cook_time_min: 5
+category: cafe
+prep_source: fresh
+tags: [cafe, rapido, fresco]
 ingredients:
-  - { ingredient: "ovo inteiro",       quantity: 3,   unit: un }
-  - { ingredient: "clara de ovo",      quantity: 2,   unit: un }
-  - { ingredient: "queijo mussarela",  quantity: 30,  unit: g  }
-  - { ingredient: "tomate",            quantity: 50,  unit: g  }
-  - { ingredient: "azeite",            quantity: 5,   unit: ml }
-  - { ingredient: "sal",               quantity: 1,   unit: g  }
+  - { ingredient: "ovo inteiro",        quantity: 1, unit: un }
+  - { ingredient: "clara de ovo",       quantity: 4, unit: un }
+  - { ingredient: "queijo minas",       quantity: 30, unit: g }
+  - { ingredient: "cebolinha",          quantity: 5, unit: g }
+  - { ingredient: "sal",                quantity: 1, unit: g }
+  - { ingredient: "pimenta-do-reino",   quantity: 1, unit: g }
 macros_per_serving:
-  kcal: 380
-  protein_g: 32
+  kcal: 280
+  protein_g: 34
   carbs_g: 4
-  fat_g: 26
-source: manual
-needs_review: false
+  fat_g: 14
+portions:
+  - person_id: marcus
+    description: "Ele: 4 claras + 1 ovo + 30g queijo (~280 kcal)"
+    servings: 1.0
+    macros: { kcal: 280, protein_g: 34, carbs_g: 4, fat_g: 14 }
+  - person_id: rafaella
+    description: "Dela: 3 ovos com queijo branco e cebolinha"
+    servings: 1.05
+    macros: { kcal: 290, protein_g: 26, carbs_g: 4, fat_g: 18 }
+preparation_steps:
+  - "Bata os ovos/claras com sal e pimenta."
+  - "Aqueça frigideira antiaderente em fogo médio."
+  - "Despeje a mistura; quando começar a firmar, adicione queijo e cebolinha."
+  - "Dobre ao meio, sirva."
+observations: "Acompanha pão integral, banana ou fruta conforme a refeição."
 ---
 
 # Omelete Proteico
 
-Refeição rápida e densa em proteína para café da manhã.
-
-## Modo de preparo
-
-1. Bata os ovos inteiros e claras com sal.
-2. Aqueça o azeite em frigideira antiaderente.
-3. Despeje os ovos, espalhe queijo e tomate em cubos.
-4. Dobre ao meio quando a base estiver firme. Sirva.
-
-## Observações
-
-- Pode trocar mussarela por cottage para reduzir gordura.
-- Macros calculados a partir de tabelas TACO/USDA padrão.
+Café da manhã rápido, alta proteína. 5 minutos do início ao prato.

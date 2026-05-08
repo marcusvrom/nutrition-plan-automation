@@ -3,88 +3,317 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Plano Alimentar — Relatório</title>
+<title>Plano Alimentar — Relatório Consolidado</title>
 <style>
-  :root {
-    --bg: #fafafa; --fg: #1d1d1f; --muted: #6b7280;
-    --accent: #2563eb; --ok: #15803d; --warn: #b45309; --err: #b91c1c;
-    --border: #e5e7eb; --card: #ffffff;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg); color: var(--fg); line-height: 1.5;
-  }
-  header {
-    background: var(--fg); color: white; padding: 24px 32px;
-  }
-  header h1 { margin: 0 0 4px; font-size: 1.6rem; }
-  header p { margin: 0; color: #cbd5e1; font-size: 0.9rem; }
-  main { max-width: 1100px; margin: 0 auto; padding: 24px 32px; }
-  section.card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 20px 24px; margin-bottom: 20px;
-  }
-  section.card > h2 {
-    margin: 0 0 12px; font-size: 1.2rem; border-bottom: 1px solid var(--border); padding-bottom: 8px;
-  }
-  table {
-    width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 0.92rem;
-  }
-  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); }
-  th { background: #f3f4f6; font-weight: 600; }
-  details { margin: 6px 0; padding: 8px 12px; background: #f9fafb; border-radius: 8px; }
-  details summary { cursor: pointer; }
-  details ul { margin: 8px 0 4px 18px; }
-  .person h3 { margin: 12px 0 4px; }
-  .targets { color: var(--muted); margin: 0 0 4px; }
-  .delta { margin: 0 0 8px; }
-  .delta .ok    { color: var(--ok); }
-  .delta .over  { color: var(--err); }
-  .delta .under { color: var(--warn); }
-  .issues { padding-left: 18px; }
-  .issues li.error   { color: var(--err); }
-  .issues li.warning { color: var(--warn); }
-  .ok { color: var(--ok); }
-  .warn { color: var(--warn); font-weight: 600; }
-  footer { color: var(--muted); font-size: 0.8rem; padding: 16px 32px; text-align: center; }
+:root{
+  --bg:#F5F3EE; --surface:#fff; --surface-alt:#EEEBE4; --surface-2:#F8F3EB;
+  --text:#1C1B18; --text-2:#5C584E; --text-3:#908B7E;
+  --accent:#2E7D52; --accent-light:#E3F2E9; --accent-dark:#1A5C38;
+  --protein:#3B82F6; --protein-l:#EFF6FF;
+  --carb:#F59E0B; --carb-l:#FFFBEB;
+  --fat:#EF4444; --fat-l:#FEF2F2;
+  --cal:#8B5CF6; --cal-l:#F5F3FF;
+  --rose:#b14d2a; --rose-l:#fbeadb;
+  --teal:#2d5d5b; --teal-l:#d8e6e3;
+  --warning:#CC7722; --warn-l:#FDF3E4;
+  --border:rgba(28,27,24,.08); --border-strong:rgba(28,27,24,.18);
+  --shadow:0 2px 8px rgba(28,27,24,.06);
+  --radius:10px; --radius-lg:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em}
+pre{white-space:pre-wrap;background:var(--surface-alt);padding:12px;border-radius:8px;max-height:400px;overflow:auto}
+
+.page{max-width:1080px;margin:0 auto;padding:24px 20px 80px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:100;background:rgba(245,243,238,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:10px 20px;margin:0 -20px 24px}
+.nav-inner{display:flex;gap:6px;overflow-x:auto;max-width:1080px;margin:0 auto}
+.nav-link{padding:6px 14px;font-size:12px;font-weight:600;color:var(--text-3);border-radius:100px;text-decoration:none;white-space:nowrap;border:1px solid transparent}
+.nav-link:hover{color:var(--text);background:var(--surface-alt)}
+.nav-link.active{color:var(--accent-dark);background:var(--accent-light)}
+
+.master-header{padding:32px 0 16px;text-align:center;border-bottom:1px solid var(--border);margin-bottom:24px}
+.master-header .eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:600}
+.master-header h1{font-size:28px;margin-top:8px}
+.master-header .gen{color:var(--text-3);font-size:12px;margin-top:6px}
+
+/* person hero */
+.person-block{margin-bottom:48px}
+.person-divider{border:none;border-top:1px dashed var(--border-strong);margin:48px 0}
+.hero{padding:32px 0 16px;border-bottom:1px solid var(--border);margin-bottom:24px}
+.hero .eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+.hero-title{font-size:32px;font-weight:500;margin-bottom:6px}
+.hero-sub{color:var(--text-2);max-width:720px}
+.hero-projection{margin-top:14px;color:var(--accent-dark);font-weight:500}
+.stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-top:16px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;text-align:center}
+.stat-card .sv{font-size:22px;font-weight:600}
+.stat-card .sl{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-3);margin-top:4px}
+.stat-card.s-cal{border-left:3px solid var(--cal)} .stat-card.s-cal .sv{color:var(--cal)}
+.stat-card.s-p{border-left:3px solid var(--protein)} .stat-card.s-p .sv{color:var(--protein)}
+.stat-card.s-c{border-left:3px solid var(--carb)} .stat-card.s-c .sv{color:var(--carb)}
+.stat-card.s-g{border-left:3px solid var(--fat)} .stat-card.s-g .sv{color:var(--fat)}
+.stat-card.s-r{border-left:3px solid var(--accent)} .stat-card.s-r .sv{color:var(--accent)}
+
+/* sections */
+.section{margin:36px 0;scroll-margin-top:80px}
+.section-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.section-num{width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0}
+.section-title{font-size:22px;font-weight:600}
+.muted{color:var(--text-2);margin-bottom:14px}
+.muted.small{font-size:13px}
+
+/* tables */
+.data-table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:8px 0;font-size:13px}
+.data-table th,.data-table td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+.data-table th{background:var(--surface-alt);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3)}
+.data-table tr:last-child td{border-bottom:none}
+
+.badge{display:inline-block;padding:2px 8px;border-radius:100px;font-size:11px;font-weight:600}
+.badge.s-ok,.badge.p-low{background:var(--accent-light);color:var(--accent-dark)}
+.badge.s-warn,.badge.p-medium{background:var(--carb-l);color:var(--carb)}
+.badge.s-alert,.badge.p-critical{background:var(--fat-l);color:var(--fat)}
+.badge.s-info,.badge.p-high{background:var(--protein-l);color:var(--protein)}
+
+/* alerts */
+.alert{padding:14px 18px;border-radius:var(--radius);margin:12px 0;border-left:4px solid var(--accent)}
+.alert-title{font-weight:700;margin-bottom:4px}
+.alert-body{font-size:14px;color:var(--text-2)}
+.alert.a-critical{background:var(--fat-l);border-color:var(--fat);color:var(--fat)}
+.alert.a-warn{background:var(--warn-l);border-color:var(--warning);color:var(--accent-dark)}
+.alert.a-info{background:var(--teal-l);border-color:var(--teal);color:var(--teal)}
+.alert.a-success{background:var(--accent-light);border-color:var(--accent);color:var(--accent-dark)}
+.alert.a-critical .alert-body,.alert.a-warn .alert-body,.alert.a-info .alert-body,.alert.a-success .alert-body{color:var(--text-2)}
+
+/* rules / principles grid */
+.rules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.rule-item{display:flex;gap:12px;padding:14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
+.rule-icon{font-size:20px;width:32px;text-align:center;flex-shrink:0}
+.rule-text strong{display:block;margin-bottom:2px}
+.rule-text span{font-size:13px;color:var(--text-2);display:block}
+.rule-text .eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:700;margin-bottom:4px;display:block}
+
+.warn-card{border-left:3px solid var(--warning);background:var(--surface);padding:16px;margin-top:14px}
+.warn-card .card-title{color:var(--warning);font-weight:700;margin-bottom:6px}
+
+/* week tabs */
+.week-tabs{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto}
+.week-tab{padding:8px 16px;border:1px solid var(--border-strong);border-radius:100px;font-size:13px;font-weight:500;background:var(--surface);color:var(--text-2);white-space:nowrap;cursor:pointer}
+.week-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+.week-pane.hidden{display:none}
+
+/* days */
+.day-grid{display:grid;gap:12px}
+.day-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.day-header{background:var(--surface-alt);padding:10px 16px;font-weight:600;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
+.day-kcal{font-size:12px;color:var(--cal);font-weight:600}
+.meal-row{padding:12px 16px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:120px 1fr auto;gap:12px;font-size:13px;align-items:start}
+.meal-row:last-child{border-bottom:none}
+.meal-label{font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.5px;line-height:1.3}
+.meal-time{font-size:10px;color:var(--text-3);font-weight:500;letter-spacing:0}
+.ml-cafe{color:var(--carb)}
+.ml-almoco{color:var(--accent-dark)}
+.ml-jantar{color:var(--cal)}
+.ml-snack{color:var(--text-2)}
+.meal-desc{line-height:1.5}
+.meal-desc strong{font-weight:600}
+.ingredient-note{font-size:11px;color:var(--text-3);font-style:italic;display:block;margin-top:2px}
+.source{font-size:9px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:2px 6px;border-radius:4px;margin-left:6px}
+.s-fresh{background:var(--carb-l);color:var(--carb)}
+.s-freezer{background:var(--protein-l);color:var(--protein)}
+.s-fridge{background:var(--accent-light);color:var(--accent-dark)}
+.s-prep{background:var(--cal-l);color:var(--cal)}
+.s-pantry{background:var(--surface-alt);color:var(--text-3)}
+.meal-macros{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.mp{font-size:10px;font-weight:600;padding:2px 6px;border-radius:4px;white-space:nowrap}
+.mp.k{background:var(--cal-l);color:var(--cal)}
+.mp.p{background:var(--protein-l);color:var(--protein)}
+.mp.c{background:var(--carb-l);color:var(--carb)}
+.mp.g{background:var(--fat-l);color:var(--fat)}
+
+.day-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;background:var(--accent-light);border:1px solid rgba(46,125,82,.15);border-radius:var(--radius);padding:14px;margin-bottom:14px}
+.ds-item{text-align:center}
+.ds-label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--accent-dark)}
+.ds-value{font-size:20px;font-weight:700;color:var(--accent-dark)}
+.ds-value.over{color:var(--fat)}
+.ds-value.under{color:var(--warning)}
+.ds-value.ok{color:var(--accent-dark)}
+.ds-target{font-size:11px;color:var(--text-3)}
+
+/* recipes */
+.recipe-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.recipe-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;cursor:pointer}
+.recipe-card[open]{box-shadow:var(--shadow)}
+.recipe-card summary{cursor:pointer;list-style:none}
+.recipe-card summary::-webkit-details-marker{display:none}
+.recipe-tag{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.recipe-name{font-size:17px;font-weight:600;margin-bottom:4px}
+.recipe-meta{font-size:12px;color:var(--text-3);margin-bottom:10px}
+.recipe-macros-bar{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;font-weight:600}
+.rm-k{color:var(--cal)} .rm-p{color:var(--protein)} .rm-c{color:var(--carb)} .rm-g{color:var(--fat)}
+.warn-flag{color:var(--warning);font-size:11px;font-weight:700}
+.recipe-body{margin-top:14px;padding-top:14px;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.recipe-body h4{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text);margin:12px 0 6px}
+.recipe-body ul{list-style:disc;padding-left:18px}
+.recipe-body ol.steps{padding-left:18px}
+.recipe-body li{margin-bottom:3px}
+.recipe-portion-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
+.recipe-portion-box{padding:10px;background:var(--surface-alt);border-radius:8px;border-left:3px solid var(--accent)}
+.recipe-portion-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:700}
+.recipe-portion-value{font-size:13px;margin-top:3px}
+.recipe-portion-macros{font-size:11px;color:var(--text-3);font-family:ui-monospace,Menlo,monospace;margin-top:4px}
+.raw-md{margin-top:12px}
+.raw-md summary{font-size:11px;color:var(--text-3);cursor:pointer}
+
+/* ingredient map */
+.ing-map{display:grid;gap:12px}
+.ing-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.ing-header{padding:14px 16px;background:var(--surface-alt);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.ing-title{font-weight:700;font-size:14px}
+.ing-badges{display:flex;gap:4px;flex-wrap:wrap}
+.ing-badge{font-size:10px;font-weight:600;padding:2px 8px;border-radius:100px}
+.ing-badge.b-prep_sunday{background:var(--accent-light);color:var(--accent-dark)}
+.ing-badge.b-congela{background:var(--protein-l);color:var(--protein)}
+.ing-badge.b-fresh{background:var(--carb-l);color:var(--carb)}
+.ing-badge.b-fridge{background:var(--accent-light);color:var(--accent-dark)}
+.ing-badge.b-stock{background:var(--surface-alt);color:var(--text-3);border:1px dashed var(--border-strong)}
+.ing-detail{padding:14px 16px;font-size:13px;color:var(--text-2)}
+.ing-detail p{margin-bottom:8px}
+.ing-flow{display:grid;gap:8px;margin-top:8px}
+.ing-flow-step{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start}
+.ing-flow-num{width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.ing-used{margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+.ing-used-label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3);font-weight:700;margin-bottom:6px}
+.ing-used-list{display:flex;flex-wrap:wrap;gap:6px}
+.ing-tag{font-size:11px;padding:3px 9px;background:var(--surface-alt);border-radius:6px;color:var(--text-2);font-weight:500}
+
+/* shopping */
+.shop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.shop-cat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.shop-cat-title{font-weight:700;font-size:14px;color:var(--accent-dark);padding-bottom:8px;border-bottom:1px solid var(--border);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.shop-cat-meta{font-size:11px;color:var(--text-3);font-weight:500}
+.shop-list{list-style:none;display:grid;gap:4px}
+.shop-item{display:flex;align-items:flex-start;gap:10px;padding:6px 8px;border-radius:6px;cursor:pointer;font-size:13px}
+.shop-item:hover{background:var(--surface-alt)}
+.shop-check{width:18px;height:18px;border:2px solid var(--border-strong);border-radius:4px;flex-shrink:0;margin-top:1px}
+.shop-item.checked .shop-check{background:var(--accent);border-color:var(--accent)}
+.shop-item.checked .shop-check::after{content:'✓';color:#fff;font-size:11px;font-weight:700;display:block;text-align:center;line-height:14px}
+.shop-text{flex:1}
+.shop-name{font-weight:500}
+.shop-usage{font-size:11px;color:var(--text-3);font-style:italic;margin-top:1px}
+.shop-pantry{font-size:11px;color:var(--accent);margin-top:1px}
+.shop-qty{font-weight:600;color:var(--text-2);white-space:nowrap;font-size:12px}
+.shop-tag{font-size:9px;font-weight:600;letter-spacing:.5px;padding:2px 6px;border-radius:4px;margin-left:4px;text-transform:uppercase}
+.shop-tag.t-her{background:var(--rose-l);color:var(--rose)}
+.shop-tag.t-his{background:var(--protein-l);color:var(--protein)}
+.shop-tag.t-shared{background:var(--teal-l);color:var(--teal)}
+.shop-tag.t-fresh{background:var(--carb-l);color:var(--carb)}
+.shop-tag.t-stock{background:var(--surface-alt);color:var(--text-3);border:1px dashed var(--border-strong)}
+.shop-tag.t-swap{background:var(--accent-light);color:var(--accent-dark)}
+
+.pantry-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin-top:10px}
+.pantry-item{background:var(--surface-alt);border-radius:8px;padding:12px;font-size:13px}
+.pantry-item strong{display:block;margin-bottom:2px}
+.pantry-item span{color:var(--text-3);font-size:12px}
+
+/* meal prep */
+.prep-timeline{position:relative;padding-left:28px}
+.prep-timeline::before{content:'';position:absolute;left:8px;top:4px;bottom:4px;width:2px;background:var(--border-strong)}
+.prep-step{position:relative;margin-bottom:18px}
+.prep-step::before{content:'';position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--surface);box-shadow:0 0 0 2px var(--accent)}
+.prep-step-title{font-weight:700;font-size:14px;margin-bottom:3px}
+.prep-time{font-size:11px;color:var(--text-3);font-weight:500;margin-right:6px;font-family:ui-monospace,monospace}
+.prep-step-body{font-size:13px;color:var(--text-2)}
+
+.note-box{background:var(--accent-light);border:1px solid rgba(46,125,82,.15);border-radius:var(--radius);padding:14px;font-size:13px;color:var(--accent-dark);margin-top:14px}
+
+/* cronograma */
+.cron{display:grid;gap:12px}
+.cron-item{padding:14px 18px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);border-left:3px solid var(--accent)}
+.cron-date{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);font-weight:700}
+.cron-title{font-size:16px;font-weight:600;margin:4px 0 6px}
+.cron-body{font-size:13px;color:var(--text-2)}
+
+/* validation */
+.issues{padding-left:18px}
+.issues li.error{color:var(--fat)}
+.issues li.warning{color:var(--warning)}
+.ok-msg{color:var(--accent-dark)}
+
+footer{margin-top:48px;padding:20px;text-align:center;color:var(--text-3);font-size:12px;border-top:1px solid var(--border)}
+
+@media (max-width:640px){
+  .meal-row{grid-template-columns:1fr;gap:6px}
+  .meal-macros{justify-content:flex-start}
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+}
 </style>
 </head>
 <body>
-<header>
-  <h1>Plano Alimentar — Relatório Semanal</h1>
-  <p>Gerado em {{GENERATED_AT}}</p>
+
+<nav class="nav">
+  <div class="nav-inner">
+    {{NAV_ITEMS}}
+    <a class="nav-link" href="#ingredient-map">Ingredientes</a>
+    <a class="nav-link" href="#recipes">Receitas</a>
+    <a class="nav-link" href="#shopping">Compras</a>
+    <a class="nav-link" href="#meal-prep">Meal prep</a>
+    <a class="nav-link" href="#validation">Validação</a>
+  </div>
+</nav>
+
+<div class="page">
+
+<header class="master-header">
+  <div class="eyebrow">Plano alimentar consolidado</div>
+  <h1>Sistema versionado</h1>
+  <p class="gen">Gerado em {{GENERATED_AT}}</p>
 </header>
-<main>
 
-  <section class="card" id="macros">
-    <h2>Macros por pessoa</h2>
-    {{MACROS_BLOCK}}
-  </section>
+{{PEOPLE_SECTIONS}}
 
-  <section class="card" id="plan">
-    <h2>Plano semanal</h2>
-    {{PLAN_BLOCK}}
-  </section>
+<hr class="person-divider" />
 
-  <section class="card" id="shopping">
-    <h2>Lista de compras consolidada</h2>
-    {{SHOPPING_BLOCK}}
-  </section>
+{{SHARED_SECTIONS}}
 
-  <section class="card" id="recipes">
-    <h2>Receitas</h2>
-    {{RECIPES_BLOCK}}
-  </section>
-
-  <section class="card" id="issues">
-    <h2>Validação</h2>
-    {{ISSUES_BLOCK}}
-  </section>
-
-</main>
 <footer>
-  Sistema versionado em <code>nutrition-plan-automation</code>. Cálculos determinísticos; LLM apenas estrutura e refatora.
+  Sistema versionado · cálculos determinísticos · LLM apenas estrutura. Não substitui acompanhamento profissional.
 </footer>
+
+</div>
+
+<script>
+// week tabs
+document.querySelectorAll('.week-tab').forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.tab;
+    if (!target) return;
+    const pane = document.getElementById(target);
+    if (!pane) return;
+    const container = pane.parentElement;
+    container.querySelectorAll('.week-pane').forEach((p) => p.classList.add('hidden'));
+    pane.classList.remove('hidden');
+    // siblings of this tab
+    tab.parentElement.querySelectorAll('.week-tab').forEach((t) => t.classList.remove('active'));
+    tab.classList.add('active');
+  });
+});
+// shopping check
+document.querySelectorAll('.shop-item').forEach((it) => {
+  it.addEventListener('click', () => it.classList.toggle('checked'));
+});
+// nav active on scroll
+const sections = document.querySelectorAll('[id^="person-"], section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+  let curr = '';
+  sections.forEach((s) => { if (window.scrollY >= s.offsetTop - 100) curr = s.id; });
+  navLinks.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + curr));
+});
+</script>
+
 </body>
 </html>

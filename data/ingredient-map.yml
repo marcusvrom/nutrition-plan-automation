@@ -1,0 +1,124 @@
+# Mapa de ingredientes — fluxo de origem (compra → prep → congelamento → prato).
+# Cada entrada descreve um insumo intermediário do meal prep dominical.
+
+entries:
+  - id: frango-desfiado
+    icon: "🍗"
+    title: "Frango Desfiado"
+    badges: [prep_sunday, congela]
+    quantity_at_prep: "~1 kg de peito de frango cozido e desfiado"
+    method: "Cozinhar peito inteiro em água com sal, louro e cebola (~25 min). Desfiar com garfo. Dividir em porções de ~100g em sacos zip."
+    flow:
+      - { step: 1, text: "Compra: 2 kg de peito de frango total. ~1 kg vai para cubos (frango brócolis), ~1 kg para desfiar." }
+      - { step: 2, text: "Prep (09:30): Cozinhe 1 kg em água temperada. Em paralelo, corte o outro 1 kg em cubos." }
+      - { step: 3, text: "Divisão: ~500g escondidinho, ~300g recheio cremoso pizza, ~200g porções avulsas (crepes)." }
+      - { step: 4, text: "Congelamento: porções de ~100g em sacos zip planos. Tirar na noite anterior para a geladeira." }
+    used_in:
+      - { recipe_id: crepe-tapioca-proteico, label: "☕ Crepe de Tapioca" }
+      - { recipe_id: escondidinho-frango,    label: "🍽️ Escondidinho de Frango" }
+      - { recipe_id: pizza-express-frango,   label: "🍽️ Pizza Express Frango" }
+      - { recipe_id: lasanha-pratica,        label: "🍽️ Lasanha Prática" }
+
+  - id: carne-moida
+    icon: "🥩"
+    title: "Carne Moída Refogada"
+    badges: [prep_sunday, congela]
+    quantity_at_prep: "~1,5 kg refogada com cebola, alho e temperos base"
+    method: "Refogar tudo junto numa panela grande. Depois dividir para destinos diferentes."
+    flow:
+      - { step: 1, text: "Compra: 1,5 kg moída magra (paleta ou acém) — ou blend acém + músculo 50/50 (econômico)." }
+      - { step: 2, text: "Prep (10:00): refogue com cebola, alho e sal." }
+      - { step: 3, text: "Divisão: ~400g + trigo → quibes (~11). ~350g → rondellis. ~240g → hot pockets. ~300g + páprica/cominho → pizza carne. ~200g → crepes (porções de ~80g)." }
+      - { step: 4, text: "Quibes e hot pockets vão crus ao freezer; rondelli montado; porções avulsas em saquinhos." }
+    used_in:
+      - { recipe_id: crepe-tapioca-carne,  label: "☕ Crepe de Tapioca (carne)" }
+      - { recipe_id: rondelli-carne,       label: "🍽️ Rondelli" }
+      - { recipe_id: quibe-assado,         label: "🌙 Quibe Assado" }
+      - { recipe_id: hot-pockets-batata,   label: "🌙 Hot Pockets" }
+      - { recipe_id: pizza-express-carne,  label: "🌙 Pizza Express Carne" }
+
+  - id: brocolis-cozido
+    icon: "🥦"
+    title: "Brócolis Cozido"
+    badges: [prep_sunday, congela]
+    quantity_at_prep: "2 ramos inteiros, al dente"
+    method: "Cozinhar al dente (3-4 min) + choque térmico em água gelada para cor e textura."
+    flow:
+      - { step: 1, text: "Divisão: 1 ramo picado para frango brócolis; outro porcionado para acompanhamentos." }
+      - { step: 2, text: "Saquinhos de ~100g. Vai direto da marmita ao micro-ondas sem descongelar." }
+    used_in:
+      - { recipe_id: frango-brocolis-requeijao, label: "🍽️ Frango com Brócolis" }
+      - { recipe_id: mongolian-beef,            label: "🌙 Mongolian Beef (acompanhamento)" }
+
+  - id: vegetais-assados
+    icon: "🥕"
+    title: "Vegetais Assados"
+    badges: [prep_sunday, congela]
+    quantity_at_prep: "4 cenouras + 4 abobrinhas + 3 beterrabas"
+    method: "Cubos médios, sal/orégano/azeite. 200°C, 30-35 min."
+    flow:
+      - { step: 1, text: "Entram no forno junto com o pré-aquecimento. 1 assadeira grande." }
+      - { step: 2, text: "~150g por marmita. Acompanham frango brócolis, rondelli, escondidinho." }
+      - { step: 3, text: "Congela razoavelmente — abobrinha amolece; substituir por batata doce se incomodar." }
+    used_in:
+      - { recipe_id: frango-brocolis-requeijao, label: "🍽️ Frango Brócolis (acomp.)" }
+      - { recipe_id: rondelli-carne,            label: "🍽️ Rondelli (acomp.)" }
+      - { recipe_id: escondidinho-frango,       label: "🍽️ Escondidinho (acomp.)" }
+
+  - id: arroz
+    icon: "🍚"
+    title: "Arroz (Integral + Japonês)"
+    badges: [prep_sunday, congela]
+    quantity_at_prep: "~1 kg integral + ~500g japonês cozidos"
+    method: "Cozinhar normalmente. Porcionar SEPARADO das proteínas (congela melhor)."
+    flow:
+      - { step: 1, text: "Potes 130-166g. Integral: 150g (frango brócolis), 130g (rondelli). Japonês: 166g (Mongolian)." }
+      - { step: 2, text: "Borrife água antes de aquecer no micro-ondas — fica soltinho." }
+    used_in:
+      - { recipe_id: frango-brocolis-requeijao, label: "🍽️ Frango Brócolis" }
+      - { recipe_id: mongolian-beef,            label: "🍽️ Mongolian Beef" }
+      - { recipe_id: rondelli-carne,            label: "🍽️ Rondelli (acomp.)" }
+
+  - id: omelete-crepe-fresh
+    icon: "🍳"
+    title: "Omelete e Crepe (frescos)"
+    badges: [fresh]
+    description: "Estas receitas NÃO são do prep — são feitas na hora. Recheios de proteína vêm do prep."
+    flow:
+      - { step: 1, text: "Noite anterior: tire 1 porção de proteína do freezer → geladeira." }
+      - { step: 2, text: "Manhã: bata massa (30 seg), cozinhe (~2 min), recheie. Total: ~8 min." }
+    required_in_pantry: ["Ovos (1 dúzia/sem)", "Goma de tapioca", "Leite desnatado", "Queijo minas", "Requeijão light"]
+
+  - id: recheio-frango-cremoso
+    icon: "🌯"
+    title: "Recheio de Frango Cremoso (Pizza Express)"
+    badges: [prep_sunday, congela]
+    quantity_at_prep: "~500g frango desfiado + extrato + caldo + requeijão"
+    method: "Variação do frango desfiado já com molho cremoso, dividido em ~6 porções de ~100g."
+    used_in:
+      - { recipe_id: pizza-express-frango, label: "🍽️ Pizza Express Frango Cremoso" }
+
+  - id: fraldinha-desfiada
+    icon: "🥩"
+    title: "Fraldinha Desfiada + Purê"
+    badges: [prep_sunday, congela]
+    quantity_at_prep: "500g fraldinha → ~400g cozida + 500g batata + 500g abóbora japonesa"
+    method: "Pressão 40 min. Purê no vapor para não ficar aguado. ~125g carne + 200g purê por marmita."
+    used_in:
+      - { recipe_id: fraldinha-pure-abobora, label: "🍽️ Fraldinha com Purê" }
+
+  - id: lasanha-batch
+    icon: "🍝"
+    title: "Lasanha Prática (batch)"
+    badges: [prep_sunday, congela]
+    quantity_at_prep: "1 travessa grande → ~6 porções de 250g"
+    method: "Usa proteína do batch (frango desfiado ou carne moída). 180°C 25-30 min."
+    used_in:
+      - { recipe_id: lasanha-pratica, label: "🍽️ Lasanha Prática" }
+
+  - id: bolo-pizza-fresh
+    icon: "🍕"
+    title: "Mini Pizza de Pastel + Bolo Fit (frescos)"
+    badges: [fresh]
+    description: "Não são do prep — são feitas frescas. Pizza tem proteína baixa: sempre acompanhar com whey/proteína."
+    required_in_pantry: ["Massa de pastel", "Queijo mussarela", "Molho de tomate", "Coco ralado seco", "Farinha de aveia", "Leite de coco light", "Leite em pó desnatado", "Stevia"]

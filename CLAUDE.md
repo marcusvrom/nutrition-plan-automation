@@ -78,17 +78,46 @@ npm run build       # gerar output/snapshot.json (debug)
 
 ## Diretórios e responsabilidades
 
-| Caminho                | Quem edita                |
-|------------------------|---------------------------|
-| `data/recipes/`        | usuário e Claude          |
-| `data/food-plan.yml`   | usuário e Claude          |
-| `data/pantry.yml`      | usuário e Claude          |
-| `data/profile.yml`     | usuário (Claude com pedido) |
-| `src/`                 | usuário (Claude com pedido) |
-| `templates/`           | usuário (Claude com pedido) |
-| `output/`              | scripts (regenerável)     |
-| `docs/`                | usuário e Claude          |
-| `.github/workflows/`   | usuário (Claude com pedido) |
+| Caminho                                    | Quem edita                       |
+|--------------------------------------------|----------------------------------|
+| `data/recipes/`                            | usuário e Claude                 |
+| `data/food-plan.yml`                       | usuário e Claude                 |
+| `data/pantry.yml`                          | usuário e Claude                 |
+| `data/ingredient-map.yml`                  | usuário e Claude                 |
+| `data/meal-prep.yml`                       | usuário e Claude                 |
+| `data/shopping-categories.yml`             | usuário e Claude                 |
+| `data/plans/<person>/principles.yml`       | usuário e Claude                 |
+| `data/plans/<person>/rules.yml`            | usuário e Claude                 |
+| `data/plans/<person>/supplements.yml`      | usuário e Claude                 |
+| `data/plans/<person>/clinical.yml`         | usuário (Claude com pedido)      |
+| `data/plans/<person>/cronograma.yml`       | usuário e Claude                 |
+| `data/profile.yml`                         | usuário (Claude com pedido)      |
+| `src/`                                     | usuário (Claude com pedido)      |
+| `templates/`                               | usuário (Claude com pedido)      |
+| `output/`                                  | scripts (regenerável)            |
+| `docs/`                                    | usuário e Claude                 |
+| `.github/workflows/`                       | usuário (Claude com pedido)      |
+
+## Variantes de porção
+
+Quando uma receita é compartilhada entre pessoas com porções diferentes,
+declarar `portions:` no front-matter:
+
+```yaml
+portions:
+  - person_id: marcus
+    description: "180g + 150g arroz japonês"
+    servings: 1.0
+    macros: { kcal: 640, protein_g: 41, carbs_g: 54, fat_g: 16 }
+  - person_id: rafaella
+    description: "130g + 80g arroz + brócolis dobrado"
+    servings: 0.85
+    macros: { kcal: 520, protein_g: 38, carbs_g: 50, fat_g: 14 }
+```
+
+Os macros do `portions[].macros` (quando presentes) substituem
+`macros_per_serving × servings` no cálculo daquela pessoa. Sem `macros`,
+usa `macros_per_serving × servings` linear.
 
 ## Estilo das respostas
 

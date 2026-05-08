@@ -14,15 +14,6 @@
         "properties": {
           "id":   { "type": "string", "pattern": "^[a-z0-9-]+$" },
           "name": { "type": "string" },
-          "sex":  { "type": "string", "enum": ["male", "female", "other"] },
-          "age":        { "type": "number", "minimum": 0 },
-          "height_cm":  { "type": "number", "minimum": 0 },
-          "weight_kg":  { "type": "number", "minimum": 0 },
-          "activity_level": {
-            "type": "string",
-            "enum": ["sedentary", "light", "moderate", "active", "very_active"]
-          },
-          "goal": { "type": "string", "enum": ["cut", "recomp", "bulk", "maintain"] },
           "daily_targets": {
             "type": "object",
             "required": ["kcal", "protein_g", "carbs_g", "fat_g"],
@@ -31,16 +22,13 @@
               "protein_g": { "type": "number", "minimum": 0 },
               "carbs_g":   { "type": "number", "minimum": 0 },
               "fat_g":     { "type": "number", "minimum": 0 }
-            }
-          },
-          "restrictions": { "type": "array", "items": { "type": "string" } },
-          "preferences":  { "type": "object" }
-        }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
       }
-    },
-    "default_serving_scale": {
-      "type": "object",
-      "additionalProperties": { "type": "number", "exclusiveMinimum": 0 }
     }
-  }
+  },
+  "additionalProperties": true
 }

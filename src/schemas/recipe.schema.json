@@ -11,6 +11,7 @@
     "serving_size": { "type": "string" },
     "prep_time_min": { "type": "number", "minimum": 0 },
     "cook_time_min": { "type": "number", "minimum": 0 },
+    "category": { "type": "string" },
     "tags": { "type": "array", "items": { "type": "string" } },
     "ingredients": {
       "type": "array",
@@ -21,9 +22,9 @@
         "properties": {
           "ingredient": { "type": "string", "minLength": 1 },
           "quantity":   { "type": "number", "exclusiveMinimum": 0 },
-          "unit":       { "type": "string", "enum": ["g", "ml", "un"] }
+          "unit":       { "type": "string" }
         },
-        "additionalProperties": false
+        "additionalProperties": true
       }
     },
     "macros_per_serving": {
@@ -35,10 +36,15 @@
         "carbs_g":   { "type": "number", "minimum": 0 },
         "fat_g":     { "type": "number", "minimum": 0 }
       },
-      "additionalProperties": false
+      "additionalProperties": true
     },
+    "portions": { "type": "array" },
+    "prep_source": { "type": "string" },
+    "freeze_days": { "type": "number" },
     "source":        { "type": "string" },
-    "needs_review":  { "type": "boolean" }
+    "needs_review":  { "type": "boolean" },
+    "observations":  { "type": "string" },
+    "preparation_steps": { "type": "array", "items": { "type": "string" } }
   },
   "additionalProperties": true
 }

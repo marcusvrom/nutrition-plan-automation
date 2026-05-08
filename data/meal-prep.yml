@@ -1,0 +1,67 @@
+intro: |
+  Roteiro do meal prep dominical (~3-4h). Produz comida para os dois — Marcus e Rafaella.
+  Mesma receita, mesma compra, porções diferentes na hora de servir.
+  Janela típica: 09:00–12:00.
+
+steps:
+  - time: "09:00"
+    title: "Ligar forno + bases"
+    body: >-
+      Pré-aquecer 200°C. Arroz integral e japonês no fogo (2 panelas).
+      Hidratar trigo do quibe. Cozinhar ~1,5 kg de batata
+      (escondidinho + hot pockets). Cozinhar 1 kg de frango inteiro para desfiar.
+
+  - time: "09:30"
+    title: "Vegetais + frango cubos"
+    body: >-
+      Cortar vegetais em cubos → forno (30 min). Cortar 1 kg de frango em
+      cubos, temperar com chimichurri/páprica. Cozinhar brócolis al dente
+      + choque térmico.
+
+  - time: "10:00"
+    title: "Proteínas principais"
+    body: >-
+      Mongolian Beef: marinar → grelhar → molho.
+      Fraldinha: selar e levar à pressão (40 min).
+      Carne moída: refogar 1,5 kg com cebola e alho — dividir entre quibes,
+      rondellis, hot pockets, pizza, lasanha e crepes.
+      Frango brócolis: grelhar cubos + montar com requeijão.
+
+  - time: "10:30"
+    title: "Recheios, molhos e purê"
+    body: >-
+      Desfiar frango cozido. Dividir: 500g escondidinho, 300g + extrato +
+      requeijão → pizza frango, 200g porções avulsas (crepes).
+      Molho tomate: passata + cebola/alho/manjericão.
+      Purê abóbora: 500g batata + 500g abóbora no vapor (~15 min), amassar
+      com leite e salsinha. Porcionar com fraldinha.
+
+  - time: "11:00"
+    title: "Montagem"
+    body: >-
+      Rondellis: enrolar massa com carne → travessa com molho → forno.
+      Lasanha: camadas molho → massa → proteína → molho → queijo → forno.
+      Quibes: trigo + 400g carne moída → modelar ~11 unidades com queijo.
+      Hot pockets: massa de batata + aveia → 6 unidades com 40g de carne.
+      Escondidinho: purê → frango → purê → forno.
+
+  - time: "11:30"
+    title: "Assar"
+    body: >-
+      Quibes e hot pockets na air fryer (em levas). Gratinar escondidinho,
+      rondellis e lasanha simultaneamente no forno (3 travessas).
+      Aproveite para cozinhar 12 ovos para a semana (10 min).
+
+  - time: "12:00"
+    title: "Porcionar e congelar"
+    body: >-
+      Esfriar tudo. Etiquetar com cor (rosa = Rafaella, azul = Marcus) +
+      data + porção. Geladeira (3 dias): perecíveis. Freezer (4-7 dias):
+      o resto. Arroz SEMPRE em potes separados.
+
+output_summary: >-
+  ~5 marmitas frango/brócolis · 3 porções Mongolian Beef · ~4 fraldinha+purê ·
+  ~5 rondelli · ~6 lasanha · ~11 quibes · 6 hot pockets · ~5 escondidinho ·
+  ~6 recheio pizza (frango + carne) · ~3 frango desfiado avulso ·
+  ~3 carne moída avulsa · vegetais assados · arroz integral e japonês ·
+  brócolis porcionado · 12 ovos cozidos.

@@ -1,0 +1,39 @@
+intro: >-
+  Stack focado em SOP, deficiência identificada (Vit. D) e suporte à perda
+  de peso. Discutir com endócrino antes de iniciar.
+
+items:
+  - name: "Vitamina D3"
+    dose: "10.000 UI/dia (8 sem) → 2.000 UI manutenção"
+    when: "Café, com gordura"
+    priority: critical
+    justification: "Exame: 23,1 ng/mL (insuficiente). Meta: 40-50. Reavaliar em 8 semanas."
+  - name: "Mio-inositol + D-chiro 40:1"
+    dose: "4 g + 100 mg/dia"
+    when: "Manhã e noite"
+    priority: high
+    justification: "Maior corpo de evidência clínica em SOP depois da metformina."
+  - name: "Ômega-3 (EPA + DHA)"
+    dose: "2 g de EPA+DHA"
+    when: "Almoço"
+    priority: high
+    justification: "Anti-inflamatório, reduz triglicérides, melhora perfil hormonal SOP."
+  - name: "Whey Protein"
+    dose: "30g (1 scoop) 1-2×/dia"
+    when: "Lanches"
+    priority: medium
+    justification: "Garantir 130g de proteína/dia. Concentrado é suficiente."
+  - name: "Magnésio glicinato (ou dimalato)"
+    dose: "300-400 mg/dia"
+    when: "Antes de dormir"
+    priority: medium
+    justification: "Sensibilidade insulínica + qualidade do sono + reduz cólicas."
+  - name: "Berberina"
+    dose: "500 mg 2-3×/dia"
+    when: "Antes das refeições"
+    priority: medium
+    justification: "'Metformina natural'. Apenas se médico não prescrever metformina. Discutir com endócrino."
+
+cost_summary: >-
+  Stack mínimo essencial (Vit D + Inositol + Ômega-3 + Whey): ~R$ 280-380/mês.
+  Stack completo: ~R$ 450-550/mês. Os 4 essenciais fazem 80% do efeito.

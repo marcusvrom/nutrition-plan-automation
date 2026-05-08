@@ -1,81 +1,147 @@
-# Plano alimentar semanal.
+# Planos alimentares por pessoa.
+# - Marcus: 3 refeições/dia, semanas A e B (rotação).
+# - Rafaella: 5 refeições/dia, 1 semana padrão (dieta SOP).
 #
-# Cada slot referencia uma receita por `recipe_id` (slug do arquivo em data/recipes/)
-# e quantas porções (servings) cada pessoa consome.
-#
-# Um servings == uma porção tal como definida no front-matter da receita.
-# Para refeições muito simples (ex: 2 ovos mexidos), use receitas próprias
-# em vez de inventar quantidades aqui.
+# Cada slot referencia uma receita; `servings` é o multiplicador para o
+# cálculo de macros. Quando a receita já tem `portions:` por pessoa,
+# o cálculo usa as macros customizadas dessa variant × servings.
 
-week_starts_on: monday
-days:
-  monday:
-    breakfast:
-      recipe_id: omelete-proteico
-      servings: { marcus: 1.0, namorada: 0.7 }
-    lunch:
-      recipe_id: frango-curry
-      servings: { marcus: 1.0, namorada: 0.7 }
-    dinner:
-      recipe_id: mongolian-beef
-      servings: { marcus: 1.0, namorada: 0.7 }
-  tuesday:
-    breakfast:
-      recipe_id: omelete-proteico
-      servings: { marcus: 1.0, namorada: 0.7 }
-    lunch:
-      recipe_id: mongolian-beef
-      servings: { marcus: 1.0, namorada: 0.7 }
-    dinner:
-      recipe_id: frango-curry
-      servings: { marcus: 1.0, namorada: 0.7 }
-  wednesday:
-    breakfast:
-      recipe_id: omelete-proteico
-      servings: { marcus: 1.0, namorada: 0.7 }
-    lunch:
-      recipe_id: frango-curry
-      servings: { marcus: 1.0, namorada: 0.7 }
-    dinner:
-      recipe_id: mongolian-beef
-      servings: { marcus: 1.0, namorada: 0.7 }
-  thursday:
-    breakfast:
-      recipe_id: omelete-proteico
-      servings: { marcus: 1.0, namorada: 0.7 }
-    lunch:
-      recipe_id: mongolian-beef
-      servings: { marcus: 1.0, namorada: 0.7 }
-    dinner:
-      recipe_id: frango-curry
-      servings: { marcus: 1.0, namorada: 0.7 }
-  friday:
-    breakfast:
-      recipe_id: omelete-proteico
-      servings: { marcus: 1.0, namorada: 0.7 }
-    lunch:
-      recipe_id: frango-curry
-      servings: { marcus: 1.0, namorada: 0.7 }
-    dinner:
-      recipe_id: mongolian-beef
-      servings: { marcus: 1.0, namorada: 0.7 }
-  saturday:
-    breakfast:
-      recipe_id: omelete-proteico
-      servings: { marcus: 1.0, namorada: 0.7 }
-    lunch:
-      recipe_id: mongolian-beef
-      servings: { marcus: 1.0, namorada: 0.7 }
-    dinner:
-      recipe_id: frango-curry
-      servings: { marcus: 1.0, namorada: 0.7 }
-  sunday:
-    breakfast:
-      recipe_id: omelete-proteico
-      servings: { marcus: 1.0, namorada: 0.7 }
-    lunch:
-      recipe_id: frango-curry
-      servings: { marcus: 1.0, namorada: 0.7 }
-    dinner:
-      recipe_id: mongolian-beef
-      servings: { marcus: 1.0, namorada: 0.7 }
+plans:
+  # ============================================================ Marcus
+  - person_id: marcus
+    meals_order: [breakfast, lunch, dinner]
+    weeks:
+      - id: A
+        label: Semana A
+        days:
+          monday:
+            breakfast: { recipe_id: crepe-tapioca-proteico, servings: { marcus: 1 }, meal_time: "07:30" }
+            lunch:     { recipe_id: frango-brocolis-requeijao, servings: { marcus: 1 }, meal_time: "12:30",
+                         notes: "Marmita freezer + arroz separado" }
+            dinner:    { recipe_id: quibe-assado, servings: { marcus: 2 }, meal_time: "20:00",
+                         notes: "Quibes do freezer (descongelar de manhã)" }
+          tuesday:
+            breakfast: { recipe_id: omelete-proteico, servings: { marcus: 1 } }
+            lunch:     { recipe_id: mongolian-beef, servings: { marcus: 1 } }
+            dinner:    { recipe_id: hot-pockets-batata, servings: { marcus: 2 } }
+          wednesday:
+            breakfast: { recipe_id: crepe-tapioca-carne, servings: { marcus: 1 } }
+            lunch:     { recipe_id: rondelli-carne, servings: { marcus: 1 } }
+            dinner:    { recipe_id: escondidinho-frango, servings: { marcus: 1 } }
+          thursday:
+            breakfast: { recipe_id: omelete-proteico, servings: { marcus: 1 } }
+            lunch:     { recipe_id: fraldinha-pure-abobora, servings: { marcus: 1 } }
+            dinner:    { recipe_id: quibe-assado, servings: { marcus: 2 } }
+          friday:
+            breakfast: { recipe_id: crepe-tapioca-proteico, servings: { marcus: 1 } }
+            lunch:     { recipe_id: escondidinho-frango, servings: { marcus: 1 } }
+            dinner:    { recipe_id: mongolian-beef, servings: { marcus: 1 } }
+          saturday:
+            breakfast: { recipe_id: bolo-coco-fit, servings: { marcus: 1 } }
+            lunch:     { recipe_id: lasanha-pratica, servings: { marcus: 1 } }
+            dinner:    { recipe_id: mini-pizza-pastel, servings: { marcus: 1.5 } }
+          sunday:
+            breakfast: { recipe_id: shake-completo, servings: { marcus: 1 }, notes: "Início rápido para o dia de prep" }
+            lunch:     { recipe_id: frango-brocolis-requeijao, servings: { marcus: 1 }, notes: "Direto do prep, refeição fresca" }
+            dinner:    { recipe_id: hot-pockets-batata, servings: { marcus: 2 }, notes: "Recém-feitos do prep" }
+      - id: B
+        label: Semana B
+        days:
+          monday:
+            breakfast: { recipe_id: omelete-proteico, servings: { marcus: 1 } }
+            lunch:     { recipe_id: mongolian-beef, servings: { marcus: 1 } }
+            dinner:    { recipe_id: escondidinho-frango, servings: { marcus: 1 } }
+          tuesday:
+            breakfast: { recipe_id: crepe-tapioca-proteico, servings: { marcus: 1 } }
+            lunch:     { recipe_id: frango-brocolis-requeijao, servings: { marcus: 1 } }
+            dinner:    { recipe_id: quibe-assado, servings: { marcus: 2 } }
+          wednesday:
+            breakfast: { recipe_id: omelete-proteico, servings: { marcus: 1 } }
+            lunch:     { recipe_id: fraldinha-pure-abobora, servings: { marcus: 1 } }
+            dinner:    { recipe_id: hot-pockets-batata, servings: { marcus: 2 } }
+          thursday:
+            breakfast: { recipe_id: crepe-tapioca-carne, servings: { marcus: 1 } }
+            lunch:     { recipe_id: escondidinho-frango, servings: { marcus: 1 } }
+            dinner:    { recipe_id: rondelli-carne, servings: { marcus: 1 } }
+          friday:
+            breakfast: { recipe_id: omelete-proteico, servings: { marcus: 1 } }
+            lunch:     { recipe_id: rondelli-carne, servings: { marcus: 1 } }
+            dinner:    { recipe_id: pizza-express-carne, servings: { marcus: 1 } }
+          saturday:
+            breakfast: { recipe_id: bolo-coco-fit, servings: { marcus: 1 } }
+            lunch:     { recipe_id: lasanha-pratica, servings: { marcus: 1 } }
+            dinner:    { recipe_id: pizza-express-carne, servings: { marcus: 1 } }
+          sunday:
+            breakfast: { recipe_id: shake-completo, servings: { marcus: 1 } }
+            lunch:     { recipe_id: mongolian-beef, servings: { marcus: 1 } }
+            dinner:    { recipe_id: escondidinho-frango, servings: { marcus: 1 } }
+
+  # ============================================================ Rafaella
+  - person_id: rafaella
+    meals_order: [breakfast, morning_snack, lunch, afternoon_snack, dinner]
+    weeks:
+      - id: default
+        label: Semana padrão (SOP)
+        days:
+          monday:
+            breakfast:       { recipe_id: omelete-proteico, servings: { rafaella: 1 }, meal_time: "07:30",
+                                notes: "3 ovos com queijo branco + 1 banana pequena. Café preto." }
+            morning_snack:   { recipe_id: iogurte-chia-frutas, servings: { rafaella: 1 }, meal_time: "10:30" }
+            lunch:           { recipe_id: frango-brocolis-requeijao, servings: { rafaella: 1 }, meal_time: "12:30",
+                                notes: "Marmita freezer · 4 min microondas" }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { rafaella: 1 }, meal_time: "16:00",
+                                notes: "1 scoop whey + 200ml água + 1 maçã pequena" }
+            dinner:          { recipe_id: escondidinho-frango, servings: { rafaella: 1 }, meal_time: "20:00",
+                                notes: "Porção dela 200g + salada grande" }
+          tuesday:
+            breakfast:       { recipe_id: crepe-tapioca-proteico, servings: { rafaella: 1 }, meal_time: "07:30" }
+            morning_snack:   { recipe_id: ovos-cozidos-banana, servings: { rafaella: 1 }, meal_time: "10:30" }
+            lunch:           { recipe_id: mongolian-beef, servings: { rafaella: 1 }, meal_time: "12:30",
+                                notes: "Brócolis em volume dobrado para saciedade" }
+            afternoon_snack: { recipe_id: whey-castanhas, servings: { rafaella: 1 }, meal_time: "16:00" }
+            dinner:          { recipe_id: hot-pockets-batata, servings: { rafaella: 1 }, meal_time: "20:00",
+                                notes: "1 hot pocket + 1 ovo cozido + salada grande (subir proteína)" }
+          wednesday:
+            breakfast:       { recipe_id: crepe-tapioca-carne, servings: { rafaella: 1 }, meal_time: "07:30" }
+            morning_snack:   { recipe_id: iogurte-chia-frutas, servings: { rafaella: 1 }, meal_time: "10:30" }
+            lunch:           { recipe_id: rondelli-carne, servings: { rafaella: 1 }, meal_time: "12:30",
+                                notes: "Vegetais assados em volume dobrado" }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { rafaella: 1 }, meal_time: "16:00",
+                                notes: "Shake whey + banana + linhaça" }
+            dinner:          { recipe_id: escondidinho-frango, servings: { rafaella: 1 }, meal_time: "20:00" }
+          thursday:
+            breakfast:       { recipe_id: omelete-proteico, servings: { rafaella: 1 }, meal_time: "07:30" }
+            morning_snack:   { recipe_id: whey-castanhas, servings: { rafaella: 1 }, meal_time: "10:30",
+                                notes: "Whey + 5 castanhas-do-pará (selênio)" }
+            lunch:           { recipe_id: pizza-express-frango, servings: { rafaella: 1 }, meal_time: "12:30" }
+            afternoon_snack: { recipe_id: iogurte-aveia-canela, servings: { rafaella: 1 }, meal_time: "16:00" }
+            dinner:          { recipe_id: quibe-assado, servings: { rafaella: 2 }, meal_time: "20:00",
+                                notes: "2 quibes + salada tabule (sem cuscuz)" }
+          friday:
+            breakfast:       { recipe_id: crepe-tapioca-proteico, servings: { rafaella: 1 }, meal_time: "07:30" }
+            morning_snack:   { recipe_id: ovos-cozidos-banana, servings: { rafaella: 1 }, meal_time: "10:30",
+                                notes: "Ovos do prep + tomate-cereja" }
+            lunch:           { recipe_id: frango-brocolis-requeijao, servings: { rafaella: 1 }, meal_time: "12:30" }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { rafaella: 1 }, meal_time: "16:00",
+                                notes: "Whey + 1 pera" }
+            dinner:          { recipe_id: pizza-express-carne, servings: { rafaella: 1 }, meal_time: "20:00",
+                                notes: "Carne moída temperada do prep + salada" }
+          saturday:
+            breakfast:       { recipe_id: omelete-proteico, servings: { rafaella: 1 }, meal_time: "08:30",
+                                notes: "+ 1/4 abacate + fatia pão integral light" }
+            morning_snack:   { recipe_id: iogurte-chia-frutas, servings: { rafaella: 1 }, meal_time: "11:00" }
+            lunch:           { recipe_id: refeicao-livre, servings: { rafaella: 1 }, meal_time: "13:30",
+                                notes: "Refeição livre controlada · sem refrigerante" }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { rafaella: 0.6 }, meal_time: "17:00",
+                                notes: "Whey light (compensa almoço)" }
+            dinner:          { recipe_id: salada-caesar-frango, servings: { rafaella: 1 }, meal_time: "20:30" }
+          sunday:
+            breakfast:       { recipe_id: mingau-aveia-proteico, servings: { rafaella: 1 }, meal_time: "08:00",
+                                notes: "Combustível para o dia de meal prep" }
+            morning_snack:   { recipe_id: iogurte-chia-frutas, servings: { rafaella: 0.7 }, meal_time: "11:00",
+                                notes: "Frutas vermelhas + 6 amêndoas (mid-prep)" }
+            lunch:           { recipe_id: hot-pockets-batata, servings: { rafaella: 1 }, meal_time: "13:30",
+                                notes: "Hot pocket fresquinho do prep + salada grande" }
+            afternoon_snack: { recipe_id: iogurte-aveia-canela, servings: { rafaella: 1 }, meal_time: "16:30" }
+            dinner:          { recipe_id: rondelli-carne, servings: { rafaella: 1 }, meal_time: "20:00",
+                                notes: "Recém-feito do prep + vegetais assados generosos" }

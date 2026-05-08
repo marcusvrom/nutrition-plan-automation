@@ -12,26 +12,39 @@ scripts TypeScript, não pelo modelo.
 
 ```
 data/
-  recipes/             # 1 arquivo Markdown por receita
-  food-plan.yml        # plano semanal (referencia receitas)
-  profile.yml          # pessoas + metas diárias de macros
-  pantry.yml           # itens já em casa (descontados da lista de compras)
+  recipes/                  # 1 arquivo Markdown por receita (com variantes de porção por pessoa)
+  profile.yml               # pessoas, metas diárias, condições clínicas
+  food-plan.yml             # plans[] por pessoa, weeks[] (A/B), refeições por dia
+  pantry.yml                # itens já em casa (descontados da lista)
+  ingredient-map.yml        # fluxo de origem dos insumos do meal prep
+  meal-prep.yml              # roteiro hora a hora do prep dominical
+  shopping-categories.yml   # categorização da lista + tags + tabela de substituições
+  plans/
+    <person_id>/
+      principles.yml        # pilares do plano (opcional)
+      rules.yml             # regras de ouro + disclaimer (opcional)
+      supplements.yml       # stack de suplementos (opcional)
+      clinical.yml          # alertas + tabela de exames (opcional)
+      cronograma.yml        # timeline 12 sem / mensal (opcional)
 src/
-  domain/              # tipos
-  parsers/             # leitura de YAML/Markdown
-  validators/          # JSON Schema + regras cruzadas
-  calculators/         # macros e lista de compras (puro)
-  generators/          # HTML
-  cli/                 # validate, build, report
-  schemas/             # JSON Schemas
-templates/
-  report-template.html
-output/                # gerado: index.html (e snapshot.json)
-docs/                  # ARCHITECTURE, DATA_MODEL, WORKFLOW, PROMPTS, FUTURE_MCP_RAG
-.github/workflows/
-  nutrition-report.yml # CI: valida + gera + publica em GitHub Pages
-CLAUDE.md              # contrato operacional para a LLM
+  domain/types.ts           # tipos do domínio (rico)
+  parsers/                  # loaders YAML/Markdown
+  validators/               # JSON Schema + regras cruzadas
+  calculators/              # macros (por pessoa/semana) e lista de compras
+  generators/html-report.ts # template renderer
+  cli/                      # validate, build, report
+  schemas/                  # JSON Schemas
+templates/report-template.html
+output/index.html           # relatório consolidado (todas as pessoas)
+.github/workflows/nutrition-report.yml
+CLAUDE.md                   # contrato operacional para a LLM
 ```
+
+**Modelo multi-pessoa:** o relatório consolida vários planos. Cada pessoa
+tem seu hero, refeições, princípios, regras, suplementos, exames e
+cronograma; receitas e mapa de ingredientes são compartilhados; lista de
+compras é unificada. Receitas podem declarar `portions:` com
+`description` e `macros` específicas para cada `person_id`.
 
 ## Uso local
 
