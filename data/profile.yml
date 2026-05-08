@@ -1,16 +1,15 @@
-# Perfis das duas pessoas. Cada uma tem seu plano em data/plans/<id>/.
+# Perfis anonimizados das duas pessoas. Cada uma tem seu plano em data/plans/<id>/.
 # Receitas são compartilhadas; porções são por pessoa via `portions:` na receita
 # ou via `servings:` no slot do plano.
 
 people:
   - id: marcus
-    name: Marcus
+    name: "Pessoa 1 (Ele)"
     sex: male
     age: 30
     height_cm: 178
     weight_kg: 110
     activity_level: light
-    medications: ["Mounjaro 2.5 mg"]
     daily_targets:
       kcal: 1850
       protein_g: 160
@@ -18,23 +17,22 @@ people:
       fat_g: 55
     metadata:
       eyebrow: "Plano Alimentar Personalizado · v3"
-      title: "Deficit Inteligente"
-      subtitle: "3 refeições, meal prep dominical, 13 receitas integradas. ~110 kg + Mounjaro 2.5 mg."
+      title: "Déficit Inteligente"
+      subtitle: "Plano anonimizado com 3 refeições, meal prep dominical e rotação semanal de receitas."
       version: "v3"
-      goal: "deficit ~500 kcal sobre TDEE de ~2.350; perda ~0,5 kg/sem"
+      goal: "déficit moderado sobre gasto energético estimado"
       meals_per_day: 3
       deficit_kcal: 500
-      projection: "Perda alvo ~0,5 kg/semana"
+      projection: "Perda alvo gradual e sustentável"
 
   - id: rafaella
-    name: Rafaella
+    name: "Pessoa 2 (Ela)"
     sex: female
     age: 21
     height_cm: 175
     weight_kg: 133
     imc: 43.4
     activity_level: light
-    conditions: ["SOP", "dislipidemia", "ITU em investigação"]
     daily_targets:
       kcal: 1750
       protein_g: 130
@@ -46,13 +44,13 @@ people:
       added_sugar_g_max: 25
     metadata:
       eyebrow: "Plano Alimentar Personalizado · v3.1"
-      title: "Reset metabólico para Rafaella"
-      subtitle: "Protocolo de 12 semanas para SOP + obesidade grau 3. Refeições idênticas ao prep dele com porções recalibradas."
+      title: "Plano metabólico personalizado"
+      subtitle: "Plano anonimizado com 5 refeições, porções recalibradas e foco em consistência semanal."
       version: "v3.1"
-      goal: "deficit ~1.220 kcal sobre GET ~2.967"
+      goal: "déficit calórico controlado com acompanhamento profissional recomendado"
       meals_per_day: 5
       deficit_kcal: 1220
-      projection: "−10 a −13 kg em 12 semanas"
+      projection: "Projeção deve ser revisada com profissional de saúde"
 
 default_serving_scale:
   marcus: 1.0
