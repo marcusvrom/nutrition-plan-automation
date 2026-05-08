@@ -41,7 +41,7 @@ async function callAnthropic(spec: CallSpec, key: string): Promise<string> {
       "anthropic-version": "2023-06-01",
     },
     body: JSON.stringify({
-      model: "claude-haiku-4-5",
+      model: "claude-sonnet-4-6",
       max_tokens: spec.maxTokens ?? 2000,
       system: spec.system,
       messages: [{ role: "user", content: spec.user }],
