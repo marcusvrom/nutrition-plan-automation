@@ -151,7 +151,7 @@ export async function loadRecipes(): Promise<Recipe[]> {
       portions: data.portions,
       prep_source: data.prep_source,
       freeze_days: data.freeze_days,
-      source: data.source,
+      source: data.source ?? "manual",
       needs_review: data.needs_review ?? false,
       observations: data.observations,
       preparation_steps: data.preparation_steps,
