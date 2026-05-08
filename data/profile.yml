@@ -9,7 +9,7 @@ people:
     age: 30
     height_cm: 178
     weight_kg: 110
-    activity_level: moderate
+    activity_level: light
     medications: ["Mounjaro 2.5 mg"]
     daily_targets:
       kcal: 1850
