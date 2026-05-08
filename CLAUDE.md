@@ -59,11 +59,11 @@ Leia-o antes de qualquer mudança.
    seção "Δ médio/dia" estiver fora da tolerância.
 6. Variar receitas: evitar repetir a mesma receita >3x na semana,
    exceto café da manhã.
-7. Para `person_id: marcus` / Pessoa 1 (Ele), sempre gerar 4 refeições por dia:
+7. Para `person_id: person_1` / Pessoa 1 (Ele), sempre gerar 4 refeições por dia:
    `breakfast`, `lunch`, `afternoon_snack`, `dinner`.
 8. Ao adicionar `afternoon_snack` para a Pessoa 1, redistribuir porções entre
    café, almoço, lanche e jantar para manter a média diária próxima de
-   `profile.people[marcus].daily_targets`. Não apenas somar um lanche novo ao
+   `profile.people[person_1].daily_targets`. Não apenas somar um lanche novo ao
    plano existente sem reduzir ou recalibrar outras porções.
 9. Para a Pessoa 1, usar `meals_order: [breakfast, lunch, afternoon_snack, dinner]`.
 
@@ -112,11 +112,11 @@ declarar `portions:` no front-matter:
 
 ```yaml
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "180g + 150g arroz japonês"
     servings: 1.0
     macros: { kcal: 640, protein_g: 41, carbs_g: 54, fat_g: 16 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "130g + 80g arroz + brócolis dobrado"
     servings: 0.85
     macros: { kcal: 520, protein_g: 38, carbs_g: 50, fat_g: 14 }
