@@ -30,6 +30,8 @@ portions:
     description: "Panqueca menor: reduzir aveia para 20g ou servir 0.8 porção"
     servings: 0.8
     macros: { kcal: 345, protein_g: 30, carbs_g: 38, fat_g: 8 }
+source: manual
+needs_review: true
 preparation_steps:
   - "Amasse a banana em uma tigela."
   - "Misture ovo, claras, aveia, whey, canela e fermento."
