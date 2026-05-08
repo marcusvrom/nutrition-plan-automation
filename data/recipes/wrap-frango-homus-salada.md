@@ -33,6 +33,8 @@ portions:
     description: "1 wrap com menos homus ou meia tortilha extra de salada"
     servings: 0.85
     macros: { kcal: 390, protein_g: 32, carbs_g: 37, fat_g: 14 }
+source: manual
+needs_review: true
 preparation_steps:
   - "Misture iogurte, limão, sal e pimenta para formar um molho rápido."
   - "Aqueça rapidamente a tortilha em frigideira antiaderente."
