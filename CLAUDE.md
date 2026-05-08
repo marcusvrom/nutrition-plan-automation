@@ -59,6 +59,13 @@ Leia-o antes de qualquer mudança.
    seção "Δ médio/dia" estiver fora da tolerância.
 6. Variar receitas: evitar repetir a mesma receita >3x na semana,
    exceto café da manhã.
+7. Para `person_id: marcus` / Pessoa 1 (Ele), sempre gerar 4 refeições por dia:
+   `breakfast`, `lunch`, `afternoon_snack`, `dinner`.
+8. Ao adicionar `afternoon_snack` para a Pessoa 1, redistribuir porções entre
+   café, almoço, lanche e jantar para manter a média diária próxima de
+   `profile.people[marcus].daily_targets`. Não apenas somar um lanche novo ao
+   plano existente sem reduzir ou recalibrar outras porções.
+9. Para a Pessoa 1, usar `meals_order: [breakfast, lunch, afternoon_snack, dinner]`.
 
 ## Tratamento de inconsistências
 
