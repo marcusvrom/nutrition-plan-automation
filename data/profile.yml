@@ -3,7 +3,7 @@
 # ou via `servings:` no slot do plano.
 
 people:
-  - id: marcus
+  - id: person_1
     name: "Pessoa 1 (Ele)"
     sex: male
     age: 30
@@ -26,7 +26,7 @@ people:
       deficit_kcal: 500
       projection: "Perda alvo ~0,5 kg/semana"
 
-  - id: rafaella
+  - id: person_2
     name: "Pessoa 2 (Ela)"
     sex: female
     age: 21
@@ -55,5 +55,5 @@ people:
       projection: "−10 a −13 kg em 12 semanas"
 
 default_serving_scale:
-  marcus: 1.0
-  rafaella: 0.85
+  person_1: 1.0
+  person_2: 0.85
