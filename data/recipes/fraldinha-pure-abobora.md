@@ -24,7 +24,7 @@ macros_per_serving:
   carbs_g: 28
   fat_g: 16
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "125g carne + 200g purê"
     servings: 1.0
     macros: { kcal: 420, protein_g: 38, carbs_g: 28, fat_g: 16 }

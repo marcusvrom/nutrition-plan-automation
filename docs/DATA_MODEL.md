@@ -45,11 +45,11 @@ Lista de pessoas e suas metas diárias.
 
 ```yaml
 people:
-  - id: marcus
+  - id: person_1
     daily_targets: { kcal: 2400, protein_g: 180, carbs_g: 240, fat_g: 75 }
 default_serving_scale:
-  marcus: 1.0
-  namorada: 0.7
+  person_1: 1.0
+  person_2: 0.7
 ```
 
 `default_serving_scale` é apenas dica para a LLM ao gerar slots; o cálculo
@@ -62,7 +62,7 @@ days:
   monday:
     breakfast:
       recipe_id: omelete-proteico
-      servings: { marcus: 1.0, namorada: 0.7 }
+      servings: { person_1: 1.0, person_2: 0.7 }
 ```
 
 - `recipe_id` deve referenciar receita existente (validado).

@@ -26,11 +26,11 @@ macros_per_serving:
   carbs_g: 44
   fat_g: 18
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "200g frango ao curry + 130g arroz integral"
     servings: 1.0
     macros: { kcal: 560, protein_g: 48, carbs_g: 52, fat_g: 18 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "160g frango ao curry + 80g arroz integral + salada"
     servings: 0.85
     macros: { kcal: 420, protein_g: 36, carbs_g: 34, fat_g: 14 }

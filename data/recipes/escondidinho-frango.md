@@ -25,11 +25,11 @@ macros_per_serving:
   carbs_g: 36
   fat_g: 11
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "250g + whey água"
     servings: 1.0
     macros: { kcal: 460, protein_g: 53, carbs_g: 32, fat_g: 11 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "200g + salada grande + whey água"
     servings: 0.8
     macros: { kcal: 450, protein_g: 42, carbs_g: 28, fat_g: 18 }

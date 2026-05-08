@@ -24,11 +24,11 @@ macros_per_serving:
   carbs_g: 18
   fat_g: 12
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "1 filé + arroz integral"
     servings: 1.0
     macros: { kcal: 480, protein_g: 38, carbs_g: 48, fat_g: 14 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "1 filé + salada grande + 80g arroz"
     servings: 1.0
     macros: { kcal: 440, protein_g: 36, carbs_g: 36, fat_g: 14 }

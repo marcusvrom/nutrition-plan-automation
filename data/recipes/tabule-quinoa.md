@@ -25,11 +25,11 @@ macros_per_serving:
   carbs_g: 38
   fat_g: 14
 portions:
-  - person_id: rafaella
+  - person_id: person_2
     description: "1 prato (~300g)"
     servings: 1.0
     macros: { kcal: 430, protein_g: 36, carbs_g: 38, fat_g: 14 }
-  - person_id: marcus
+  - person_id: person_1
     description: "Prato cheio (~400g)"
     servings: 1.3
     macros: { kcal: 560, protein_g: 47, carbs_g: 49, fat_g: 18 }

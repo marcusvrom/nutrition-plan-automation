@@ -22,7 +22,7 @@ macros_per_serving:
   carbs_g: 38
   fat_g: 24
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "3 fatias + legumes + whey água"
     servings: 1.5
     macros: { kcal: 580, protein_g: 58, carbs_g: 57, fat_g: 36 }
