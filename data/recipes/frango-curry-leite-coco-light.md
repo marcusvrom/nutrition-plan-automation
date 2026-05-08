@@ -34,6 +34,8 @@ portions:
     description: "160g frango ao curry + 80g arroz integral + salada"
     servings: 0.85
     macros: { kcal: 420, protein_g: 36, carbs_g: 34, fat_g: 14 }
+source: manual
+needs_review: true
 preparation_steps:
   - "Tempere o frango com sal, curry e alho."
   - "Refogue cebola e pimentao no azeite ate murchar."

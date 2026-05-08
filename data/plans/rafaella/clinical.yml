@@ -1,6 +1,7 @@
 intro: >-
-  Painel de 08/10/2025. Marcadores em laranja/vermelho direcionam decisões
-  nutricionais e farmacológicas.
+  Painel de 08/10/2025 para Pessoa 2 (Ela). Marcadores em laranja/vermelho
+  direcionam decisões nutricionais e farmacológicas, mantendo identificação
+  pessoal anonimizada.
 
 alerts:
   - level: critical

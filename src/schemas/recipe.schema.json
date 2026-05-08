@@ -3,7 +3,7 @@
   "$id": "recipe.schema.json",
   "title": "Recipe",
   "type": "object",
-  "required": ["id", "name", "servings", "ingredients", "macros_per_serving"],
+  "required": ["id", "name", "servings", "ingredients", "macros_per_serving", "source"],
   "properties": {
     "id":   { "type": "string", "pattern": "^[a-z0-9-]+$" },
     "name": { "type": "string", "minLength": 1 },
@@ -22,7 +22,7 @@
         "properties": {
           "ingredient": { "type": "string", "minLength": 1 },
           "quantity":   { "type": "number", "exclusiveMinimum": 0 },
-          "unit":       { "type": "string" }
+          "unit":       { "type": "string", "minLength": 1 }
         },
         "additionalProperties": true
       }
@@ -38,10 +38,34 @@
       },
       "additionalProperties": true
     },
-    "portions": { "type": "array" },
+    "portions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["person_id", "description", "servings"],
+        "properties": {
+          "person_id": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 },
+          "servings": { "type": "number", "exclusiveMinimum": 0 },
+          "ingredient_note": { "type": "string" },
+          "macros": {
+            "type": "object",
+            "required": ["kcal", "protein_g", "carbs_g", "fat_g"],
+            "properties": {
+              "kcal":      { "type": "number", "minimum": 0 },
+              "protein_g": { "type": "number", "minimum": 0 },
+              "carbs_g":   { "type": "number", "minimum": 0 },
+              "fat_g":     { "type": "number", "minimum": 0 }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    },
     "prep_source": { "type": "string" },
     "freeze_days": { "type": "number" },
-    "source":        { "type": "string" },
+    "source":        { "type": "string", "minLength": 1 },
     "needs_review":  { "type": "boolean" },
     "observations":  { "type": "string" },
     "preparation_steps": { "type": "array", "items": { "type": "string" } }

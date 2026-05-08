@@ -1,10 +1,10 @@
-# Perfis das duas pessoas. Cada uma tem seu plano em data/plans/<id>/.
+# Perfis anonimizados das duas pessoas. Cada uma tem seu plano em data/plans/<id>/.
 # Receitas são compartilhadas; porções são por pessoa via `portions:` na receita
 # ou via `servings:` no slot do plano.
 
 people:
   - id: marcus
-    name: Marcus
+    name: "Pessoa 1 (Ele)"
     sex: male
     age: 30
     height_cm: 178
@@ -18,8 +18,8 @@ people:
       fat_g: 55
     metadata:
       eyebrow: "Plano Alimentar Personalizado · v3"
-      title: "Deficit Inteligente"
-      subtitle: "3 refeições, meal prep dominical, 13 receitas integradas. ~110 kg + Mounjaro 2.5 mg."
+      title: "Déficit Inteligente"
+      subtitle: "Plano anonimizado com 3 refeições, meal prep dominical, rotação semanal de receitas e contexto clínico preservado."
       version: "v3"
       goal: "deficit ~500 kcal sobre TDEE de ~2.350; perda ~0,5 kg/sem"
       meals_per_day: 3
@@ -27,7 +27,7 @@ people:
       projection: "Perda alvo ~0,5 kg/semana"
 
   - id: rafaella
-    name: Rafaella
+    name: "Pessoa 2 (Ela)"
     sex: female
     age: 21
     height_cm: 175
@@ -46,7 +46,7 @@ people:
       added_sugar_g_max: 25
     metadata:
       eyebrow: "Plano Alimentar Personalizado · v3.1"
-      title: "Reset metabólico para Rafaella"
+      title: "Reset metabólico para Pessoa 2 (Ela)"
       subtitle: "Protocolo de 12 semanas para SOP + obesidade grau 3. Refeições idênticas ao prep dele com porções recalibradas."
       version: "v3.1"
       goal: "deficit ~1.220 kcal sobre GET ~2.967"

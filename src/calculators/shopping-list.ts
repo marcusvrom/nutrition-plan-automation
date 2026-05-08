@@ -12,8 +12,15 @@ const normalize = (n: string): string => n.trim().toLowerCase();
 const keyOf = (ing: string, unit: Unit): string =>
   `${normalize(ing)}|${unit}`;
 
+function getActiveWeekForPlan(plan: FoodPlanFile["plans"][number], foodPlan: FoodPlanFile) {
+  const activeWeekId = foodPlan.settings?.active_weeks?.[plan.person_id];
+  if (!activeWeekId) return plan.weeks[0];
+  return plan.weeks.find((week) => week.id === activeWeekId) ?? plan.weeks[0];
+}
+
 /** Soma ingredientes em um único agregado por (nome, unidade), considerando
- *  apenas a primeira semana de cada plano (lista é semanal). */
+ *  a semana ativa por pessoa em foodPlan.settings.active_weeks.
+ *  Se nenhuma semana ativa for declarada, usa a primeira semana do plano. */
 export function computeShoppingList(args: {
   foodPlan: FoodPlanFile;
   recipes: Map<string, Recipe>;
@@ -22,7 +29,7 @@ export function computeShoppingList(args: {
   const totals = new Map<string, ShoppingItem>();
 
   for (const plan of args.foodPlan.plans) {
-    const week = plan.weeks[0];
+    const week = getActiveWeekForPlan(plan, args.foodPlan);
     if (!week) continue;
     for (const meals of Object.values(week.days)) {
       for (const slot of Object.values(meals)) {
