@@ -25,11 +25,11 @@ macros_per_serving:
   carbs_g: 53
   fat_g: 13
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "180g frango + brócolis padrão + 150g arroz"
     servings: 1.0
     macros: { kcal: 620, protein_g: 52, carbs_g: 58, fat_g: 14 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "130g frango + brócolis dobrado + 80g arroz integral"
     servings: 0.85
     macros: { kcal: 510, protein_g: 42, carbs_g: 48, fat_g: 14 }

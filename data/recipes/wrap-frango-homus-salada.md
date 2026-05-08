@@ -25,11 +25,11 @@ macros_per_serving:
   carbs_g: 44
   fat_g: 16
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "1 wrap grande com 130g frango + homus + salada"
     servings: 1.0
     macros: { kcal: 460, protein_g: 38, carbs_g: 44, fat_g: 16 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "1 wrap com menos homus ou meia tortilha extra de salada"
     servings: 0.85
     macros: { kcal: 390, protein_g: 32, carbs_g: 37, fat_g: 14 }

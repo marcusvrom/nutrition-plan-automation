@@ -1,4 +1,5 @@
 rules:
+  - { icon: "🍽️", title: "Cadência: 4 refeições/dia", description: "Gerar café da manhã, almoço, lanche da tarde e jantar para a Pessoa 1 (Ele)." }
   - { icon: "💧",  title: "Hidratação: 3L+/dia",  description: "Mounjaro pode causar desidratação." }
   - { icon: "☕",  title: "Café preto é livre",   description: "0 kcal, termogênico. Sem açúcar nem cremes." }
   - { icon: "🚫",  title: "Zero açúcar refinado", description: "Impacto direto na TGP e esteatose." }

@@ -29,11 +29,11 @@ macros_per_serving:
   carbs_g: 54
   fat_g: 14
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "180g carne + 150g arroz japonês"
     servings: 1.0
     macros: { kcal: 640, protein_g: 41, carbs_g: 54, fat_g: 16 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "130g carne + 80g arroz + brócolis dobrado"
     servings: 0.85
     macros: { kcal: 520, protein_g: 38, carbs_g: 50, fat_g: 14 }

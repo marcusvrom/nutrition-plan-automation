@@ -21,11 +21,11 @@ macros_per_serving:
   carbs_g: 16
   fat_g: 13
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "Padrão (40g goma + 100g frango + requeijão)"
     servings: 1.0
     macros: { kcal: 440, protein_g: 35, carbs_g: 26, fat_g: 14 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "Mini (25g goma + 80g frango + requeijão light)"
     servings: 0.7
     macros: { kcal: 310, protein_g: 32, carbs_g: 18, fat_g: 11 }

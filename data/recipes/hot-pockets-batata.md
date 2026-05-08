@@ -24,11 +24,11 @@ macros_per_serving:
   carbs_g: 20
   fat_g: 6
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "2 hot pockets + whey água"
     servings: 2.0
     macros: { kcal: 510, protein_g: 53, carbs_g: 40, fat_g: 13 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "1 hot pocket + ovo + salada grande"
     servings: 1.0
     macros: { kcal: 440, protein_g: 28, carbs_g: 28, fat_g: 18 }

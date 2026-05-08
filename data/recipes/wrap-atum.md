@@ -23,7 +23,7 @@ macros_per_serving:
   carbs_g: 36
   fat_g: 10
 portions:
-  - person_id: rafaella
+  - person_id: person_2
     description: "2 wraps"
     servings: 1.0
     macros: { kcal: 380, protein_g: 32, carbs_g: 36, fat_g: 10 }

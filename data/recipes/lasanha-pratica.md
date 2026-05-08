@@ -23,7 +23,7 @@ macros_per_serving:
   carbs_g: 34
   fat_g: 12
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "250g + salada"
     servings: 1.0
     macros: { kcal: 380, protein_g: 32, carbs_g: 34, fat_g: 12 }

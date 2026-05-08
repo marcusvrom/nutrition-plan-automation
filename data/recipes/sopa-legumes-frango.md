@@ -26,11 +26,11 @@ macros_per_serving:
   carbs_g: 18
   fat_g: 9
 portions:
-  - person_id: rafaella
+  - person_id: person_2
     description: "1 tigela cheia"
     servings: 1.0
     macros: { kcal: 280, protein_g: 30, carbs_g: 18, fat_g: 9 }
-  - person_id: marcus
+  - person_id: person_1
     description: "1 tigela + 2 fatias pão integral"
     servings: 1.4
     macros: { kcal: 470, protein_g: 38, carbs_g: 48, fat_g: 13 }

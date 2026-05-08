@@ -1,5 +1,5 @@
 intro: |
-  Roteiro do meal prep dominical (~3-4h). Produz comida para os dois — Marcus e Rafaella.
+  Roteiro do meal prep dominical (~3-4h). Produz comida para os dois — Pessoa 1 (Ele) e Pessoa 2 (Ela).
   Mesma receita, mesma compra, porções diferentes na hora de servir.
   Janela típica: 09:00–12:00.
 
@@ -55,7 +55,7 @@ steps:
   - time: "12:00"
     title: "Porcionar e congelar"
     body: >-
-      Esfriar tudo. Etiquetar com cor (rosa = Rafaella, azul = Marcus) +
+      Esfriar tudo. Etiquetar com cor (rosa = Pessoa 2 (Ela), azul = Pessoa 1 (Ele)) +
       data + porção. Geladeira (3 dias): perecíveis. Freezer (4-7 dias):
       o resto. Arroz SEMPRE em potes separados.
 

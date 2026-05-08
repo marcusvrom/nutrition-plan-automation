@@ -24,7 +24,7 @@ macros_per_serving:
   carbs_g: 42
   fat_g: 12
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "+ 1 scoop whey água (recomendado)"
     servings: 1.0
     macros: { kcal: 465, protein_g: 43, carbs_g: 44, fat_g: 13 }

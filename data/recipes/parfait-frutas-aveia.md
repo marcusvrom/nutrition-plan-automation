@@ -21,7 +21,7 @@ macros_per_serving:
   carbs_g: 38
   fat_g: 10
 portions:
-  - person_id: rafaella
+  - person_id: person_2
     description: "1 copo (acrescenta whey opcional p/ +25g P)"
     servings: 1.0
     macros: { kcal: 320, protein_g: 18, carbs_g: 38, fat_g: 10 }

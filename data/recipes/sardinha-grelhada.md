@@ -21,11 +21,11 @@ macros_per_serving:
   carbs_g: 14
   fat_g: 22
 portions:
-  - person_id: rafaella
+  - person_id: person_2
     description: "1 lata + salada grande"
     servings: 1.0
     macros: { kcal: 380, protein_g: 30, carbs_g: 14, fat_g: 22 }
-  - person_id: marcus
+  - person_id: person_1
     description: "2 latas + salada (jantar leve)"
     servings: 2.0
     macros: { kcal: 720, protein_g: 60, carbs_g: 14, fat_g: 44 }
@@ -38,4 +38,4 @@ observations: "~2-3g ômega-3/lata + cálcio dos ossos + vit D. Inclui 1-2x/sem 
 
 # Sardinha Grelhada
 
-Fonte de ômega-3 anti-inflamatório, especialmente importante no plano da Rafaella.
+Fonte de ômega-3 anti-inflamatório, especialmente importante no plano da Pessoa 2 (Ela).
