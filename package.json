@@ -8,6 +8,8 @@
     "validate": "tsx src/cli/validate.ts",
     "build": "tsx src/cli/build.ts",
     "report": "tsx src/cli/report.ts",
+    "report:ai": "tsx src/cli/report-ai.ts",
+    "update-weight": "tsx src/cli/update-weight.ts",
     "all": "npm run validate && npm run report",
     "typecheck": "tsc --noEmit"
   },

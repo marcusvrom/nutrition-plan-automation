@@ -21,6 +21,8 @@ import type {
 } from "../domain/types.ts";
 import type { ValidationIssue } from "../validators/validate.ts";
 import { macrosForSlotPerson } from "../calculators/macros.ts";
+import type { AiNarrative } from "../ai/narrative.ts";
+import type { WeightLogFile } from "../domain/types.ts";
 
 const ROOT = process.cwd();
 
@@ -71,7 +73,6 @@ function tagBadge(tag: ShoppingTag): string {
     his: "💙 dele",
     fresh: "🌿 fresco",
     stock: "📦 estoque",
-    swap: "💰 econômico",
   };
   return `<span class="shop-tag t-${tag}">${labels[tag] ?? tag}</span>`;
 }
@@ -444,25 +445,6 @@ function renderShoppingByCategory(grouped: ShoppingByCategory[]): string {
     .join("");
 }
 
-function renderSwapTable(sc: ShoppingCategoriesFile | undefined): string {
-  if (!sc?.swap_table?.length) return "";
-  const rows = sc.swap_table
-    .map(
-      (s) => `<tr>
-      <td><strong>${escape(s.from)}</strong></td>
-      <td>${escape(s.to)}</td>
-      <td><span class="badge s-ok">${escape(s.weekly_savings_brl)}</span></td>
-      <td>${escape(s.rationale)}</td>
-    </tr>`,
-    )
-    .join("");
-  return `<h3>Substituições econômicas</h3>
-  <table class="data-table">
-    <thead><tr><th>Saída</th><th>Entrada</th><th>Economia</th><th>Justificativa</th></tr></thead>
-    <tbody>${rows}</tbody>
-  </table>`;
-}
-
 function renderPantryEssentials(sc: ShoppingCategoriesFile | undefined): string {
   if (!sc?.pantry_essentials?.length) return "";
   const items = sc.pantry_essentials
@@ -503,6 +485,73 @@ function renderPersonHero(person: Person, weekly: PersonWeekTotal[]): string {
   </header>`;
 }
 
+function renderWeightHistory(
+  weightLogs: Record<string, WeightLogFile>,
+  profile: ProfileFile,
+): string {
+  const sections = profile.people
+    .map((p) => {
+      const log = weightLogs[p.id];
+      if (!log || !log.entries.length) return "";
+      const rows = log.entries
+        .map(
+          (e) =>
+            `<tr><td><code>${escape(e.date)}</code></td><td><strong>${e.weight_kg} kg</strong></td><td>${escape(e.note ?? "")}</td></tr>`,
+        )
+        .join("");
+      const first = log.entries[0]!;
+      const last = log.entries[log.entries.length - 1]!;
+      const deltaKg = +(last.weight_kg - first.weight_kg).toFixed(1);
+      return `<div class="card">
+        <div class="card-title">${escape(p.name)} — variação ${deltaKg >= 0 ? "+" : ""}${deltaKg} kg</div>
+        <table class="data-table">
+          <thead><tr><th>Data</th><th>Peso</th><th>Observação</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+    })
+    .join("");
+  if (!sections) return "";
+  return `<p class="muted">Atualize com <code>npm run update-weight -- &lt;person_id&gt; &lt;kg&gt; --apply</code>. As metas diárias recalculam automaticamente via Mifflin-St Jeor.</p>${sections}`;
+}
+
+function renderAiNarrative(narrative: AiNarrative | undefined, profile: ProfileFile): string {
+  if (!narrative) return "";
+  if (narrative.errorMessage) {
+    return alertBox(
+      "warn",
+      "⚠ Análise por IA indisponível",
+      escape(narrative.errorMessage),
+    );
+  }
+  const banner = narrative.fellBack
+    ? alertBox(
+        "warn",
+        "⚠ AVISO IMPORTANTE: Conteúdo gerado por provedor de fallback",
+        `Esta análise foi gerada por <strong>${escape(narrative.providerUsed ?? "")}</strong> porque a chave do Claude (Anthropic) não estava disponível ou a chamada falhou. A qualidade pode divergir do esperado. Configure <code>ANTHROPIC_API_KEY</code> para usar o provedor primário.`,
+      )
+    : "";
+  const perPerson = narrative.perPerson
+    .map((p) => {
+      const person = profile.people.find((x) => x.id === p.personId);
+      const tips = p.tips
+        .map((t) => `<li>${escape(t)}</li>`)
+        .join("");
+      return `<div class="card">
+        <div class="card-eyebrow">Análise por IA</div>
+        <div class="card-title">${escape(person?.name ?? p.personId)}</div>
+        <p>${escape(p.summary)}</p>
+        ${tips ? `<ul class="ai-tips">${tips}</ul>` : ""}
+      </div>`;
+    })
+    .join("");
+  const global = narrative.globalObservation
+    ? `<div class="card"><div class="card-eyebrow">Observação geral</div><p>${escape(narrative.globalObservation)}</p></div>`
+    : "";
+  const stamp = `<p class="muted small">Gerado em ${escape(narrative.generatedAt)} via <strong>${escape(narrative.providerUsed ?? "")}</strong>.</p>`;
+  return `${banner}${stamp}<div class="grid-2">${perPerson}</div>${global}`;
+}
+
 export async function generateHtmlReport(args: {
   weekly: PersonWeekTotal[];
   profile: ProfileFile;
@@ -518,6 +567,8 @@ export async function generateHtmlReport(args: {
   supplements: Record<string, SupplementsFile>;
   clinical: Record<string, ClinicalFile>;
   cronograma: Record<string, CronogramaFile>;
+  weightLogs: Record<string, WeightLogFile>;
+  aiNarrative?: AiNarrative;
   issues: ValidationIssue[];
 }): Promise<string> {
   const tplPath = join(ROOT, "templates", "report-template.html");
@@ -634,7 +685,6 @@ export async function generateHtmlReport(args: {
     ${args.shoppingCategoriesFile.intro ? `<p class="muted">${escape(args.shoppingCategoriesFile.intro)}</p>` : ""}
     <div class="shop-grid">${renderShoppingByCategory(args.groupedShopping)}</div>
     ${renderPantryEssentials(args.shoppingCategoriesFile)}
-    ${renderSwapTable(args.shoppingCategoriesFile)}
   </section>`);
 
   if (args.mealPrep?.steps.length) {
@@ -644,14 +694,44 @@ export async function generateHtmlReport(args: {
     </section>`);
   }
 
+  const weightSection = renderWeightHistory(args.weightLogs, args.profile);
+  if (weightSection) {
+    sharedSections.push(`<section class="section" id="weights">
+      <div class="section-head"><div class="section-num">★</div><div class="section-title">Histórico de peso</div></div>
+      ${weightSection}
+    </section>`);
+  }
+
+  if (args.aiNarrative) {
+    sharedSections.unshift(`<section class="section" id="ai-narrative">
+      <div class="section-head"><div class="section-num">AI</div><div class="section-title">Análise por IA</div></div>
+      ${renderAiNarrative(args.aiNarrative, args.profile)}
+    </section>`);
+  }
+
   sharedSections.push(`<section class="section" id="validation">
     <div class="section-head"><div class="section-num">★</div><div class="section-title">Validação</div></div>
     ${renderIssues(args.issues)}
   </section>`);
 
+  const fallbackBanner =
+    args.aiNarrative && args.aiNarrative.fellBack
+      ? `<div class="fallback-banner">
+          <strong>⚠ AVISO: Relatório gerado com provedor de IA alternativo</strong>
+          A análise por IA neste relatório foi gerada por
+          <strong>${escape(args.aiNarrative.providerUsed ?? "")}</strong>
+          como fallback porque a chave do Claude (Anthropic) não estava configurada
+          ou a chamada falhou. Os <strong>cálculos de macros, kcal e lista de compras
+          continuam determinísticos</strong> (não foram afetados). Para usar o
+          provedor primário, defina <code>ANTHROPIC_API_KEY</code> e rode
+          <code>npm run report:ai</code> novamente.
+        </div>`
+      : "";
+
   const filled = tpl
     .replaceAll("{{GENERATED_AT}}", new Date().toISOString())
     .replace("{{NAV_ITEMS}}", navItems)
+    .replace("{{FALLBACK_BANNER}}", fallbackBanner)
     .replace("{{PEOPLE_SECTIONS}}", peopleSections)
     .replace("{{SHARED_SECTIONS}}", sharedSections.join(""));
 

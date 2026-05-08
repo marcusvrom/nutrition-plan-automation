@@ -15,6 +15,7 @@ import type {
   ClinicalFile,
   CronogramaFile,
   ShoppingCategoriesFile,
+  WeightLogFile,
 } from "../domain/types.ts";
 
 const ROOT = process.cwd();
@@ -104,6 +105,22 @@ export async function loadClinical(): Promise<Record<string, ClinicalFile>> {
 
 export async function loadCronograma(): Promise<Record<string, CronogramaFile>> {
   return loadPersonScopedFile<CronogramaFile>("cronograma.yml", { items: [] });
+}
+
+export async function loadWeightLogs(): Promise<Record<string, WeightLogFile>> {
+  const weightsDir = join(DATA_DIR, "weights");
+  const out: Record<string, WeightLogFile> = {};
+  if (!(await exists(weightsDir))) return out;
+  const files = await readdir(weightsDir);
+  for (const f of files) {
+    if (extname(f) !== ".yml") continue;
+    const personId = basename(f, ".yml");
+    out[personId] = await loadYaml<WeightLogFile>(
+      join(weightsDir, f),
+      { person_id: personId, entries: [] },
+    );
+  }
+  return out;
 }
 
 export async function loadRecipes(): Promise<Recipe[]> {

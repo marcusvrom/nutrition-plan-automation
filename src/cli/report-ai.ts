@@ -1,3 +1,13 @@
+// Variante de `report` que ainda chama um provedor de IA para gerar
+// uma narrativa (resumo + dicas) embutida no HTML.
+//
+// Ordem de fallback: Anthropic → OpenAI → Gemini. Se nenhum provedor
+// estiver configurado ou todos falharem, o relatório é gerado mesmo assim
+// com aviso na seção "Análise por IA".
+//
+// IMPORTANTE: a IA NÃO calcula macros. Apenas comenta os números já
+// calculados deterministicamente.
+
 import {
   indexRecipes,
   loadClinical,
@@ -21,6 +31,7 @@ import {
 } from "../calculators/shopping-list.ts";
 import { validateAll } from "../validators/validate.ts";
 import { generateHtmlReport } from "../generators/html-report.ts";
+import { generateNarrative } from "../ai/narrative.ts";
 
 const [
   recipes,
@@ -61,6 +72,19 @@ const groupedShopping = groupShoppingByCategory({
   categories: shoppingCategoriesFile,
 });
 
+console.log("Chamando provedor de IA…");
+const aiNarrative = await generateNarrative({
+  profile,
+  weekly,
+  weightLogs,
+});
+
+if (aiNarrative.providerUsed) {
+  console.log(`✔ Provedor: ${aiNarrative.providerUsed}${aiNarrative.fellBack ? " (FALLBACK)" : ""}`);
+} else {
+  console.warn(`⚠ IA indisponível: ${aiNarrative.errorMessage ?? "?"}`);
+}
+
 const outPath = await generateHtmlReport({
   weekly,
   profile,
@@ -77,6 +101,7 @@ const outPath = await generateHtmlReport({
   clinical,
   cronograma,
   weightLogs,
+  aiNarrative,
   issues,
 });
 

@@ -212,7 +212,6 @@ pre{white-space:pre-wrap;background:var(--surface-alt);padding:12px;border-radiu
 .shop-tag.t-shared{background:var(--teal-l);color:var(--teal)}
 .shop-tag.t-fresh{background:var(--carb-l);color:var(--carb)}
 .shop-tag.t-stock{background:var(--surface-alt);color:var(--text-3);border:1px dashed var(--border-strong)}
-.shop-tag.t-swap{background:var(--accent-light);color:var(--accent-dark)}
 
 .pantry-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin-top:10px}
 .pantry-item{background:var(--surface-alt);border-radius:8px;padding:12px;font-size:13px}
@@ -243,6 +242,18 @@ pre{white-space:pre-wrap;background:var(--surface-alt);padding:12px;border-radiu
 .issues li.warning{color:var(--warning)}
 .ok-msg{color:var(--accent-dark)}
 
+/* ai */
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px;margin:14px 0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.card-title{font-weight:700;font-size:16px;margin-bottom:6px}
+.card-eyebrow{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3);font-weight:700;margin-bottom:4px}
+.ai-tips{margin-top:10px;padding-left:18px;font-size:13px;color:var(--text-2)}
+.ai-tips li{margin-bottom:4px}
+
+/* fallback banner global */
+.fallback-banner{background:var(--warn-l);border:2px solid var(--warning);color:var(--accent-dark);padding:18px 22px;margin:12px 0 28px;border-radius:var(--radius);font-size:14px}
+.fallback-banner strong{font-size:16px;display:block;margin-bottom:4px}
+
 footer{margin-top:48px;padding:20px;text-align:center;color:var(--text-3);font-size:12px;border-top:1px solid var(--border)}
 
 @media (max-width:640px){
@@ -272,6 +283,8 @@ footer{margin-top:48px;padding:20px;text-align:center;color:var(--text-3);font-s
   <h1>Sistema versionado</h1>
   <p class="gen">Gerado em {{GENERATED_AT}}</p>
 </header>
+
+{{FALLBACK_BANNER}}
 
 {{PEOPLE_SECTIONS}}
 

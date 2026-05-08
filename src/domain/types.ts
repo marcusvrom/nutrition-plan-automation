@@ -98,6 +98,19 @@ export interface ProfileFile {
   default_serving_scale?: Record<string, number>;
 }
 
+// ─── Histórico de peso ──────────────────────────────────────────────────────
+
+export interface WeightEntry {
+  date: string;          // ISO YYYY-MM-DD
+  weight_kg: number;
+  note?: string;
+}
+
+export interface WeightLogFile {
+  person_id: string;
+  entries: WeightEntry[];
+}
+
 // ─── Plano semanal ──────────────────────────────────────────────────────────
 
 export type MealLabel =
@@ -268,7 +281,7 @@ export interface CronogramaFile {
 
 // ─── Lista de compras (categorias + tags) ───────────────────────────────────
 
-export type ShoppingTag = "shared" | "her" | "his" | "fresh" | "stock" | "swap";
+export type ShoppingTag = "shared" | "her" | "his" | "fresh" | "stock";
 
 export interface ShoppingCategoryItemConfig {
   ingredient: string;
@@ -293,7 +306,6 @@ export interface ShoppingCategoriesFile {
   intro?: string;
   categories: ShoppingCategory[];
   pantry_essentials?: { name: string; note?: string }[];
-  swap_table?: { from: string; to: string; weekly_savings_brl: string; rationale: string }[];
 }
 
 // ─── Saídas calculadas ──────────────────────────────────────────────────────

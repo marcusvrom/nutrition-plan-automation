@@ -53,10 +53,40 @@ Requisitos: Node.js 20+.
 ```bash
 npm install
 npm run validate    # checa schemas e referências cruzadas
-npm run report      # gera output/index.html
+npm run report      # gera output/index.html (determinístico, sem IA)
+npm run report:ai   # idem + adiciona seção de análise por IA
 ```
 
 Abra `output/index.html` no navegador.
+
+### Atualizar peso (semanal)
+
+```bash
+# dry run: mostra novos targets calculados
+npm run update-weight -- marcus 108
+
+# aplica: grava em data/weights/<id>.yml e recalcula daily_targets
+npm run update-weight -- marcus 108 --apply --note "pesagem semanal"
+npm run report
+```
+
+A meta calórica é recalculada via Mifflin-St Jeor + activity_level + `metadata.deficit_kcal`. Proteína (g) é mantida; gordura ~28% kcal; carbo é o resto.
+
+### IA (Claude → OpenAI → Gemini)
+
+`npm run report:ai` chama um provedor de IA para gerar uma seção de
+**análise** — resumo da semana e dicas — embutida no relatório. Os macros
+e a lista de compras continuam **determinísticos** (a IA nunca calcula
+números). Ordem de fallback:
+
+1. `ANTHROPIC_API_KEY` → Claude (claude-haiku-4-5)
+2. `OPENAI_API_KEY`    → OpenAI (gpt-4o-mini)
+3. `GEMINI_API_KEY`    → Gemini (gemini-2.0-flash)
+
+Se Claude não estiver disponível e o sistema cair para OpenAI/Gemini, um
+**banner grande de aviso** é renderizado no topo do HTML. Se nenhum
+provedor estiver configurado, a seção exibe um aviso e o relatório continua
+funcional.
 
 ## Adicionar uma receita
 

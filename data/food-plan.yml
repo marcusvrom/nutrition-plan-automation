@@ -49,7 +49,7 @@ plans:
         days:
           monday:
             breakfast: { recipe_id: omelete-proteico, servings: { marcus: 1 } }
-            lunch:     { recipe_id: mongolian-beef, servings: { marcus: 1 } }
+            lunch:     { recipe_id: strogonoff-frango, servings: { marcus: 1 } }
             dinner:    { recipe_id: escondidinho-frango, servings: { marcus: 1 } }
           tuesday:
             breakfast: { recipe_id: crepe-tapioca-proteico, servings: { marcus: 1 } }
@@ -75,6 +75,37 @@ plans:
             breakfast: { recipe_id: shake-completo, servings: { marcus: 1 } }
             lunch:     { recipe_id: mongolian-beef, servings: { marcus: 1 } }
             dinner:    { recipe_id: escondidinho-frango, servings: { marcus: 1 } }
+      - id: C
+        label: Semana C (variedade · peixe)
+        days:
+          monday:
+            breakfast: { recipe_id: parfait-frutas-aveia, servings: { marcus: 1 } }
+            lunch:     { recipe_id: strogonoff-frango, servings: { marcus: 1 } }
+            dinner:    { recipe_id: peixe-milanesa-aveia, servings: { marcus: 1 } }
+          tuesday:
+            breakfast: { recipe_id: omelete-proteico, servings: { marcus: 1 } }
+            lunch:     { recipe_id: tabule-quinoa, servings: { marcus: 1.3 } }
+            dinner:    { recipe_id: sopa-legumes-frango, servings: { marcus: 1.4 } }
+          wednesday:
+            breakfast: { recipe_id: crepe-tapioca-proteico, servings: { marcus: 1 } }
+            lunch:     { recipe_id: frango-brocolis-requeijao, servings: { marcus: 1 } }
+            dinner:    { recipe_id: sardinha-grelhada, servings: { marcus: 2 } }
+          thursday:
+            breakfast: { recipe_id: omelete-proteico, servings: { marcus: 1 } }
+            lunch:     { recipe_id: mongolian-beef, servings: { marcus: 1 } }
+            dinner:    { recipe_id: quibe-assado, servings: { marcus: 2 } }
+          friday:
+            breakfast: { recipe_id: parfait-frutas-aveia, servings: { marcus: 1 } }
+            lunch:     { recipe_id: peixe-milanesa-aveia, servings: { marcus: 1 } }
+            dinner:    { recipe_id: hot-pockets-batata, servings: { marcus: 2 } }
+          saturday:
+            breakfast: { recipe_id: bolo-coco-fit, servings: { marcus: 1 } }
+            lunch:     { recipe_id: lasanha-pratica, servings: { marcus: 1 } }
+            dinner:    { recipe_id: mini-pizza-pastel, servings: { marcus: 1.5 } }
+          sunday:
+            breakfast: { recipe_id: shake-completo, servings: { marcus: 1 } }
+            lunch:     { recipe_id: strogonoff-frango, servings: { marcus: 1 } }
+            dinner:    { recipe_id: rondelli-carne, servings: { marcus: 1 } }
 
   # ============================================================ Rafaella
   - person_id: rafaella
@@ -145,3 +176,51 @@ plans:
             afternoon_snack: { recipe_id: iogurte-aveia-canela, servings: { rafaella: 1 }, meal_time: "16:30" }
             dinner:          { recipe_id: rondelli-carne, servings: { rafaella: 1 }, meal_time: "20:00",
                                 notes: "Recém-feito do prep + vegetais assados generosos" }
+      - id: B
+        label: Semana B (variedade · peixe + sopa)
+        days:
+          monday:
+            breakfast:       { recipe_id: parfait-frutas-aveia, servings: { rafaella: 1 }, meal_time: "07:30" }
+            morning_snack:   { recipe_id: ovos-cozidos-banana, servings: { rafaella: 1 }, meal_time: "10:30" }
+            lunch:           { recipe_id: strogonoff-frango, servings: { rafaella: 1 }, meal_time: "12:30",
+                                notes: "Versão dela com salada grande" }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { rafaella: 1 }, meal_time: "16:00" }
+            dinner:          { recipe_id: sopa-legumes-frango, servings: { rafaella: 1 }, meal_time: "20:00",
+                                notes: "Tigela cheia + 1 fatia pão integral" }
+          tuesday:
+            breakfast:       { recipe_id: omelete-proteico, servings: { rafaella: 1 } }
+            morning_snack:   { recipe_id: iogurte-chia-frutas, servings: { rafaella: 1 } }
+            lunch:           { recipe_id: tabule-quinoa, servings: { rafaella: 1 }, meal_time: "12:30" }
+            afternoon_snack: { recipe_id: whey-castanhas, servings: { rafaella: 1 } }
+            dinner:          { recipe_id: peixe-milanesa-aveia, servings: { rafaella: 1 }, meal_time: "20:00" }
+          wednesday:
+            breakfast:       { recipe_id: crepe-tapioca-proteico, servings: { rafaella: 1 } }
+            morning_snack:   { recipe_id: parfait-frutas-aveia, servings: { rafaella: 0.6 }, notes: "Mini parfait" }
+            lunch:           { recipe_id: sardinha-grelhada, servings: { rafaella: 1 }, meal_time: "12:30",
+                                notes: "Ômega-3 ANTI-SOP" }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { rafaella: 1 } }
+            dinner:          { recipe_id: escondidinho-frango, servings: { rafaella: 1 } }
+          thursday:
+            breakfast:       { recipe_id: parfait-frutas-aveia, servings: { rafaella: 1 } }
+            morning_snack:   { recipe_id: whey-castanhas, servings: { rafaella: 1 } }
+            lunch:           { recipe_id: wrap-atum, servings: { rafaella: 1 }, meal_time: "12:30" }
+            afternoon_snack: { recipe_id: iogurte-aveia-canela, servings: { rafaella: 1 } }
+            dinner:          { recipe_id: sopa-legumes-frango, servings: { rafaella: 1 } }
+          friday:
+            breakfast:       { recipe_id: omelete-proteico, servings: { rafaella: 1 } }
+            morning_snack:   { recipe_id: ovos-cozidos-banana, servings: { rafaella: 1 } }
+            lunch:           { recipe_id: tabule-quinoa, servings: { rafaella: 1 } }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { rafaella: 1 } }
+            dinner:          { recipe_id: peixe-milanesa-aveia, servings: { rafaella: 1 } }
+          saturday:
+            breakfast:       { recipe_id: parfait-frutas-aveia, servings: { rafaella: 1 } }
+            morning_snack:   { recipe_id: iogurte-chia-frutas, servings: { rafaella: 1 } }
+            lunch:           { recipe_id: refeicao-livre, servings: { rafaella: 1 }, meal_time: "13:30" }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { rafaella: 0.6 } }
+            dinner:          { recipe_id: salada-caesar-frango, servings: { rafaella: 1 } }
+          sunday:
+            breakfast:       { recipe_id: mingau-aveia-proteico, servings: { rafaella: 1 } }
+            morning_snack:   { recipe_id: iogurte-chia-frutas, servings: { rafaella: 0.7 } }
+            lunch:           { recipe_id: strogonoff-frango, servings: { rafaella: 1 }, notes: "Recém-feito" }
+            afternoon_snack: { recipe_id: parfait-frutas-aveia, servings: { rafaella: 0.6 } }
+            dinner:          { recipe_id: sopa-legumes-frango, servings: { rafaella: 1 } }

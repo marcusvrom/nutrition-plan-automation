@@ -212,7 +212,6 @@ pre{white-space:pre-wrap;background:var(--surface-alt);padding:12px;border-radiu
 .shop-tag.t-shared{background:var(--teal-l);color:var(--teal)}
 .shop-tag.t-fresh{background:var(--carb-l);color:var(--carb)}
 .shop-tag.t-stock{background:var(--surface-alt);color:var(--text-3);border:1px dashed var(--border-strong)}
-.shop-tag.t-swap{background:var(--accent-light);color:var(--accent-dark)}
 
 .pantry-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin-top:10px}
 .pantry-item{background:var(--surface-alt);border-radius:8px;padding:12px;font-size:13px}
@@ -243,6 +242,18 @@ pre{white-space:pre-wrap;background:var(--surface-alt);padding:12px;border-radiu
 .issues li.warning{color:var(--warning)}
 .ok-msg{color:var(--accent-dark)}
 
+/* ai */
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px;margin:14px 0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.card-title{font-weight:700;font-size:16px;margin-bottom:6px}
+.card-eyebrow{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3);font-weight:700;margin-bottom:4px}
+.ai-tips{margin-top:10px;padding-left:18px;font-size:13px;color:var(--text-2)}
+.ai-tips li{margin-bottom:4px}
+
+/* fallback banner global */
+.fallback-banner{background:var(--warn-l);border:2px solid var(--warning);color:var(--accent-dark);padding:18px 22px;margin:12px 0 28px;border-radius:var(--radius);font-size:14px}
+.fallback-banner strong{font-size:16px;display:block;margin-bottom:4px}
+
 footer{margin-top:48px;padding:20px;text-align:center;color:var(--text-3);font-size:12px;border-top:1px solid var(--border)}
 
 @media (max-width:640px){
@@ -270,8 +281,10 @@ footer{margin-top:48px;padding:20px;text-align:center;color:var(--text-3);font-s
 <header class="master-header">
   <div class="eyebrow">Plano alimentar consolidado</div>
   <h1>Sistema versionado</h1>
-  <p class="gen">Gerado em 2026-05-08T00:59:37.611Z</p>
+  <p class="gen">Gerado em 2026-05-08T01:17:31.889Z</p>
 </header>
+
+
 
 <div class="person-block" id="person-marcus">
         <header class="hero">
@@ -348,7 +361,7 @@ footer{margin-top:48px;padding:20px;text-align:center;color:var(--text-3);font-s
             <div class="section-num">2</div>
             <div class="section-title">Cardápio semanal</div>
           </div>
-          <div class="week-tabs"><button class="week-tab active" data-tab="week-marcus-A">Semana A</button><button class="week-tab " data-tab="week-marcus-B">Semana B</button></div><div class="day-grid week-pane " id="week-marcus-A">
+          <div class="week-tabs"><button class="week-tab active" data-tab="week-marcus-A">Semana A</button><button class="week-tab " data-tab="week-marcus-B">Semana B</button><button class="week-tab " data-tab="week-marcus-C">Semana C (variedade · peixe)</button></div><div class="day-grid week-pane " id="week-marcus-A">
         <div class="day-summary">
     <div class="ds-item"><div class="ds-label">Meta diária</div><div class="ds-value">1850 kcal</div><div class="ds-target">P 160g · C 170g · G 55g</div></div>
     <div class="ds-item"><div class="ds-label">Δ médio kcal</div><div class="ds-value under">-146</div></div>
@@ -675,13 +688,13 @@ footer{margin-top:48px;padding:20px;text-align:center;color:var(--text-3);font-s
       </div><div class="day-grid week-pane hidden" id="week-marcus-B">
         <div class="day-summary">
     <div class="ds-item"><div class="ds-label">Meta diária</div><div class="ds-value">1850 kcal</div><div class="ds-target">P 160g · C 170g · G 55g</div></div>
-    <div class="ds-item"><div class="ds-label">Δ médio kcal</div><div class="ds-value under">-354</div></div>
-    <div class="ds-item"><div class="ds-label">Δ proteína</div><div class="ds-value under">-18.6g</div></div>
-    <div class="ds-item"><div class="ds-label">Δ carbo</div><div class="ds-value under">-57.3g</div></div>
-    <div class="ds-item"><div class="ds-label">Δ gordura</div><div class="ds-value under">-11.4g</div></div>
+    <div class="ds-item"><div class="ds-label">Δ médio kcal</div><div class="ds-value under">-368</div></div>
+    <div class="ds-item"><div class="ds-label">Δ proteína</div><div class="ds-value under">-17.6g</div></div>
+    <div class="ds-item"><div class="ds-label">Δ carbo</div><div class="ds-value under">-57.9g</div></div>
+    <div class="ds-item"><div class="ds-label">Δ gordura</div><div class="ds-value under">-11.7g</div></div>
   </div>
         <div class="day-card">
-          <div class="day-header">Segunda<span class="day-kcal">~1380 kcal · 128g P</span></div>
+          <div class="day-header">Segunda<span class="day-kcal">~1280 kcal · 135g P</span></div>
           
               <div class="meal-row">
                 <div class="meal-label ml-cafe">☕ Café</div>
@@ -700,15 +713,15 @@ footer{margin-top:48px;padding:20px;text-align:center;color:var(--text-3);font-s
               <div class="meal-row">
                 <div class="meal-label ml-almoco">🍽️ Almoço</div>
                 <div class="meal-desc">
-                  <strong>Mongolian Beef</strong> · 180g carne + 150g arroz japonês
+                  <strong>Strogonoff de Frango Fit</strong> · 180g strogonoff + 130g arroz
                   
                   <span class="source s-freezer">freezer</span>
                 </div>
                 <div class="meal-macros">
-    <span class="mp k">640 kcal</span>
-    <span class="mp p">41g P</span>
-    <span class="mp c">54g C</span>
-    <span class="mp g">16g G</span>
+    <span class="mp k">540 kcal</span>
+    <span class="mp p">48g P</span>
+    <span class="mp c">50g C</span>
+    <span class="mp g">14g G</span>
   </div>
               </div>
               <div class="meal-row">
@@ -996,6 +1009,330 @@ footer{margin-top:48px;padding:20px;text-align:center;color:var(--text-3);font-s
   </div>
               </div>
         </div>
+      </div><div class="day-grid week-pane hidden" id="week-marcus-C">
+        <div class="day-summary">
+    <div class="ds-item"><div class="ds-label">Meta diária</div><div class="ds-value">1850 kcal</div><div class="ds-target">P 160g · C 170g · G 55g</div></div>
+    <div class="ds-item"><div class="ds-label">Δ médio kcal</div><div class="ds-value under">-97</div></div>
+    <div class="ds-item"><div class="ds-label">Δ proteína</div><div class="ds-value ok">-8.7g</div></div>
+    <div class="ds-item"><div class="ds-label">Δ carbo</div><div class="ds-value under">-29.8g</div></div>
+    <div class="ds-item"><div class="ds-label">Δ gordura</div><div class="ds-value over">+5.9g</div></div>
+  </div>
+        <div class="day-card">
+          <div class="day-header">Segunda<span class="day-kcal">~1340 kcal · 104g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Parfait de Iogurte, Frutas Vermelhas e Aveia</strong> · Parfait de Iogurte, Frutas Vermelhas e Aveia
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">320 kcal</span>
+    <span class="mp p">18g P</span>
+    <span class="mp c">38g C</span>
+    <span class="mp g">10g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço</div>
+                <div class="meal-desc">
+                  <strong>Strogonoff de Frango Fit</strong> · 180g strogonoff + 130g arroz
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">540 kcal</span>
+    <span class="mp p">48g P</span>
+    <span class="mp c">50g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Filé de Peixe à Milanesa de Aveia</strong> · 1 filé + arroz integral
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">480 kcal</span>
+    <span class="mp p">38g P</span>
+    <span class="mp c">48g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Terça<span class="day-kcal">~1666 kcal · 148g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Omelete Proteico</strong> · Ele: 4 claras + 1 ovo + 30g queijo (~280 kcal)
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">280 kcal</span>
+    <span class="mp p">34g P</span>
+    <span class="mp c">4g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço</div>
+                <div class="meal-desc">
+                  <strong>Tabule de Quinoa com Frango</strong> · Prato cheio (~400g)
+                  
+                  <span class="source s-fridge">fridge</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">728 kcal</span>
+    <span class="mp p">61g P</span>
+    <span class="mp c">64g C</span>
+    <span class="mp g">23g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Sopa de Legumes com Frango Desfiado</strong> · 1 tigela + 2 fatias pão integral
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">658 kcal</span>
+    <span class="mp p">53g P</span>
+    <span class="mp c">67g C</span>
+    <span class="mp g">18g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Quarta<span class="day-kcal">~2500 kcal · 207g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Crepe de Tapioca Proteico</strong> · Padrão (40g goma + 100g frango + requeijão)
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">440 kcal</span>
+    <span class="mp p">35g P</span>
+    <span class="mp c">26g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço</div>
+                <div class="meal-desc">
+                  <strong>Frango com Brócolis e Requeijão</strong> · 180g frango + brócolis padrão + 150g arroz
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">620 kcal</span>
+    <span class="mp p">52g P</span>
+    <span class="mp c">58g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Sardinha Grelhada com Salada de Folhas</strong> · 2 latas + salada (jantar leve)
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">1440 kcal</span>
+    <span class="mp p">120g P</span>
+    <span class="mp c">28g C</span>
+    <span class="mp g">88g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Quinta<span class="day-kcal">~1720 kcal · 155g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Omelete Proteico</strong> · Ele: 4 claras + 1 ovo + 30g queijo (~280 kcal)
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">280 kcal</span>
+    <span class="mp p">34g P</span>
+    <span class="mp c">4g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço</div>
+                <div class="meal-desc">
+                  <strong>Mongolian Beef</strong> · 180g carne + 150g arroz japonês
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">640 kcal</span>
+    <span class="mp p">41g P</span>
+    <span class="mp c">54g C</span>
+    <span class="mp g">16g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Quibe Assado com Queijo</strong> · 2 quibes + salada
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">800 kcal</span>
+    <span class="mp p">80g P</span>
+    <span class="mp c">60g C</span>
+    <span class="mp g">20g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Sexta<span class="day-kcal">~1820 kcal · 162g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Parfait de Iogurte, Frutas Vermelhas e Aveia</strong> · Parfait de Iogurte, Frutas Vermelhas e Aveia
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">320 kcal</span>
+    <span class="mp p">18g P</span>
+    <span class="mp c">38g C</span>
+    <span class="mp g">10g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço</div>
+                <div class="meal-desc">
+                  <strong>Filé de Peixe à Milanesa de Aveia</strong> · 1 filé + arroz integral
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">480 kcal</span>
+    <span class="mp p">38g P</span>
+    <span class="mp c">48g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Hot Pockets de Batata</strong> · 2 hot pockets + whey água
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">1020 kcal</span>
+    <span class="mp p">106g P</span>
+    <span class="mp c">80g C</span>
+    <span class="mp g">26g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Sábado<span class="day-kcal">~1715 kcal · 162g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Bolo de Coco Fit (Molhadinho)</strong> · + 1 scoop whey água (recomendado)
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">465 kcal</span>
+    <span class="mp p">43g P</span>
+    <span class="mp c">44g C</span>
+    <span class="mp g">13g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço</div>
+                <div class="meal-desc">
+                  <strong>Lasanha Prática</strong> · 250g + salada
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">380 kcal</span>
+    <span class="mp p">32g P</span>
+    <span class="mp c">34g C</span>
+    <span class="mp g">12g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Mini Pizza de Massa de Pastel</strong> · 3 fatias + legumes + whey água
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">870 kcal</span>
+    <span class="mp p">87g P</span>
+    <span class="mp c">86g C</span>
+    <span class="mp g">54g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Domingo<span class="day-kcal">~1510 kcal · 121g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Shake Completo (Whey + Leite + Banana + Aveia)</strong> · Shake Completo (Whey + Leite + Banana + Aveia)
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">350 kcal</span>
+    <span class="mp p">35g P</span>
+    <span class="mp c">45g C</span>
+    <span class="mp g">4g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço</div>
+                <div class="meal-desc">
+                  <strong>Strogonoff de Frango Fit</strong> · 180g strogonoff + 130g arroz
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">540 kcal</span>
+    <span class="mp p">48g P</span>
+    <span class="mp c">50g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Rondelli de Carne</strong> · 250g rondelli + vegetais
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">620 kcal</span>
+    <span class="mp p">38g P</span>
+    <span class="mp c">56g C</span>
+    <span class="mp g">20g G</span>
+  </div>
+              </div>
+        </div>
       </div>
         </section>
         <section class="section" id="rules-marcus">
@@ -1236,7 +1573,7 @@ footer{margin-top:48px;padding:20px;text-align:center;color:var(--text-3);font-s
             <div class="section-num">3</div>
             <div class="section-title">Cardápio semanal</div>
           </div>
-          <div class="week-tabs"><button class="week-tab active" data-tab="week-rafaella-default">Semana padrão (SOP)</button></div><div class="day-grid week-pane " id="week-rafaella-default">
+          <div class="week-tabs"><button class="week-tab active" data-tab="week-rafaella-default">Semana padrão (SOP)</button><button class="week-tab " data-tab="week-rafaella-B">Semana B (variedade · peixe + sopa)</button></div><div class="day-grid week-pane " id="week-rafaella-default">
         <div class="day-summary">
     <div class="ds-item"><div class="ds-label">Meta diária</div><div class="ds-value">1750 kcal</div><div class="ds-target">P 130g · C 170g · G 60g</div></div>
     <div class="ds-item"><div class="ds-label">Δ médio kcal</div><div class="ds-value ok">+1</div></div>
@@ -1753,6 +2090,526 @@ footer{margin-top:48px;padding:20px;text-align:center;color:var(--text-3);font-s
     <span class="mp p">35g P</span>
     <span class="mp c">48g C</span>
     <span class="mp g">17g G</span>
+  </div>
+              </div>
+        </div>
+      </div><div class="day-grid week-pane hidden" id="week-rafaella-B">
+        <div class="day-summary">
+    <div class="ds-item"><div class="ds-label">Meta diária</div><div class="ds-value">1750 kcal</div><div class="ds-target">P 130g · C 170g · G 60g</div></div>
+    <div class="ds-item"><div class="ds-label">Δ médio kcal</div><div class="ds-value under">-222</div></div>
+    <div class="ds-item"><div class="ds-label">Δ proteína</div><div class="ds-value ok">-0.9g</div></div>
+    <div class="ds-item"><div class="ds-label">Δ carbo</div><div class="ds-value under">-40.8g</div></div>
+    <div class="ds-item"><div class="ds-label">Δ gordura</div><div class="ds-value under">-7.5g</div></div>
+  </div>
+        <div class="day-card">
+          <div class="day-header">Segunda<span class="day-kcal">~1500 kcal · 128g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café<br><span class="meal-time">07:30</span></div>
+                <div class="meal-desc">
+                  <strong>Parfait de Iogurte, Frutas Vermelhas e Aveia</strong> · 1 copo (acrescenta whey opcional p/ +25g P)
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">320 kcal</span>
+    <span class="mp p">18g P</span>
+    <span class="mp c">38g C</span>
+    <span class="mp g">10g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥣 Lanche manhã<br><span class="meal-time">10:30</span></div>
+                <div class="meal-desc">
+                  <strong>Ovos Cozidos com Banana</strong> · Ovos Cozidos com Banana
+                  
+                  <span class="source s-fridge">fridge</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">240 kcal</span>
+    <span class="mp p">15g P</span>
+    <span class="mp c">28g C</span>
+    <span class="mp g">10g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço<br><span class="meal-time">12:30</span></div>
+                <div class="meal-desc">
+                  <strong>Strogonoff de Frango Fit</strong> · 150g strogonoff + 80g arroz + salada
+                  <span class="ingredient-note">→ Versão dela com salada grande</span>
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">460 kcal</span>
+    <span class="mp p">40g P</span>
+    <span class="mp c">40g C</span>
+    <span class="mp g">13g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥤 Lanche tarde<br><span class="meal-time">16:00</span></div>
+                <div class="meal-desc">
+                  <strong>Whey Shake com Fruta</strong> · Whey Shake com Fruta
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">200 kcal</span>
+    <span class="mp p">25g P</span>
+    <span class="mp c">22g C</span>
+    <span class="mp g">2g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar<br><span class="meal-time">20:00</span></div>
+                <div class="meal-desc">
+                  <strong>Sopa de Legumes com Frango Desfiado</strong> · 1 tigela cheia
+                  <span class="ingredient-note">→ Tigela cheia + 1 fatia pão integral</span>
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">280 kcal</span>
+    <span class="mp p">30g P</span>
+    <span class="mp c">18g C</span>
+    <span class="mp g">9g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Terça<span class="day-kcal">~1580 kcal · 138g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Omelete Proteico</strong> · Dela: 3 ovos com queijo branco e cebolinha
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">290 kcal</span>
+    <span class="mp p">26g P</span>
+    <span class="mp c">4g C</span>
+    <span class="mp g">18g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥣 Lanche manhã</div>
+                <div class="meal-desc">
+                  <strong>Iogurte Natural com Chia e Frutas Vermelhas</strong> · Lanche da manhã/tarde
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">220 kcal</span>
+    <span class="mp p">14g P</span>
+    <span class="mp c">22g C</span>
+    <span class="mp g">8g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço<br><span class="meal-time">12:30</span></div>
+                <div class="meal-desc">
+                  <strong>Tabule de Quinoa com Frango</strong> · 1 prato (~300g)
+                  
+                  <span class="source s-fridge">fridge</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">430 kcal</span>
+    <span class="mp p">36g P</span>
+    <span class="mp c">38g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥤 Lanche tarde</div>
+                <div class="meal-desc">
+                  <strong>Whey com Castanhas</strong> · Whey com Castanhas
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">200 kcal</span>
+    <span class="mp p">26g P</span>
+    <span class="mp c">8g C</span>
+    <span class="mp g">8g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar<br><span class="meal-time">20:00</span></div>
+                <div class="meal-desc">
+                  <strong>Filé de Peixe à Milanesa de Aveia</strong> · 1 filé + salada grande + 80g arroz
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">440 kcal</span>
+    <span class="mp p">36g P</span>
+    <span class="mp c">36g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Quarta<span class="day-kcal">~1532 kcal · 140g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Crepe de Tapioca Proteico</strong> · Mini (25g goma + 80g frango + requeijão light)
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">310 kcal</span>
+    <span class="mp p">32g P</span>
+    <span class="mp c">18g C</span>
+    <span class="mp g">11g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥣 Lanche manhã</div>
+                <div class="meal-desc">
+                  <strong>Parfait de Iogurte, Frutas Vermelhas e Aveia</strong> · 1 copo (acrescenta whey opcional p/ +25g P)
+                  <span class="ingredient-note">→ Mini parfait</span>
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">192 kcal</span>
+    <span class="mp p">11g P</span>
+    <span class="mp c">23g C</span>
+    <span class="mp g">6g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço<br><span class="meal-time">12:30</span></div>
+                <div class="meal-desc">
+                  <strong>Sardinha Grelhada com Salada de Folhas</strong> · 1 lata + salada grande
+                  <span class="ingredient-note">→ Ômega-3 ANTI-SOP</span>
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">380 kcal</span>
+    <span class="mp p">30g P</span>
+    <span class="mp c">14g C</span>
+    <span class="mp g">22g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥤 Lanche tarde</div>
+                <div class="meal-desc">
+                  <strong>Whey Shake com Fruta</strong> · Whey Shake com Fruta
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">200 kcal</span>
+    <span class="mp p">25g P</span>
+    <span class="mp c">22g C</span>
+    <span class="mp g">2g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Escondidinho de Frango</strong> · 200g + salada grande + whey água
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">450 kcal</span>
+    <span class="mp p">42g P</span>
+    <span class="mp c">28g C</span>
+    <span class="mp g">18g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Quinta<span class="day-kcal">~1400 kcal · 120g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Parfait de Iogurte, Frutas Vermelhas e Aveia</strong> · 1 copo (acrescenta whey opcional p/ +25g P)
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">320 kcal</span>
+    <span class="mp p">18g P</span>
+    <span class="mp c">38g C</span>
+    <span class="mp g">10g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥣 Lanche manhã</div>
+                <div class="meal-desc">
+                  <strong>Whey com Castanhas</strong> · Whey com Castanhas
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">200 kcal</span>
+    <span class="mp p">26g P</span>
+    <span class="mp c">8g C</span>
+    <span class="mp g">8g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço<br><span class="meal-time">12:30</span></div>
+                <div class="meal-desc">
+                  <strong>Wrap de Atum com Salada</strong> · 2 wraps
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">380 kcal</span>
+    <span class="mp p">32g P</span>
+    <span class="mp c">36g C</span>
+    <span class="mp g">10g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥤 Lanche tarde</div>
+                <div class="meal-desc">
+                  <strong>Iogurte Natural com Aveia e Canela</strong> · Iogurte Natural com Aveia e Canela
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">220 kcal</span>
+    <span class="mp p">14g P</span>
+    <span class="mp c">26g C</span>
+    <span class="mp g">6g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Sopa de Legumes com Frango Desfiado</strong> · 1 tigela cheia
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">280 kcal</span>
+    <span class="mp p">30g P</span>
+    <span class="mp c">18g C</span>
+    <span class="mp g">9g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Sexta<span class="day-kcal">~1600 kcal · 138g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Omelete Proteico</strong> · Dela: 3 ovos com queijo branco e cebolinha
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">290 kcal</span>
+    <span class="mp p">26g P</span>
+    <span class="mp c">4g C</span>
+    <span class="mp g">18g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥣 Lanche manhã</div>
+                <div class="meal-desc">
+                  <strong>Ovos Cozidos com Banana</strong> · Ovos Cozidos com Banana
+                  
+                  <span class="source s-fridge">fridge</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">240 kcal</span>
+    <span class="mp p">15g P</span>
+    <span class="mp c">28g C</span>
+    <span class="mp g">10g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço</div>
+                <div class="meal-desc">
+                  <strong>Tabule de Quinoa com Frango</strong> · 1 prato (~300g)
+                  
+                  <span class="source s-fridge">fridge</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">430 kcal</span>
+    <span class="mp p">36g P</span>
+    <span class="mp c">38g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥤 Lanche tarde</div>
+                <div class="meal-desc">
+                  <strong>Whey Shake com Fruta</strong> · Whey Shake com Fruta
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">200 kcal</span>
+    <span class="mp p">25g P</span>
+    <span class="mp c">22g C</span>
+    <span class="mp g">2g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Filé de Peixe à Milanesa de Aveia</strong> · 1 filé + salada grande + 80g arroz
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">440 kcal</span>
+    <span class="mp p">36g P</span>
+    <span class="mp c">36g C</span>
+    <span class="mp g">14g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Sábado<span class="day-kcal">~1650 kcal · 117g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Parfait de Iogurte, Frutas Vermelhas e Aveia</strong> · 1 copo (acrescenta whey opcional p/ +25g P)
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">320 kcal</span>
+    <span class="mp p">18g P</span>
+    <span class="mp c">38g C</span>
+    <span class="mp g">10g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥣 Lanche manhã</div>
+                <div class="meal-desc">
+                  <strong>Iogurte Natural com Chia e Frutas Vermelhas</strong> · Lanche da manhã/tarde
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">220 kcal</span>
+    <span class="mp p">14g P</span>
+    <span class="mp c">22g C</span>
+    <span class="mp g">8g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço<br><span class="meal-time">13:30</span></div>
+                <div class="meal-desc">
+                  <strong>Refeição Livre Controlada</strong> · Refeição Livre Controlada
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">580 kcal</span>
+    <span class="mp p">28g P</span>
+    <span class="mp c">62g C</span>
+    <span class="mp g">23g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥤 Lanche tarde</div>
+                <div class="meal-desc">
+                  <strong>Whey Shake com Fruta</strong> · Whey Shake com Fruta
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">120 kcal</span>
+    <span class="mp p">15g P</span>
+    <span class="mp c">13g C</span>
+    <span class="mp g">1g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Salada Caesar Fit com Frango Grelhado</strong> · Salada Caesar Fit com Frango Grelhado
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">410 kcal</span>
+    <span class="mp p">42g P</span>
+    <span class="mp c">22g C</span>
+    <span class="mp g">18g G</span>
+  </div>
+              </div>
+        </div><div class="day-card">
+          <div class="day-header">Domingo<span class="day-kcal">~1436 kcal · 123g P</span></div>
+          
+              <div class="meal-row">
+                <div class="meal-label ml-cafe">☕ Café</div>
+                <div class="meal-desc">
+                  <strong>Mingau de Aveia Proteico</strong> · Mingau de Aveia Proteico
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">350 kcal</span>
+    <span class="mp p">32g P</span>
+    <span class="mp c">38g C</span>
+    <span class="mp g">8g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥣 Lanche manhã</div>
+                <div class="meal-desc">
+                  <strong>Iogurte Natural com Chia e Frutas Vermelhas</strong> · Lanche da manhã/tarde
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">154 kcal</span>
+    <span class="mp p">10g P</span>
+    <span class="mp c">15g C</span>
+    <span class="mp g">6g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-almoco">🍽️ Almoço</div>
+                <div class="meal-desc">
+                  <strong>Strogonoff de Frango Fit</strong> · 150g strogonoff + 80g arroz + salada
+                  <span class="ingredient-note">→ Recém-feito</span>
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">460 kcal</span>
+    <span class="mp p">40g P</span>
+    <span class="mp c">40g C</span>
+    <span class="mp g">13g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-snack">🥤 Lanche tarde</div>
+                <div class="meal-desc">
+                  <strong>Parfait de Iogurte, Frutas Vermelhas e Aveia</strong> · 1 copo (acrescenta whey opcional p/ +25g P)
+                  
+                  <span class="source s-fresh">fresh</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">192 kcal</span>
+    <span class="mp p">11g P</span>
+    <span class="mp c">23g C</span>
+    <span class="mp g">6g G</span>
+  </div>
+              </div>
+              <div class="meal-row">
+                <div class="meal-label ml-jantar">🌙 Jantar</div>
+                <div class="meal-desc">
+                  <strong>Sopa de Legumes com Frango Desfiado</strong> · 1 tigela cheia
+                  
+                  <span class="source s-freezer">freezer</span>
+                </div>
+                <div class="meal-macros">
+    <span class="mp k">280 kcal</span>
+    <span class="mp p">30g P</span>
+    <span class="mp c">18g C</span>
+    <span class="mp g">9g G</span>
   </div>
               </div>
         </div>
@@ -2503,6 +3360,62 @@ Lanche zero-trabalho: ovos do prep + banana.</pre></details>
     </div>
   </details><details class="recipe-card">
     <summary>
+      <div class="recipe-tag">cafe</div>
+      <div class="recipe-name">Parfait de Iogurte, Frutas Vermelhas e Aveia </div>
+      <div class="recipe-meta">1 porção(ões) · 5 min · fresh</div>
+      <div class="recipe-macros-bar">
+        <span class="rm rm-k">320 kcal</span>
+        <span class="rm rm-p">18g P</span>
+        <span class="rm rm-c">38g C</span>
+        <span class="rm rm-g">10g G</span>
+      </div>
+    </summary>
+    <div class="recipe-body">
+      <h4>Porções por pessoa</h4><div class="recipe-portion-grid"><div class="recipe-portion-box">
+        <div class="recipe-portion-label">rafaella</div>
+        <div class="recipe-portion-value">1 copo (acrescenta whey opcional p/ +25g P)</div>
+        <div class="recipe-portion-macros">320 kcal · 18g P · 38g C · 10g G</div>
+      </div></div>
+      <h4>Ingredientes</h4>
+      <ul><li>200 g de iogurte natural integral</li><li>80 g de mix frutas vermelhas</li><li>25 g de aveia em flocos</li><li>8 g de chia</li><li>5 g de linhaça</li><li>1 g de canela</li></ul>
+      <h4>Modo de preparo</h4><ol class="steps"><li>Em um copo, alterne camadas de iogurte, frutas, aveia.</li><li>Polvilhe chia, linhaça moída e canela por cima.</li><li>Pode preparar na noite anterior (overnight).</li></ol>
+      <h4>Observações</h4><p>Receita anti-SOP: antocianinas + fibra solúvel + canela (controle glicêmico).</p>
+      <details class="raw-md"><summary>Markdown completo</summary><pre># Parfait de Iogurte, Frutas Vermelhas e Aveia
+
+Café da manhã ou lanche da tarde. Combina muito bem com whey para fechar proteína.</pre></details>
+    </div>
+  </details><details class="recipe-card">
+    <summary>
+      <div class="recipe-tag">jantar</div>
+      <div class="recipe-name">Filé de Peixe à Milanesa de Aveia </div>
+      <div class="recipe-meta">3 porção(ões) · 25 min · freezer · congela 30d</div>
+      <div class="recipe-macros-bar">
+        <span class="rm rm-k">320 kcal</span>
+        <span class="rm rm-p">32g P</span>
+        <span class="rm rm-c">18g C</span>
+        <span class="rm rm-g">12g G</span>
+      </div>
+    </summary>
+    <div class="recipe-body">
+      <h4>Porções por pessoa</h4><div class="recipe-portion-grid"><div class="recipe-portion-box">
+        <div class="recipe-portion-label">marcus</div>
+        <div class="recipe-portion-value">1 filé + arroz integral</div>
+        <div class="recipe-portion-macros">480 kcal · 38g P · 48g C · 14g G</div>
+      </div><div class="recipe-portion-box">
+        <div class="recipe-portion-label">rafaella</div>
+        <div class="recipe-portion-value">1 filé + salada grande + 80g arroz</div>
+        <div class="recipe-portion-macros">440 kcal · 36g P · 36g C · 14g G</div>
+      </div></div>
+      <h4>Ingredientes</h4>
+      <ul><li>450 g de filé de tilápia / merluza</li><li>80 g de farelo de aveia</li><li>1 un de ovo inteiro</li><li>30 ml de limão</li><li>3 g de alho em pó</li><li>3 g de páprica defumada</li><li>5 g de sal</li><li>10 ml de azeite</li></ul>
+      <h4>Modo de preparo</h4><ol class="steps"><li>Tempere os filés com limão, sal, alho, páprica.</li><li>Passe no ovo batido; depois no farelo de aveia.</li><li>Pincele azeite. Air fryer 200°C por 12 min OU forno 200°C por 15 min.</li></ol>
+      <h4>Observações</h4><p>Empanado fit: aveia em vez de farinha de rosca = mais fibra, menos carbo refinado.</p>
+      <details class="raw-md"><summary>Markdown completo</summary><pre># Filé de Peixe à Milanesa de Aveia
+
+Versão fit do peixe empanado, sem fritar.</pre></details>
+    </div>
+  </details><details class="recipe-card">
+    <summary>
       <div class="recipe-tag">jantar</div>
       <div class="recipe-name">Pizza Express Carne Moída </div>
       <div class="recipe-meta">1 porção(ões) · 13 min · fridge</div>
@@ -2669,6 +3582,36 @@ Jantar leve do sábado com molho de iogurte + dijon.</pre></details>
     </div>
   </details><details class="recipe-card">
     <summary>
+      <div class="recipe-tag">almoco</div>
+      <div class="recipe-name">Sardinha Grelhada com Salada de Folhas </div>
+      <div class="recipe-meta">1 porção(ões) · 15 min · fresh</div>
+      <div class="recipe-macros-bar">
+        <span class="rm rm-k">380 kcal</span>
+        <span class="rm rm-p">30g P</span>
+        <span class="rm rm-c">14g C</span>
+        <span class="rm rm-g">22g G</span>
+      </div>
+    </summary>
+    <div class="recipe-body">
+      <h4>Porções por pessoa</h4><div class="recipe-portion-grid"><div class="recipe-portion-box">
+        <div class="recipe-portion-label">rafaella</div>
+        <div class="recipe-portion-value">1 lata + salada grande</div>
+        <div class="recipe-portion-macros">380 kcal · 30g P · 14g C · 22g G</div>
+      </div><div class="recipe-portion-box">
+        <div class="recipe-portion-label">marcus</div>
+        <div class="recipe-portion-value">2 latas + salada (jantar leve)</div>
+        <div class="recipe-portion-macros">720 kcal · 60g P · 14g C · 44g G</div>
+      </div></div>
+      <h4>Ingredientes</h4>
+      <ul><li>1 lata de sardinha em conserva</li><li>100 g de folhas verdes</li><li>80 g de tomate</li><li>10 ml de limão</li><li>5 ml de azeite</li><li>30 g de cebola roxa</li></ul>
+      <h4>Modo de preparo</h4><ol class="steps"><li>Aqueça frigideira; grelhe a sardinha (já cozida na lata) por 2 min de cada lado.</li><li>Monte a salada com folhas, tomate, cebola roxa.</li><li>Tempere com limão, azeite, sal e pimenta.</li></ol>
+      <h4>Observações</h4><p>~2-3g ômega-3/lata + cálcio dos ossos + vit D. Inclui 1-2x/sem para SOP.</p>
+      <details class="raw-md"><summary>Markdown completo</summary><pre># Sardinha Grelhada
+
+Fonte de ômega-3 anti-inflamatório, especialmente importante no plano da Rafaella.</pre></details>
+    </div>
+  </details><details class="recipe-card">
+    <summary>
       <div class="recipe-tag">cafe</div>
       <div class="recipe-name">Shake Completo (Whey + Leite + Banana + Aveia) </div>
       <div class="recipe-meta">1 porção(ões) · 3 min · fresh</div>
@@ -2688,6 +3631,96 @@ Jantar leve do sábado com molho de iogurte + dijon.</pre></details>
       <details class="raw-md"><summary>Markdown completo</summary><pre># Shake Completo
 
 Café da manhã rápido para começar o dia de meal prep cedo.</pre></details>
+    </div>
+  </details><details class="recipe-card">
+    <summary>
+      <div class="recipe-tag">jantar</div>
+      <div class="recipe-name">Sopa de Legumes com Frango Desfiado </div>
+      <div class="recipe-meta">4 porção(ões) · 40 min · freezer · congela 60d</div>
+      <div class="recipe-macros-bar">
+        <span class="rm rm-k">280 kcal</span>
+        <span class="rm rm-p">30g P</span>
+        <span class="rm rm-c">18g C</span>
+        <span class="rm rm-g">9g G</span>
+      </div>
+    </summary>
+    <div class="recipe-body">
+      <h4>Porções por pessoa</h4><div class="recipe-portion-grid"><div class="recipe-portion-box">
+        <div class="recipe-portion-label">rafaella</div>
+        <div class="recipe-portion-value">1 tigela cheia</div>
+        <div class="recipe-portion-macros">280 kcal · 30g P · 18g C · 9g G</div>
+      </div><div class="recipe-portion-box">
+        <div class="recipe-portion-label">marcus</div>
+        <div class="recipe-portion-value">1 tigela + 2 fatias pão integral</div>
+        <div class="recipe-portion-macros">470 kcal · 38g P · 48g C · 13g G</div>
+      </div></div>
+      <h4>Ingredientes</h4>
+      <ul><li>400 g de frango desfiado</li><li>300 g de abóbora japonesa</li><li>200 g de cenoura</li><li>200 g de abobrinha</li><li>100 g de cebola</li><li>10 g de alho</li><li>30 g de extrato de tomate</li><li>3 g de açafrão / cúrcuma</li><li>5 g de sal</li><li>10 ml de azeite</li></ul>
+      <h4>Modo de preparo</h4><ol class="steps"><li>Refogue cebola e alho no azeite.</li><li>Adicione cenoura, abóbora e abobrinha em cubos.</li><li>Junte 1L de água, extrato e cúrcuma.</li><li>Cozinhe 20 min até os legumes desmancharem.</li><li>Adicione o frango desfiado e ajuste sal.</li></ol>
+      <h4>Observações</h4><p>Cúrcuma + frango desfiado do prep = anti-inflamatória e prática.</p>
+      <details class="raw-md"><summary>Markdown completo</summary><pre># Sopa de Legumes com Frango
+
+Jantar leve para os dias mais frios. Congela bem em porções individuais.</pre></details>
+    </div>
+  </details><details class="recipe-card">
+    <summary>
+      <div class="recipe-tag">almoco</div>
+      <div class="recipe-name">Strogonoff de Frango Fit </div>
+      <div class="recipe-meta">4 porção(ões) · 40 min · freezer · congela 45d</div>
+      <div class="recipe-macros-bar">
+        <span class="rm rm-k">460 kcal</span>
+        <span class="rm rm-p">42g P</span>
+        <span class="rm rm-c">38g C</span>
+        <span class="rm rm-g">12g G</span>
+      </div>
+    </summary>
+    <div class="recipe-body">
+      <h4>Porções por pessoa</h4><div class="recipe-portion-grid"><div class="recipe-portion-box">
+        <div class="recipe-portion-label">marcus</div>
+        <div class="recipe-portion-value">180g strogonoff + 130g arroz</div>
+        <div class="recipe-portion-macros">540 kcal · 48g P · 50g C · 14g G</div>
+      </div><div class="recipe-portion-box">
+        <div class="recipe-portion-label">rafaella</div>
+        <div class="recipe-portion-value">150g strogonoff + 80g arroz + salada</div>
+        <div class="recipe-portion-macros">460 kcal · 40g P · 40g C · 13g G</div>
+      </div></div>
+      <h4>Ingredientes</h4>
+      <ul><li>600 g de peito de frango em cubos</li><li>200 g de champignon fresco</li><li>200 g de iogurte natural integral</li><li>60 g de extrato de tomate</li><li>100 g de cebola</li><li>10 g de alho</li><li>10 g de mostarda dijon</li><li>10 ml de azeite</li><li>400 g de arroz integral cozido</li><li>5 g de sal</li></ul>
+      <h4>Modo de preparo</h4><ol class="steps"><li>Tempere o frango com sal, pimenta, mostarda.</li><li>Refogue cebola e alho no azeite; doure os cubos de frango.</li><li>Adicione champignon fatiado; cozinhe 5 min.</li><li>Junte extrato de tomate; misture iogurte FORA do fogo (evita talhar).</li><li>Porcione 250g por marmita; arroz separado.</li></ol>
+      <h4>Observações</h4><p>Usa iogurte natural em vez de creme de leite — corta gordura saturada e mantém cremosidade.</p>
+      <details class="raw-md"><summary>Markdown completo</summary><pre># Strogonoff de Frango Fit
+
+Versão sem creme de leite, com iogurte natural integral. Comfort food adaptado.</pre></details>
+    </div>
+  </details><details class="recipe-card">
+    <summary>
+      <div class="recipe-tag">almoco</div>
+      <div class="recipe-name">Tabule de Quinoa com Frango </div>
+      <div class="recipe-meta">3 porção(ões) · 35 min · fridge · congela 4d</div>
+      <div class="recipe-macros-bar">
+        <span class="rm rm-k">430 kcal</span>
+        <span class="rm rm-p">36g P</span>
+        <span class="rm rm-c">38g C</span>
+        <span class="rm rm-g">14g G</span>
+      </div>
+    </summary>
+    <div class="recipe-body">
+      <h4>Porções por pessoa</h4><div class="recipe-portion-grid"><div class="recipe-portion-box">
+        <div class="recipe-portion-label">rafaella</div>
+        <div class="recipe-portion-value">1 prato (~300g)</div>
+        <div class="recipe-portion-macros">430 kcal · 36g P · 38g C · 14g G</div>
+      </div><div class="recipe-portion-box">
+        <div class="recipe-portion-label">marcus</div>
+        <div class="recipe-portion-value">Prato cheio (~400g)</div>
+        <div class="recipe-portion-macros">560 kcal · 47g P · 49g C · 18g G</div>
+      </div></div>
+      <h4>Ingredientes</h4>
+      <ul><li>300 g de quinoa cozida</li><li>360 g de peito de frango grelhado</li><li>200 g de tomate</li><li>200 g de pepino</li><li>30 g de salsinha</li><li>15 g de hortelã fresca</li><li>30 ml de limão</li><li>15 ml de azeite</li><li>50 g de cebola roxa</li></ul>
+      <h4>Modo de preparo</h4><ol class="steps"><li>Cozinhe a quinoa (~15 min) e deixe esfriar.</li><li>Pique tomate, pepino, cebola roxa em cubos pequenos.</li><li>Pique salsinha e hortelã.</li><li>Misture tudo com frango grelhado em cubos.</li><li>Tempere com limão, azeite, sal e pimenta.</li></ol>
+      
+      <details class="raw-md"><summary>Markdown completo</summary><pre># Tabule de Quinoa com Frango
+
+Salada nutritiva refrescante. Quinoa = proteína completa + carbo de baixo IG.</pre></details>
     </div>
   </details><details class="recipe-card">
     <summary>
@@ -2733,10 +3766,36 @@ Whey + 5 castanhas-do-pará (selênio para tireoide).</pre></details>
 
 Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
     </div>
+  </details><details class="recipe-card">
+    <summary>
+      <div class="recipe-tag">almoco</div>
+      <div class="recipe-name">Wrap de Atum com Salada </div>
+      <div class="recipe-meta">1 porção(ões) · 5 min · fresh</div>
+      <div class="recipe-macros-bar">
+        <span class="rm rm-k">380 kcal</span>
+        <span class="rm rm-p">32g P</span>
+        <span class="rm rm-c">36g C</span>
+        <span class="rm rm-g">10g G</span>
+      </div>
+    </summary>
+    <div class="recipe-body">
+      <h4>Porções por pessoa</h4><div class="recipe-portion-grid"><div class="recipe-portion-box">
+        <div class="recipe-portion-label">rafaella</div>
+        <div class="recipe-portion-value">2 wraps</div>
+        <div class="recipe-portion-macros">380 kcal · 32g P · 36g C · 10g G</div>
+      </div></div>
+      <h4>Ingredientes</h4>
+      <ul><li>2 un de wrap integral</li><li>1 lata de atum em água</li><li>30 g de iogurte natural integral</li><li>5 g de mostarda dijon</li><li>50 g de folhas verdes</li><li>60 g de tomate</li><li>20 g de cebola roxa</li><li>5 ml de limão</li></ul>
+      <h4>Modo de preparo</h4><ol class="steps"><li>Misture atum escorrido com iogurte e mostarda.</li><li>Coloque a mistura no wrap, adicione folhas, tomate, cebola roxa.</li><li>Tempere com limão; enrole.</li></ol>
+      <h4>Observações</h4><p>Sem maionese: iogurte + mostarda dão cremosidade com 1/4 das calorias.</p>
+      <details class="raw-md"><summary>Markdown completo</summary><pre># Wrap de Atum
+
+Almoço portátil em 5 min. Atum em água é mais magro que em óleo.</pre></details>
+    </div>
   </details></div>
     </section><section class="section" id="shopping">
     <div class="section-head"><div class="section-num">★</div><div class="section-title">Lista de compras consolidada</div></div>
-    <p class="muted">Lista para os dois (Marcus + Rafaella). Itens com 📦 são de estoque (durar semanas/meses) — só repor quando acabar. Itens com 🌿 são frescos. Itens com 🌸 são exclusivos/aumentados para a Rafaella. Itens com 💰 são substituições econômicas vs. versão padrão.</p>
+    <p class="muted">Lista para os dois (Marcus + Rafaella) — versão econômica (só opções otimizadas). Itens com 📦 são de estoque (duram semanas/meses) — só repor quando acabar. Itens com 🌿 são frescos. Itens com 🌸 são exclusivos/aumentados para a Rafaella.</p>
     <div class="shop-grid"><div class="shop-cat">
         <div class="shop-cat-title">🥩 Proteínas<span class="shop-cat-meta">8 itens · R$ 105-130</span></div>
         <ul class="shop-list"><li class="shop-item">
@@ -2758,7 +3817,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">carne moída magra <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">carne moída magra <span class="shop-tag t-shared">🤝 compartilhado</span></div>
             <div class="shop-usage">→ Blend acém + músculo 50/50: sabor + magreza, ~R$ 18-25/sem mais barato que patinho</div>
             
           </div>
@@ -2766,7 +3825,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">acém em peça (em tiras) <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">acém em peça (em tiras) <span class="shop-tag t-shared">🤝 compartilhado</span></div>
             <div class="shop-usage">→ Coxão duro em tiras finas + marinada com gengibre = igualmente macio (~R$ 8-10/sem)</div>
             
           </div>
@@ -2782,7 +3841,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">ovo inteiro <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">ovo inteiro <span class="shop-tag t-shared">🤝 compartilhado</span></div>
             <div class="shop-usage">→ Comum em vez de caipira — 18-24 unidades/sem</div>
             
           </div>
@@ -2798,7 +3857,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">whey protein <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">whey protein <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             <div class="shop-usage">→ Concentrado nacional 2kg dura ~30 dias para os dois</div>
             
           </div>
@@ -2809,7 +3868,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         <ul class="shop-list"><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">iogurte natural integral <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">iogurte natural integral <span class="shop-tag t-her">🌸 dela</span></div>
             <div class="shop-usage">→ Coar em pano por 4h vira 'grego caseiro'. ~1,5kg/sem (lanches dela)</div>
             
           </div>
@@ -2841,7 +3900,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">queijo parmesão ralado <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">queijo parmesão ralado <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             <div class="shop-usage">→ Sache &gt; pedaço (~50% economia)</div>
             
           </div>
@@ -2892,7 +3951,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">aveia em flocos <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">aveia em flocos <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             <div class="shop-usage">→ Granel: 40% mais barata que pacote de marca</div>
             
           </div>
@@ -3047,7 +4106,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">mix frutas vermelhas <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">mix frutas vermelhas <span class="shop-tag t-her">🌸 dela</span></div>
             <div class="shop-usage">→ Frutas vermelhas CONGELADAS substituem mirtilo importado (95% das antocianinas)</div>
             
           </div>
@@ -3162,7 +4221,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">mostarda dijon <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">mostarda dijon <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             
             
           </div>
@@ -3178,7 +4237,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">cúrcuma em pó <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">cúrcuma em pó <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             <div class="shop-usage">→ Anti-inflamatório SOP</div>
             
           </div>
@@ -3197,7 +4256,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         <ul class="shop-list"><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">azeite <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">azeite <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             <div class="shop-usage">→ Lata 1L dura ~4 sem; máx 3 col. sopa/dia entre os dois</div>
             <div class="shop-pantry">na despensa: 14.2 ml</div>
           </div>
@@ -3213,7 +4272,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">chia <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">chia <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             
             
           </div>
@@ -3221,7 +4280,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">linhaça <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">linhaça <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             
             
           </div>
@@ -3229,7 +4288,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">amendoim cru <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">amendoim cru <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             <div class="shop-usage">→ Substitui amêndoa importada por 1/4 do preço</div>
             
           </div>
@@ -3307,7 +4366,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">mio-inositol <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">mio-inositol <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             <div class="shop-usage">→ 4 g/dia em 2 tomadas — evidência sólida em SOP</div>
             
           </div>
@@ -3315,7 +4374,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">ômega-3 <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">ômega-3 <span class="shop-tag t-shared">🤝 compartilhado</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             <div class="shop-usage">→ EPA+DHA 2g/dia · marca nacional certificada (Sundown/Vitafor)</div>
             
           </div>
@@ -3323,7 +4382,7 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li><li class="shop-item">
           <span class="shop-check"></span>
           <div class="shop-text">
-            <div class="shop-name">magnésio dimalato <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-stock">📦 estoque</span> <span class="shop-tag t-swap">💰 econômico</span></div>
+            <div class="shop-name">magnésio dimalato <span class="shop-tag t-her">🌸 dela</span> <span class="shop-tag t-stock">📦 estoque</span></div>
             <div class="shop-usage">→ 300-400 mg/dia antes de dormir</div>
             
           </div>
@@ -3526,61 +4585,6 @@ Lanche prático: 1 scoop whey + água + 1 fruta.</pre></details>
         </li></ul>
       </div></div>
     <h3>Despensa essencial — ter sempre em casa</h3><div class="pantry-grid"><div class="pantry-item"><strong>Azeite extra virgem</strong><span>Base de tudo. 1 fio = ~40 kcal</span></div><div class="pantry-item"><strong>Sal grosso + moedor</strong><span>Substitui sal rosa importado</span></div><div class="pantry-item"><strong>Pimenta-do-reino moída</strong><span>Universal</span></div><div class="pantry-item"><strong>Páprica defumada</strong><span>Sabor sem calorias</span></div><div class="pantry-item"><strong>Cominho</strong><span>Quibes e carne moída</span></div><div class="pantry-item"><strong>Chimichurri seco</strong><span>Transforma frango básico</span></div><div class="pantry-item"><strong>Orégano e tomilho</strong><span>Vegetais, pizzas, omeletes</span></div><div class="pantry-item"><strong>Whey Protein</strong><span>Coringa de proteína</span></div><div class="pantry-item"><strong>Goma de tapioca</strong><span>Base dos crepes</span></div><div class="pantry-item"><strong>Café em pó</strong><span>0 kcal, termogênico</span></div><div class="pantry-item"><strong>Fécula de batata</strong><span>Massas e molhos</span></div><div class="pantry-item"><strong>Shoyu + vinagre arroz</strong><span>Marinadas e umami</span></div><div class="pantry-item"><strong>Extrato + passata tomate</strong><span>Base de molhos</span></div><div class="pantry-item"><strong>Coco ralado seco</strong><span>Bolo fit</span></div><div class="pantry-item"><strong>Leite de coco light</strong><span>Bolo fit (molhar)</span></div><div class="pantry-item"><strong>Leite em pó desnatado</strong><span>Cobertura bolo fit</span></div><div class="pantry-item"><strong>Stevia</strong><span>Adoçante natural</span></div><div class="pantry-item"><strong>Marmitas com tampa</strong><span>Investir em bons potes</span></div><div class="pantry-item"><strong>Sacos zip + papel filme</strong><span>Congelamento organizado</span></div><div class="pantry-item"><strong>Etiquetas adesivas</strong><span>Cor + nome + data + porção</span></div><div class="pantry-item"><strong>Balança de cozinha</strong><span>Precisão nos macros</span></div></div>
-    <h3>Substituições econômicas</h3>
-  <table class="data-table">
-    <thead><tr><th>Saída</th><th>Entrada</th><th>Economia</th><th>Justificativa</th></tr></thead>
-    <tbody><tr>
-      <td><strong>Salmão fresco 300g</strong></td>
-      <td>Sardinha em lata (3 un)</td>
-      <td><span class="badge s-ok">R$ 18-22</span></td>
-      <td>Sardinha tem 2-3g ômega-3/lata + cálcio dos ossos + vit D</td>
-    </tr><tr>
-      <td><strong>Patinho moído 1,5 kg</strong></td>
-      <td>Blend acém + músculo 50/50</td>
-      <td><span class="badge s-ok">R$ 18-25</span></td>
-      <td>Acém: sabor; músculo: magro. Pedir para moer juntos</td>
-    </tr><tr>
-      <td><strong>Acém em peça 1 kg</strong></td>
-      <td>Coxão duro 1 kg</td>
-      <td><span class="badge s-ok">R$ 8-10</span></td>
-      <td>Tiras finas contra a fibra + marinada com gengibre = mesma maciez</td>
-    </tr><tr>
-      <td><strong>Mirtilo importado fresco</strong></td>
-      <td>Mix frutas vermelhas congeladas</td>
-      <td><span class="badge s-ok">R$ 15-25</span></td>
-      <td>95% das antocianinas preservadas; mistura aumenta variedade</td>
-    </tr><tr>
-      <td><strong>Iogurte grego (500g)</strong></td>
-      <td>Iogurte natural drenado caseiro</td>
-      <td><span class="badge s-ok">R$ 12-18</span></td>
-      <td>Coar em pano por 4h → mesmo perfil proteico</td>
-    </tr><tr>
-      <td><strong>Whey premium importado</strong></td>
-      <td>Whey concentrado nacional 2kg</td>
-      <td><span class="badge s-ok">R$ 25-35/mês</span></td>
-      <td>Growth/Max Titanium: mesmo perfil proteico, certificação nacional</td>
-    </tr><tr>
-      <td><strong>Mio + D-chiro 40:1</strong></td>
-      <td>Mio-inositol puro em pó</td>
-      <td><span class="badge s-ok">R$ 25-40/mês</span></td>
-      <td>Mio sozinho 4 g/dia tem evidência sólida em SOP</td>
-    </tr><tr>
-      <td><strong>Magnésio glicinato</strong></td>
-      <td>Magnésio dimalato</td>
-      <td><span class="badge s-ok">R$ 15-25/mês</span></td>
-      <td>Biodisponibilidade similar (80% vs 90%) por metade do preço</td>
-    </tr><tr>
-      <td><strong>Castanha + amêndoa importadas</strong></td>
-      <td>Amendoim cru a granel</td>
-      <td><span class="badge s-ok">R$ 12-18</span></td>
-      <td>Perfil de gordura mono similar; manter castanha-do-pará para selênio</td>
-    </tr><tr>
-      <td><strong>Comprar tudo no supermercado</strong></td>
-      <td>Açougue + sacolão + atacado</td>
-      <td><span class="badge s-ok">R$ 30-50</span></td>
-      <td>Diversificação otimiza preço por categoria</td>
-    </tr></tbody>
-  </table>
   </section><section class="section" id="meal-prep">
       <div class="section-head"><div class="section-num">★</div><div class="section-title">Meal prep dominical</div></div>
       <p class="muted">Roteiro do meal prep dominical (~3-4h). Produz comida para os dois — Marcus e Rafaella.
@@ -3615,6 +4619,21 @@ Janela típica: 09:00–12:00.
       <div class="prep-step-title"><span class="prep-time">12:00</span> Porcionar e congelar</div>
       <div class="prep-step-body">Esfriar tudo. Etiquetar com cor (rosa = Rafaella, azul = Marcus) + data + porção. Geladeira (3 dias): perecíveis. Freezer (4-7 dias): o resto. Arroz SEMPRE em potes separados.</div>
     </div></div><div class="note-box"><strong>Produção total:</strong> ~5 marmitas frango/brócolis · 3 porções Mongolian Beef · ~4 fraldinha+purê · ~5 rondelli · ~6 lasanha · ~11 quibes · 6 hot pockets · ~5 escondidinho · ~6 recheio pizza (frango + carne) · ~3 frango desfiado avulso · ~3 carne moída avulsa · vegetais assados · arroz integral e japonês · brócolis porcionado · 12 ovos cozidos.</div>
+    </section><section class="section" id="weights">
+      <div class="section-head"><div class="section-num">★</div><div class="section-title">Histórico de peso</div></div>
+      <p class="muted">Atualize com <code>npm run update-weight -- &lt;person_id&gt; &lt;kg&gt; --apply</code>. As metas diárias recalculam automaticamente via Mifflin-St Jeor.</p><div class="card">
+        <div class="card-title">Marcus — variação +0 kg</div>
+        <table class="data-table">
+          <thead><tr><th>Data</th><th>Peso</th><th>Observação</th></tr></thead>
+          <tbody><tr><td><code>2026-04-01</code></td><td><strong>110 kg</strong></td><td>Peso inicial</td></tr></tbody>
+        </table>
+      </div><div class="card">
+        <div class="card-title">Rafaella — variação +0 kg</div>
+        <table class="data-table">
+          <thead><tr><th>Data</th><th>Peso</th><th>Observação</th></tr></thead>
+          <tbody><tr><td><code>2026-04-01</code></td><td><strong>133 kg</strong></td><td>Peso inicial · IMC 43,4</td></tr></tbody>
+        </table>
+      </div>
     </section><section class="section" id="validation">
     <div class="section-head"><div class="section-num">★</div><div class="section-title">Validação</div></div>
     <p class="ok-msg">Sem problemas detectados.</p>
