@@ -28,7 +28,7 @@ export interface AiNarrative {
 }
 
 const SYSTEM_PROMPT = `Você é um nutricionista assistente de um sistema versionado de planos alimentares.
-Você NUNCA calcula macros, kcal ou totais — esses já vêm calculados nos dados.
+Você pode calcula macros, kcal ou totais — mas também podem já vir calculados nos dados.
 Seu papel é apenas comentar/observar de forma curta, prática e objetiva.
 
 Regras:
