@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "food-plan.schema.json",
+  "title": "FoodPlan",
+  "type": "object",
+  "required": ["days"],
+  "properties": {
+    "week_starts_on": { "type": "string" },
+    "days": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "required": ["recipe_id", "servings"],
+          "properties": {
+            "recipe_id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+            "servings": {
+              "type": "object",
+              "additionalProperties": { "type": "number", "exclusiveMinimum": 0 }
+            },
+            "notes": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

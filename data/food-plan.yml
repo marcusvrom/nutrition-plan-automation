@@ -1,0 +1,81 @@
+# Plano alimentar semanal.
+#
+# Cada slot referencia uma receita por `recipe_id` (slug do arquivo em data/recipes/)
+# e quantas porções (servings) cada pessoa consome.
+#
+# Um servings == uma porção tal como definida no front-matter da receita.
+# Para refeições muito simples (ex: 2 ovos mexidos), use receitas próprias
+# em vez de inventar quantidades aqui.
+
+week_starts_on: monday
+days:
+  monday:
+    breakfast:
+      recipe_id: omelete-proteico
+      servings: { marcus: 1.0, namorada: 0.7 }
+    lunch:
+      recipe_id: frango-curry
+      servings: { marcus: 1.0, namorada: 0.7 }
+    dinner:
+      recipe_id: mongolian-beef
+      servings: { marcus: 1.0, namorada: 0.7 }
+  tuesday:
+    breakfast:
+      recipe_id: omelete-proteico
+      servings: { marcus: 1.0, namorada: 0.7 }
+    lunch:
+      recipe_id: mongolian-beef
+      servings: { marcus: 1.0, namorada: 0.7 }
+    dinner:
+      recipe_id: frango-curry
+      servings: { marcus: 1.0, namorada: 0.7 }
+  wednesday:
+    breakfast:
+      recipe_id: omelete-proteico
+      servings: { marcus: 1.0, namorada: 0.7 }
+    lunch:
+      recipe_id: frango-curry
+      servings: { marcus: 1.0, namorada: 0.7 }
+    dinner:
+      recipe_id: mongolian-beef
+      servings: { marcus: 1.0, namorada: 0.7 }
+  thursday:
+    breakfast:
+      recipe_id: omelete-proteico
+      servings: { marcus: 1.0, namorada: 0.7 }
+    lunch:
+      recipe_id: mongolian-beef
+      servings: { marcus: 1.0, namorada: 0.7 }
+    dinner:
+      recipe_id: frango-curry
+      servings: { marcus: 1.0, namorada: 0.7 }
+  friday:
+    breakfast:
+      recipe_id: omelete-proteico
+      servings: { marcus: 1.0, namorada: 0.7 }
+    lunch:
+      recipe_id: frango-curry
+      servings: { marcus: 1.0, namorada: 0.7 }
+    dinner:
+      recipe_id: mongolian-beef
+      servings: { marcus: 1.0, namorada: 0.7 }
+  saturday:
+    breakfast:
+      recipe_id: omelete-proteico
+      servings: { marcus: 1.0, namorada: 0.7 }
+    lunch:
+      recipe_id: mongolian-beef
+      servings: { marcus: 1.0, namorada: 0.7 }
+    dinner:
+      recipe_id: frango-curry
+      servings: { marcus: 1.0, namorada: 0.7 }
+  sunday:
+    breakfast:
+      recipe_id: omelete-proteico
+      servings: { marcus: 1.0, namorada: 0.7 }
+    lunch:
+      recipe_id: frango-curry
+      servings: { marcus: 1.0, namorada: 0.7 }
+    dinner:
+      recipe_id: mongolian-beef
+      servings: { marcus: 1.0, namorada: 0.7 }

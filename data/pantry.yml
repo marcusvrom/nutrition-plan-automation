@@ -1,0 +1,19 @@
+# Itens já disponíveis na despensa.
+# Usado pelo gerador de lista de compras para SUBTRAIR
+# do total consolidado da semana.
+#
+# Unidades devem bater com as usadas nas receitas (g, ml, un).
+
+items:
+  - ingredient: sal
+    quantity: 1000
+    unit: g
+  - ingredient: pimenta-do-reino
+    quantity: 50
+    unit: g
+  - ingredient: azeite
+    quantity: 500
+    unit: ml
+  - ingredient: alho
+    quantity: 200
+    unit: g

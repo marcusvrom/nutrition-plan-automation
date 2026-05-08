@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Plano Alimentar — Relatório</title>
+<style>
+  :root {
+    --bg: #fafafa; --fg: #1d1d1f; --muted: #6b7280;
+    --accent: #2563eb; --ok: #15803d; --warn: #b45309; --err: #b91c1c;
+    --border: #e5e7eb; --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--fg); line-height: 1.5;
+  }
+  header {
+    background: var(--fg); color: white; padding: 24px 32px;
+  }
+  header h1 { margin: 0 0 4px; font-size: 1.6rem; }
+  header p { margin: 0; color: #cbd5e1; font-size: 0.9rem; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 32px; }
+  section.card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 20px;
+  }
+  section.card > h2 {
+    margin: 0 0 12px; font-size: 1.2rem; border-bottom: 1px solid var(--border); padding-bottom: 8px;
+  }
+  table {
+    width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 0.92rem;
+  }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  th { background: #f3f4f6; font-weight: 600; }
+  details { margin: 6px 0; padding: 8px 12px; background: #f9fafb; border-radius: 8px; }
+  details summary { cursor: pointer; }
+  details ul { margin: 8px 0 4px 18px; }
+  .person h3 { margin: 12px 0 4px; }
+  .targets { color: var(--muted); margin: 0 0 4px; }
+  .delta { margin: 0 0 8px; }
+  .delta .ok    { color: var(--ok); }
+  .delta .over  { color: var(--err); }
+  .delta .under { color: var(--warn); }
+  .issues { padding-left: 18px; }
+  .issues li.error   { color: var(--err); }
+  .issues li.warning { color: var(--warn); }
+  .ok { color: var(--ok); }
+  .warn { color: var(--warn); font-weight: 600; }
+  footer { color: var(--muted); font-size: 0.8rem; padding: 16px 32px; text-align: center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Plano Alimentar — Relatório Semanal</h1>
+  <p>Gerado em {{GENERATED_AT}}</p>
+</header>
+<main>
+
+  <section class="card" id="macros">
+    <h2>Macros por pessoa</h2>
+    {{MACROS_BLOCK}}
+  </section>
+
+  <section class="card" id="plan">
+    <h2>Plano semanal</h2>
+    {{PLAN_BLOCK}}
+  </section>
+
+  <section class="card" id="shopping">
+    <h2>Lista de compras consolidada</h2>
+    {{SHOPPING_BLOCK}}
+  </section>
+
+  <section class="card" id="recipes">
+    <h2>Receitas</h2>
+    {{RECIPES_BLOCK}}
+  </section>
+
+  <section class="card" id="issues">
+    <h2>Validação</h2>
+    {{ISSUES_BLOCK}}
+  </section>
+
+</main>
+<footer>
+  Sistema versionado em <code>nutrition-plan-automation</code>. Cálculos determinísticos; LLM apenas estrutura e refatora.
+</footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+# Perfis nutricionais.
+# Os macros aqui são METAS DIÁRIAS. O cálculo do plano semanal
+# soma as porções de cada refeição e compara com estas metas.
+#
+# Edite com seus dados reais. Os valores abaixo são placeholders
+# baseados em perfis típicos; ajuste conforme orientação profissional.
+
+people:
+  - id: marcus
+    name: Marcus
+    sex: male
+    age: 30
+    height_cm: 178
+    weight_kg: 80
+    activity_level: moderate   # sedentary | light | moderate | active | very_active
+    goal: recomp               # cut | recomp | bulk | maintain
+    daily_targets:
+      kcal: 2400
+      protein_g: 180
+      carbs_g: 240
+      fat_g: 75
+    restrictions: []
+    preferences:
+      dislikes: []
+      likes: ["frango", "carne", "ovos", "arroz"]
+
+  - id: namorada
+    name: Namorada
+    sex: female
+    age: 28
+    height_cm: 165
+    weight_kg: 60
+    activity_level: light
+    goal: recomp
+    daily_targets:
+      kcal: 1800
+      protein_g: 120
+      carbs_g: 180
+      fat_g: 60
+    restrictions: []
+    preferences:
+      dislikes: []
+      likes: ["frango", "salada", "ovos"]
+
+# Fator de escala para porções por pessoa em receitas compartilhadas.
+# Por padrão ambas as pessoas comem a mesma receita, mas em
+# proporções diferentes. Ex: marcus = 1.0x, namorada = 0.7x.
+default_serving_scale:
+  marcus: 1.0
+  namorada: 0.7
