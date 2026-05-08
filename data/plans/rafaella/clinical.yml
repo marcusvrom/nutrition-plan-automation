@@ -1,23 +1,65 @@
 intro: >-
-  Painel clínico anonimizado. Dados laboratoriais específicos foram removidos
-  do repositório público; manter apenas alertas gerais e orientações de
-  acompanhamento profissional.
+  Painel de 08/10/2025 para Pessoa 2 (Ela). Marcadores em laranja/vermelho
+  direcionam decisões nutricionais e farmacológicas, mantendo identificação
+  pessoal anonimizada.
 
 alerts:
+  - level: critical
+    title: "⚠ Encaminhamento médico imediato"
+    body: >-
+      Urina mostra bacteriúria ++ e leucócitos 12.000/ml — sugere ITU ativa
+      ou subclínica. Procurar ginecologista/clínico antes de iniciar o plano.
   - level: warn
-    title: "⚠ Acompanhamento profissional recomendado"
+    title: "⚠ Endocrinologista é prioridade"
     body: >-
-      Plano alimentar com déficit calórico, histórico clínico ou uso de
-      medicamentos deve ser acompanhado por médico e/ou nutricionista.
+      SOP + obesidade grau 3 + dislipidemia aos 21 anos exige acompanhamento
+      endocrinológico. O endócrino vai avaliar: metformina (padrão-ouro para
+      RI em SOP), análogos de GLP-1 (IMC ≥35 com comorbidade tem indicação
+      formal), tratamento da dislipidemia.
   - level: info
-    title: "ℹ Dados sensíveis anonimizados"
+    title: "ℹ Anticoncepcional e SOP"
     body: >-
-      Exames, condições clínicas e interpretações específicas não devem ser
-      mantidos em repositório público. Guarde detalhes em local privado.
+      Pode mascarar sintomas hormonais mas não trata a resistência insulínica
+      subjacente — motor metabólico do quadro. Foco do plano: controle
+      glicêmico e perda de gordura visceral.
 
-exams: []
+exams:
+  - { marker: "IMC", value: "43,4", reference: "—", status: alert,
+      interpretation: "Obesidade grau III (175cm × 133kg)" }
+  - { marker: "Testosterona total", value: "35,33 ng/dL", reference: "8,4–48,0", status: warn,
+      interpretation: "Hiperandrogenismo bioquímico — clássico em SOP" }
+  - { marker: "S-DHEA", value: "163,9 µg/dL", reference: "25,9–460,2", status: ok,
+      interpretation: "Adrenal preservada — descarta tumor adrenal" }
+  - { marker: "DHEA", value: "4,37 ng/mL", reference: "1,00–5,86", status: ok,
+      interpretation: "Faixa adequada" }
+  - { marker: "Androstenediona", value: "1,70 ng/mL", reference: "0,3–3,3", status: ok,
+      interpretation: "Sem hiperprodução adrenal/ovariana significativa" }
+  - { marker: "TSH ultrassensível", value: "2,88 µUI/mL", reference: "0,27–4,2", status: ok,
+      interpretation: "Tireoide OK; ideal <2,5. Pedir T4L para confirmar" }
+  - { marker: "Colesterol total", value: "232 mg/dL", reference: "<190", status: warn,
+      interpretation: "Dislipidemia · ataca via dieta + perda de peso" }
+  - { marker: "LDL", value: "152 mg/dL", reference: "<100 (risco int.)", status: alert,
+      interpretation: "21 anos com LDL 152 sugere disfunção metabólica" }
+  - { marker: "Não-HDL", value: "172 mg/dL", reference: "<130", status: warn,
+      interpretation: "Marcador aterogênico mais robusto que LDL isolado" }
+  - { marker: "HDL", value: "60 mg/dL", reference: ">40", status: ok,
+      interpretation: "Protetor — manter com gordura boa e atividade" }
+  - { marker: "Triglicérides", value: "91 mg/dL", reference: "<150", status: ok,
+      interpretation: "Sinal positivo · descarta RI grave" }
+  - { marker: "Vit. D total (25-OH)", value: "23,1 ng/mL", reference: "30–44", status: alert,
+      interpretation: "Suplementação obrigatória · piora RI em SOP" }
+  - { marker: "Hemácias", value: "4,43 milhões/mm³", reference: "4,20–5,40", status: ok,
+      interpretation: "Sem anemia" }
+  - { marker: "Hemoglobina", value: "13,1 g/dL", reference: "12,0–16,0", status: ok,
+      interpretation: "OK" }
+  - { marker: "Leucócitos (sangue)", value: "10.100/mm³", reference: "4.000–11.000", status: ok,
+      interpretation: "Limite alto · pode estar relacionado à ITU" }
+  - { marker: "Urina – leucócitos", value: "12.000/ml", reference: "até 10.000", status: alert,
+      interpretation: "Indício de ITU — avaliação médica antes do plano" }
+  - { marker: "Urina – bacteriúria", value: "++", reference: "Negativo", status: alert,
+      interpretation: "Confirma infecção · pedir urocultura" }
 
 follow_up: >-
-  Registrar apenas pendências genéricas no repositório público. Detalhes de
-  exames, diagnósticos, medicamentos e condutas devem ficar em arquivo privado
-  ou em acompanhamento profissional.
+  Exames a repetir/pedir: insulina jejum + glicemia (HOMA-IR), HbA1c, SHBG
+  (testosterona livre real), LH/FSH em fase folicular, 17-OH progesterona,
+  TGP/TGO (esteatose), T4 livre, ferritina + ferro sérico, urocultura.
