@@ -152,6 +152,26 @@ export async function validateAll(args: {
   // Cross-references: cada slot referencia receita + pessoa válidas.
   const recipeIds = new Set(args.recipes.map((r) => r.id));
 
+  const activeWeeks = args.foodPlan.settings?.active_weeks ?? {};
+  for (const [personId, weekId] of Object.entries(activeWeeks)) {
+    const plan = args.foodPlan.plans.find((p) => p.person_id === personId);
+    if (!plan) {
+      issues.push({
+        level: "error",
+        where: `food-plan.yml > settings.active_weeks.${personId}`,
+        message: `Pessoa sem plano alimentar: ${personId}`,
+      });
+      continue;
+    }
+    if (!plan.weeks.some((week) => week.id === weekId)) {
+      issues.push({
+        level: "error",
+        where: `food-plan.yml > settings.active_weeks.${personId}`,
+        message: `Semana ativa desconhecida para ${personId}: ${weekId}`,
+      });
+    }
+  }
+
   for (const plan of args.foodPlan.plans) {
     if (!personIds.has(plan.person_id)) {
       issues.push({
