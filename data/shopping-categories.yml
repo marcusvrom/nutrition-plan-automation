@@ -4,9 +4,9 @@
 # não tiver consumo computado (despensa pura).
 
 intro: >-
-  Lista para os dois (Marcus + Rafaella) — versão econômica (só opções otimizadas).
+  Lista para os dois (Pessoa 1 (Ele) + Pessoa 2 (Ela)) — versão econômica (só opções otimizadas).
   Itens com 📦 são de estoque (duram semanas/meses) — só repor quando acabar.
-  Itens com 🌿 são frescos. Itens com 🌸 são exclusivos/aumentados para a Rafaella.
+  Itens com 🌿 são frescos. Itens com 🌸 são exclusivos/aumentados para a Pessoa 2 (Ela).
 
 categories:
   - id: proteinas
@@ -59,11 +59,11 @@ categories:
     cost_estimate_brl: { min: 70, max: 85 }
     items:
       - { ingredient: "arroz integral cozido", tags: [shared],
-          usage_note: "Marmitas Marcus + Rafaella" }
+          usage_note: "Marmitas Pessoa 1 (Ele) + Pessoa 2 (Ela)" }
       - { ingredient: "arroz japonês cozido", tags: [shared],
           usage_note: "Mongolian Beef" }
       - { ingredient: "goma de tapioca hidratada", tags: [shared],
-          usage_note: "Crepes — 40g (Marcus) ou 25g mini (Rafaella)" }
+          usage_note: "Crepes — 40g (Pessoa 1 (Ele)) ou 25g mini (Pessoa 2 (Ela))" }
       - { ingredient: "aveia em flocos", tags: [shared, stock],
           override_quantity: 0, display_quantity: "estoque",
           usage_note: "Granel: 40% mais barata que pacote de marca" }
@@ -93,7 +93,7 @@ categories:
     cost_estimate_brl: { min: 75, max: 90 }
     items:
       - { ingredient: "brócolis cozido", tags: [her, fresh],
-          usage_note: "Volume DOBRADO para Rafaella (DIM anti-SOP)" }
+          usage_note: "Volume DOBRADO para Pessoa 2 (Ela) (DIM anti-SOP)" }
       - { ingredient: "cenoura", tags: [shared],
           usage_note: "Vegetais assados" }
       - { ingredient: "abobrinha", tags: [shared, fresh],

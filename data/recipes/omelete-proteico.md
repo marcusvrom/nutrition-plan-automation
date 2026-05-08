@@ -21,11 +21,11 @@ macros_per_serving:
   carbs_g: 4
   fat_g: 14
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "Ele: 4 claras + 1 ovo + 30g queijo (~280 kcal)"
     servings: 1.0
     macros: { kcal: 280, protein_g: 34, carbs_g: 4, fat_g: 14 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "Dela: 3 ovos com queijo branco e cebolinha"
     servings: 1.05
     macros: { kcal: 290, protein_g: 26, carbs_g: 4, fat_g: 18 }

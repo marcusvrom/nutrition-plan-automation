@@ -26,11 +26,11 @@ macros_per_serving:
   carbs_g: 55
   fat_g: 14
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "180g carne magra + feijão + abóbora + 100g arroz"
     servings: 1.1
     macros: { kcal: 580, protein_g: 48, carbs_g: 60, fat_g: 16 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "140g carne magra + feijão + abóbora + 60g arroz"
     servings: 0.85
     macros: { kcal: 440, protein_g: 36, carbs_g: 45, fat_g: 12 }

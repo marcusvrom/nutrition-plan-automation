@@ -21,11 +21,11 @@ macros_per_serving:
   carbs_g: 42
   fat_g: 16
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "2 wraps + 130g recheio"
     servings: 1.0
     macros: { kcal: 580, protein_g: 45, carbs_g: 56, fat_g: 18 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "2 wraps + 100g recheio + queijo + salada"
     servings: 0.85
     macros: { kcal: 510, protein_g: 38, carbs_g: 52, fat_g: 15 }

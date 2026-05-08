@@ -63,10 +63,10 @@ Abra `output/index.html` no navegador.
 
 ```bash
 # dry run: mostra novos targets calculados
-npm run update-weight -- marcus 108
+npm run update-weight -- person_1 108
 
 # aplica: grava em data/weights/<id>.yml e recalcula daily_targets
-npm run update-weight -- marcus 108 --apply --note "pesagem semanal"
+npm run update-weight -- person_1 108 --apply --note "pesagem semanal"
 npm run report
 ```
 

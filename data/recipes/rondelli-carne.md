@@ -24,11 +24,11 @@ macros_per_serving:
   carbs_g: 48
   fat_g: 13
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "250g rondelli + vegetais"
     servings: 1.0
     macros: { kcal: 620, protein_g: 38, carbs_g: 56, fat_g: 20 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "200g rondelli + vegetais dobrados"
     servings: 0.8
     macros: { kcal: 510, protein_g: 35, carbs_g: 48, fat_g: 17 }

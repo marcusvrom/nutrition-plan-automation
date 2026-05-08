@@ -22,11 +22,11 @@ macros_per_serving:
   carbs_g: 48
   fat_g: 10
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "1 panqueca grande com banana, aveia e whey"
     servings: 1.0
     macros: { kcal: 430, protein_g: 38, carbs_g: 48, fat_g: 10 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "Panqueca menor: reduzir aveia para 20g ou servir 0.8 porção"
     servings: 0.8
     macros: { kcal: 345, protein_g: 30, carbs_g: 38, fat_g: 8 }

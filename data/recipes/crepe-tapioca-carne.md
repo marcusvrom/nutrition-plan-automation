@@ -20,11 +20,11 @@ macros_per_serving:
   carbs_g: 16
   fat_g: 13
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "Padrão (40g goma + 80g carne moída)"
     servings: 1.0
     macros: { kcal: 300, protein_g: 36, carbs_g: 14, fat_g: 13 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "Mini (25g goma + 70g carne moída temperada)"
     servings: 0.85
     macros: { kcal: 320, protein_g: 30, carbs_g: 18, fat_g: 12 }

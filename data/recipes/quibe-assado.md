@@ -25,11 +25,11 @@ macros_per_serving:
   carbs_g: 15
   fat_g: 5
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "2 quibes + salada"
     servings: 2.0
     macros: { kcal: 400, protein_g: 40, carbs_g: 30, fat_g: 10 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "2 quibes + salada tabule"
     servings: 2.0
     macros: { kcal: 420, protein_g: 32, carbs_g: 38, fat_g: 15 }

@@ -26,11 +26,11 @@ macros_per_serving:
   carbs_g: 38
   fat_g: 12
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "180g strogonoff + 130g arroz"
     servings: 1.0
     macros: { kcal: 540, protein_g: 48, carbs_g: 50, fat_g: 14 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "150g strogonoff + 80g arroz + salada"
     servings: 0.85
     macros: { kcal: 460, protein_g: 40, carbs_g: 40, fat_g: 13 }

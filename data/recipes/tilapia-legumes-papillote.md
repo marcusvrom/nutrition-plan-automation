@@ -25,11 +25,11 @@ macros_per_serving:
   carbs_g: 38
   fat_g: 10
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "220g tilápia + legumes + 170g batata-doce"
     servings: 1.1
     macros: { kcal: 480, protein_g: 52, carbs_g: 42, fat_g: 11 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "180g tilápia + legumes + 120g batata-doce"
     servings: 0.9
     macros: { kcal: 380, protein_g: 40, carbs_g: 34, fat_g: 9 }

@@ -21,11 +21,11 @@ macros_per_serving:
   carbs_g: 46
   fat_g: 14
 portions:
-  - person_id: marcus
+  - person_id: person_1
     description: "2 wraps + carne + whey água"
     servings: 1.0
     macros: { kcal: 470, protein_g: 57, carbs_g: 36, fat_g: 13 }
-  - person_id: rafaella
+  - person_id: person_2
     description: "2 wraps + 100g carne + queijo + salada"
     servings: 1.0
     macros: { kcal: 560, protein_g: 38, carbs_g: 52, fat_g: 22 }

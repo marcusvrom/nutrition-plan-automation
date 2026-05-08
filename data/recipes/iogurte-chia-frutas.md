@@ -17,7 +17,7 @@ macros_per_serving:
   carbs_g: 22
   fat_g: 8
 portions:
-  - person_id: rafaella
+  - person_id: person_2
     description: "Lanche da manhã/tarde"
     servings: 1.0
 ---

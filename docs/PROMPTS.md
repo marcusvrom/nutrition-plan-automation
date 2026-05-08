@@ -61,7 +61,7 @@ Entrega:
 
 ```
 Refatore data/food-plan.yml para que:
-- A média diária de macros do Marcus fique dentro de ±5% das metas.
+- A média diária de macros do Pessoa 1 (Ele) fique dentro de ±5% das metas.
 - A média diária de macros da Namorada fique dentro de ±5% das metas.
 - Não repita a mesma receita mais de 3x na semana, exceto café da manhã.
 - Mantenha apenas receitas existentes em data/recipes/.
