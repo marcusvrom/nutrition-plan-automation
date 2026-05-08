@@ -18,62 +18,76 @@ plans:
             breakfast: { recipe_id: crepe-tapioca-proteico, servings: { person_1: 1 }, meal_time: "07:30" }
             lunch:     { recipe_id: frango-brocolis-requeijao, servings: { person_1: 1 }, meal_time: "12:30",
                          notes: "Marmita freezer + arroz separado" }
-            dinner:    { recipe_id: quibe-assado, servings: { person_1: 2 }, meal_time: "20:00",
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { person_1: 1 }, meal_time: "16:00" }
+            dinner:    { recipe_id: quibe-assado, servings: { person_1: 1.5 }, meal_time: "20:00",
                          notes: "Quibes do freezer (descongelar de manhã)" }
           tuesday:
             breakfast: { recipe_id: omelete-proteico, servings: { person_1: 1 } }
             lunch:     { recipe_id: mongolian-beef, servings: { person_1: 1 } }
-            dinner:    { recipe_id: hot-pockets-batata, servings: { person_1: 2 } }
+            afternoon_snack: { recipe_id: iogurte-aveia-canela, servings: { person_1: 1 } }
+            dinner:    { recipe_id: hot-pockets-batata, servings: { person_1: 1.5 } }
           wednesday:
             breakfast: { recipe_id: crepe-tapioca-carne, servings: { person_1: 1 } }
             lunch:     { recipe_id: rondelli-carne, servings: { person_1: 1 } }
+            afternoon_snack: { recipe_id: whey-castanhas, servings: { person_1: 1 } }
             dinner:    { recipe_id: escondidinho-frango, servings: { person_1: 1 } }
           thursday:
             breakfast: { recipe_id: omelete-proteico, servings: { person_1: 1 } }
             lunch:     { recipe_id: fraldinha-pure-abobora, servings: { person_1: 1 } }
-            dinner:    { recipe_id: quibe-assado, servings: { person_1: 2 } }
+            afternoon_snack: { recipe_id: parfait-frutas-aveia, servings: { person_1: 0.8 } }
+            dinner:    { recipe_id: quibe-assado, servings: { person_1: 1.5 } }
           friday:
             breakfast: { recipe_id: crepe-tapioca-proteico, servings: { person_1: 1 } }
             lunch:     { recipe_id: escondidinho-frango, servings: { person_1: 1 } }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { person_1: 1 } }
             dinner:    { recipe_id: mongolian-beef, servings: { person_1: 1 } }
           saturday:
             breakfast: { recipe_id: bolo-coco-fit, servings: { person_1: 1 } }
             lunch:     { recipe_id: lasanha-pratica, servings: { person_1: 1 } }
+            afternoon_snack: { recipe_id: iogurte-chia-frutas, servings: { person_1: 0.8 } }
             dinner:    { recipe_id: mini-pizza-pastel, servings: { person_1: 1.5 } }
           sunday:
             breakfast: { recipe_id: shake-completo, servings: { person_1: 1 }, notes: "Início rápido para o dia de prep" }
             lunch:     { recipe_id: frango-brocolis-requeijao, servings: { person_1: 1 }, notes: "Direto do prep, refeição fresca" }
-            dinner:    { recipe_id: hot-pockets-batata, servings: { person_1: 2 }, notes: "Recém-feitos do prep" }
+            afternoon_snack: { recipe_id: panqueca-banana-aveia-whey, servings: { person_1: 1 } }
+            dinner:    { recipe_id: hot-pockets-batata, servings: { person_1: 1.5 }, notes: "Recém-feitos do prep" }
       - id: B
         label: Semana B
         days:
           monday:
             breakfast: { recipe_id: omelete-proteico, servings: { person_1: 1 } }
             lunch:     { recipe_id: strogonoff-frango, servings: { person_1: 1 } }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { person_1: 1 } }
             dinner:    { recipe_id: escondidinho-frango, servings: { person_1: 1 } }
           tuesday:
             breakfast: { recipe_id: crepe-tapioca-proteico, servings: { person_1: 1 } }
             lunch:     { recipe_id: frango-brocolis-requeijao, servings: { person_1: 1 } }
-            dinner:    { recipe_id: quibe-assado, servings: { person_1: 2 } }
+            afternoon_snack: { recipe_id: iogurte-aveia-canela, servings: { person_1: 1 } }
+            dinner:    { recipe_id: quibe-assado, servings: { person_1: 1.5 } }
           wednesday:
             breakfast: { recipe_id: omelete-proteico, servings: { person_1: 1 } }
             lunch:     { recipe_id: fraldinha-pure-abobora, servings: { person_1: 1 } }
-            dinner:    { recipe_id: hot-pockets-batata, servings: { person_1: 2 } }
+            afternoon_snack: { recipe_id: whey-castanhas, servings: { person_1: 1 } }
+            dinner:    { recipe_id: hot-pockets-batata, servings: { person_1: 1.5 } }
           thursday:
             breakfast: { recipe_id: crepe-tapioca-carne, servings: { person_1: 1 } }
             lunch:     { recipe_id: escondidinho-frango, servings: { person_1: 1 } }
+            afternoon_snack: { recipe_id: parfait-frutas-aveia, servings: { person_1: 0.8 } }
             dinner:    { recipe_id: rondelli-carne, servings: { person_1: 1 } }
           friday:
             breakfast: { recipe_id: omelete-proteico, servings: { person_1: 1 } }
             lunch:     { recipe_id: rondelli-carne, servings: { person_1: 1 } }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { person_1: 1 } }
             dinner:    { recipe_id: pizza-express-carne, servings: { person_1: 1 } }
           saturday:
             breakfast: { recipe_id: bolo-coco-fit, servings: { person_1: 1 } }
             lunch:     { recipe_id: lasanha-pratica, servings: { person_1: 1 } }
+            afternoon_snack: { recipe_id: iogurte-chia-frutas, servings: { person_1: 0.8 } }
             dinner:    { recipe_id: pizza-express-carne, servings: { person_1: 1 } }
           sunday:
             breakfast: { recipe_id: shake-completo, servings: { person_1: 1 } }
             lunch:     { recipe_id: mongolian-beef, servings: { person_1: 1 } }
+            afternoon_snack: { recipe_id: panqueca-banana-aveia-whey, servings: { person_1: 1 } }
             dinner:    { recipe_id: escondidinho-frango, servings: { person_1: 1 } }
       - id: C
         label: Semana C (variedade · peixe)
@@ -81,30 +95,37 @@ plans:
           monday:
             breakfast: { recipe_id: parfait-frutas-aveia, servings: { person_1: 1 } }
             lunch:     { recipe_id: strogonoff-frango, servings: { person_1: 1 } }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { person_1: 1 } }
             dinner:    { recipe_id: peixe-milanesa-aveia, servings: { person_1: 1 } }
           tuesday:
             breakfast: { recipe_id: omelete-proteico, servings: { person_1: 1 } }
-            lunch:     { recipe_id: tabule-quinoa, servings: { person_1: 1.3 } }
-            dinner:    { recipe_id: sopa-legumes-frango, servings: { person_1: 1.4 } }
+            lunch:     { recipe_id: tabule-quinoa, servings: { person_1: 1.1 } }
+            afternoon_snack: { recipe_id: iogurte-aveia-canela, servings: { person_1: 1 } }
+            dinner:    { recipe_id: sopa-legumes-frango, servings: { person_1: 1.2 } }
           wednesday:
             breakfast: { recipe_id: crepe-tapioca-proteico, servings: { person_1: 1 } }
             lunch:     { recipe_id: frango-brocolis-requeijao, servings: { person_1: 1 } }
-            dinner:    { recipe_id: sardinha-grelhada, servings: { person_1: 2 } }
+            afternoon_snack: { recipe_id: whey-castanhas, servings: { person_1: 1 } }
+            dinner:    { recipe_id: sardinha-grelhada, servings: { person_1: 1.6 } }
           thursday:
             breakfast: { recipe_id: omelete-proteico, servings: { person_1: 1 } }
             lunch:     { recipe_id: mongolian-beef, servings: { person_1: 1 } }
-            dinner:    { recipe_id: quibe-assado, servings: { person_1: 2 } }
+            afternoon_snack: { recipe_id: parfait-frutas-aveia, servings: { person_1: 0.8 } }
+            dinner:    { recipe_id: quibe-assado, servings: { person_1: 1.5 } }
           friday:
             breakfast: { recipe_id: parfait-frutas-aveia, servings: { person_1: 1 } }
             lunch:     { recipe_id: peixe-milanesa-aveia, servings: { person_1: 1 } }
-            dinner:    { recipe_id: hot-pockets-batata, servings: { person_1: 2 } }
+            afternoon_snack: { recipe_id: whey-shake-fruta, servings: { person_1: 1 } }
+            dinner:    { recipe_id: hot-pockets-batata, servings: { person_1: 1.5 } }
           saturday:
             breakfast: { recipe_id: bolo-coco-fit, servings: { person_1: 1 } }
             lunch:     { recipe_id: lasanha-pratica, servings: { person_1: 1 } }
+            afternoon_snack: { recipe_id: iogurte-chia-frutas, servings: { person_1: 0.8 } }
             dinner:    { recipe_id: mini-pizza-pastel, servings: { person_1: 1.5 } }
           sunday:
             breakfast: { recipe_id: shake-completo, servings: { person_1: 1 } }
             lunch:     { recipe_id: strogonoff-frango, servings: { person_1: 1 } }
+            afternoon_snack: { recipe_id: panqueca-banana-aveia-whey, servings: { person_1: 1 } }
             dinner:    { recipe_id: rondelli-carne, servings: { person_1: 1 } }
 
   # ============================================================ Pessoa 2 (Ela)
