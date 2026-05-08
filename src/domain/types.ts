@@ -48,7 +48,7 @@ export interface Recipe {
   portions?: PortionVariant[];
   prep_source?: PrepSource;
   freeze_days?: number;
-  source?: string;
+  source: string;
   needs_review?: boolean;
   observations?: string;
   preparation_steps?: string[];
@@ -146,7 +146,13 @@ export interface PersonFoodPlan {
   weeks: WeekVariant[];
 }
 
+export interface FoodPlanSettings {
+  /** Semana usada por pessoa em cálculos semanais como lista de compras. */
+  active_weeks?: Record<string, string>;
+}
+
 export interface FoodPlanFile {
+  settings?: FoodPlanSettings;
   plans: PersonFoodPlan[];
 }
 
