@@ -19,10 +19,10 @@ people:
     metadata:
       eyebrow: "Plano Alimentar Personalizado · v3"
       title: "Déficit Inteligente"
-      subtitle: "Plano anonimizado com 3 refeições, meal prep dominical, rotação semanal de receitas e contexto clínico preservado."
+      subtitle: "Plano anonimizado com 4 refeições: café da manhã, almoço, lanche da tarde e jantar."
       version: "v3"
       goal: "deficit ~500 kcal sobre TDEE de ~2.350; perda ~0,5 kg/sem"
-      meals_per_day: 3
+      meals_per_day: 4
       deficit_kcal: 500
       projection: "Perda alvo ~0,5 kg/semana"
 
