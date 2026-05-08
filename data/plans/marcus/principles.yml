@@ -1,0 +1,29 @@
+intro: >-
+  Por que esse plano funciona: deficit moderado, proteína alta para preservar
+  massa magra, meal prep dominical resolve a semana e tudo congela.
+
+pillars:
+  - icon: "🎯"
+    pillar: "Pilar 01 · Calórico"
+    title: "Deficit ~500 kcal/dia"
+    description: "~1.850 kcal sobre TDEE de ~2.350. Perda alvo ~0,5 kg/semana."
+  - icon: "🥩"
+    pillar: "Pilar 02 · Proteína"
+    title: "Proteína 1,6 g/kg meta"
+    description: "Mínimo 160g/dia para preservar massa magra."
+  - icon: "☕🍽️🌙"
+    pillar: "Pilar 03 · Refeições"
+    title: "Café + Almoço + Jantar"
+    description: "3 refeições completas, sem lanches intermediários."
+  - icon: "📦"
+    pillar: "Pilar 04 · Operacional"
+    title: "Meal prep dominical"
+    description: "3-4h no domingo = semana resolvida. Tudo congela."
+  - icon: "🔗"
+    pillar: "Pilar 05 · Rastreabilidade"
+    title: "Ingredientes rastreáveis"
+    description: "Cada item tem origem no prep — ver Mapa de Ingredientes."
+  - icon: "💊"
+    pillar: "Pilar 06 · Medicação"
+    title: "Compatível com Mounjaro"
+    description: "Se saciedade alta, priorize proteína. Nunca abaixo de 140g P/dia."

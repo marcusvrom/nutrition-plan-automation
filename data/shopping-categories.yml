@@ -1,0 +1,213 @@
+# Categorização da lista de compras + tags + notas de uso + tabela de
+# substituições econômicas. As quantidades ficam fora daqui (são calculadas
+# pelo `shopping-list.ts`); use `override_quantity` apenas quando o item
+# não tiver consumo computado (despensa pura).
+
+intro: >-
+  Lista para os dois (Marcus + Rafaella) — versão econômica (só opções otimizadas).
+  Itens com 📦 são de estoque (duram semanas/meses) — só repor quando acabar.
+  Itens com 🌿 são frescos. Itens com 🌸 são exclusivos/aumentados para a Rafaella.
+
+categories:
+  - id: proteinas
+    name: Proteínas
+    icon: "🥩"
+    cost_estimate_brl: { min: 105, max: 130 }
+    items:
+      - { ingredient: "peito de frango em cubos", tags: [shared],
+          usage_note: "Comprar peça inteira é ~25% mais barato; pedir ao açougueiro para limpar e cortar" }
+      - { ingredient: "frango desfiado", tags: [shared],
+          usage_note: "Vem da mesma peça inteira — desfiar no prep" }
+      - { ingredient: "carne moída magra", tags: [shared],
+          usage_note: "Blend acém + músculo 50/50: sabor + magreza, ~R$ 18-25/sem mais barato que patinho" }
+      - { ingredient: "acém em peça (em tiras)", tags: [shared],
+          usage_note: "Coxão duro em tiras finas + marinada com gengibre = igualmente macio (~R$ 8-10/sem)" }
+      - { ingredient: "fraldinha", tags: [shared],
+          usage_note: "Pressão 40 min → 4 porções de fraldinha com purê" }
+      - { ingredient: "ovo inteiro", tags: [shared],
+          usage_note: "Comum em vez de caipira — 18-24 unidades/sem" }
+      - { ingredient: "clara de ovo", tags: [shared],
+          usage_note: "Para omeletes proteicos — usar mesmo lote dos ovos" }
+      - { ingredient: "whey protein", tags: [shared, stock],
+          override_quantity: 0, display_quantity: "estoque (1x/mês)",
+          usage_note: "Concentrado nacional 2kg dura ~30 dias para os dois" }
+
+  - id: laticinios
+    name: Laticínios
+    icon: "🥛"
+    cost_estimate_brl: { min: 60, max: 75 }
+    items:
+      - { ingredient: "iogurte natural integral", tags: [her],
+          usage_note: "Coar em pano por 4h vira 'grego caseiro'. ~1,5kg/sem (lanches dela)" }
+      - { ingredient: "requeijão light", tags: [shared],
+          usage_note: "Crepes + recheios + escondidinho" }
+      - { ingredient: "queijo minas", tags: [shared],
+          usage_note: "Recheio dos quibes + omeletes" }
+      - { ingredient: "queijo mussarela", tags: [shared],
+          usage_note: "Mini pizza de pastel + lasanha" }
+      - { ingredient: "queijo parmesão ralado", tags: [shared, stock],
+          override_quantity: 0, display_quantity: "estoque",
+          usage_note: "Sache > pedaço (~50% economia)" }
+      - { ingredient: "queijo branco", tags: [shared],
+          usage_note: "Pizza express + omelete dela (3 ovos)" }
+      - { ingredient: "leite desnatado", tags: [shared],
+          usage_note: "Crepes, purê escondidinho, mingau, shakes" }
+
+  - id: carbos
+    name: Carbos e grãos
+    icon: "🍞"
+    cost_estimate_brl: { min: 70, max: 85 }
+    items:
+      - { ingredient: "arroz integral cozido", tags: [shared],
+          usage_note: "Marmitas Marcus + Rafaella" }
+      - { ingredient: "arroz japonês cozido", tags: [shared],
+          usage_note: "Mongolian Beef" }
+      - { ingredient: "goma de tapioca hidratada", tags: [shared],
+          usage_note: "Crepes — 40g (Marcus) ou 25g mini (Rafaella)" }
+      - { ingredient: "aveia em flocos", tags: [shared, stock],
+          override_quantity: 0, display_quantity: "estoque",
+          usage_note: "Granel: 40% mais barata que pacote de marca" }
+      - { ingredient: "farelo de aveia", tags: [shared],
+          usage_note: "Massa hot pockets + shakes" }
+      - { ingredient: "trigo para quibe", tags: [shared, stock],
+          override_quantity: 0, display_quantity: "estoque (1 pct/mês)" }
+      - { ingredient: "fécula de batata", tags: [shared, stock],
+          override_quantity: 0, display_quantity: "estoque",
+          usage_note: "Massa hot pockets" }
+      - { ingredient: "massa fresca canelone", tags: [shared],
+          usage_note: "Rondellis (1 pct = ~5 porções)" }
+      - { ingredient: "massa de lasanha", tags: [shared],
+          usage_note: "Lasanha Prática" }
+      - { ingredient: "massa de pastel", tags: [shared, fresh],
+          usage_note: "Mini pizza de pastel" }
+      - { ingredient: "wrap integral", tags: [shared],
+          usage_note: "Pizza Express — 2 wraps × 3-4 refeições/sem" }
+      - { ingredient: "batata inglesa", tags: [shared],
+          usage_note: "Escondidinho + hot pockets + purê fraldinha" }
+      - { ingredient: "abóbora japonesa", tags: [shared, fresh],
+          usage_note: "Purê da fraldinha" }
+
+  - id: vegetais
+    name: Vegetais e folhas
+    icon: "🥦"
+    cost_estimate_brl: { min: 75, max: 90 }
+    items:
+      - { ingredient: "brócolis cozido", tags: [her, fresh],
+          usage_note: "Volume DOBRADO para Rafaella (DIM anti-SOP)" }
+      - { ingredient: "cenoura", tags: [shared],
+          usage_note: "Vegetais assados" }
+      - { ingredient: "abobrinha", tags: [shared, fresh],
+          usage_note: "Vegetais assados" }
+      - { ingredient: "cebola", tags: [shared],
+          usage_note: "Base de tudo" }
+      - { ingredient: "alho", tags: [shared],
+          usage_note: "Tudo refogado" }
+      - { ingredient: "tomate", tags: [shared, fresh],
+          usage_note: "Saladas + recheios" }
+      - { ingredient: "tomate em rodelas", tags: [shared, fresh],
+          usage_note: "Pizza express + omelete" }
+      - { ingredient: "milho verde", tags: [shared],
+          usage_note: "Escondidinho" }
+      - { ingredient: "folhas verdes", tags: [her, fresh],
+          usage_note: "Saladas grandes diárias dela" }
+      - { ingredient: "mix frutas vermelhas", tags: [her],
+          usage_note: "Frutas vermelhas CONGELADAS substituem mirtilo importado (95% das antocianinas)" }
+
+  - id: temperos
+    name: Temperos, ervas e molhos
+    icon: "🌿"
+    cost_estimate_brl: { min: 30, max: 50 }
+    items:
+      - { ingredient: "molho shoyu", tags: [shared, stock] }
+      - { ingredient: "vinagre de arroz", tags: [shared, stock] }
+      - { ingredient: "passata de tomate", tags: [shared, stock] }
+      - { ingredient: "extrato de tomate", tags: [shared, stock] }
+      - { ingredient: "molho de tomate", tags: [shared, stock] }
+      - { ingredient: "óleo de gergelim", tags: [shared, stock] }
+      - { ingredient: "gengibre fresco", tags: [shared, fresh] }
+      - { ingredient: "salsinha", tags: [shared, fresh] }
+      - { ingredient: "cebolinha", tags: [shared, fresh] }
+      - { ingredient: "manjericão fresco", tags: [shared, fresh] }
+      - { ingredient: "hortelã fresca", tags: [shared, fresh] }
+      - { ingredient: "limão", tags: [shared, fresh] }
+      - { ingredient: "pimenta dedo-de-moça", tags: [shared, fresh] }
+      - { ingredient: "mostarda dijon", tags: [shared, stock] }
+      - { ingredient: "chimichurri seco", tags: [shared, stock] }
+      - { ingredient: "cúrcuma em pó", tags: [her, stock], override_quantity: 0,
+          display_quantity: "estoque", usage_note: "Anti-inflamatório SOP" }
+      - { ingredient: "gergelim", tags: [shared, stock] }
+
+  - id: gorduras
+    name: Gorduras boas e oleaginosas
+    icon: "🌰"
+    cost_estimate_brl: { min: 40, max: 60 }
+    items:
+      - { ingredient: "azeite", tags: [shared, stock],
+          usage_note: "Lata 1L dura ~4 sem; máx 3 col. sopa/dia entre os dois" }
+      - { ingredient: "castanha-do-pará", tags: [her, stock],
+          override_quantity: 100, override_unit: g,
+          usage_note: "1/dia (selênio para tireoide)" }
+      - { ingredient: "chia", tags: [her, stock],
+          override_quantity: 100, override_unit: g, display_quantity: "100g (granel)" }
+      - { ingredient: "linhaça", tags: [her, stock],
+          override_quantity: 100, override_unit: g, display_quantity: "100g (granel, moer em casa)" }
+      - { ingredient: "amendoim cru", tags: [shared, stock],
+          override_quantity: 200, override_unit: g, display_quantity: "200g (granel)",
+          usage_note: "Substitui amêndoa importada por 1/4 do preço" }
+
+  - id: bebidas-doces
+    name: Bebidas, açúcares e adoçantes
+    icon: "☕"
+    items:
+      - { ingredient: "café em pó", tags: [shared, stock] }
+      - { ingredient: "stevia", tags: [shared, stock] }
+      - { ingredient: "mel", tags: [shared, stock] }
+      - { ingredient: "melado", tags: [shared, stock] }
+      - { ingredient: "leite de coco light", tags: [shared, stock] }
+      - { ingredient: "leite em pó desnatado", tags: [shared, stock] }
+      - { ingredient: "coco ralado seco", tags: [shared, stock] }
+
+  - id: suplementos
+    name: Suplementos (estoque)
+    icon: "💊"
+    cost_estimate_brl: { min: 280, max: 450 }
+    items:
+      - { ingredient: "vitamina d3", tags: [her, stock],
+          override_quantity: 1, override_unit: frasco, display_quantity: "1 frasco (60 cáps)",
+          usage_note: "10.000 UI/dia × 8 sem (insuficiência) → 2.000 UI manutenção" }
+      - { ingredient: "mio-inositol", tags: [her, stock],
+          override_quantity: 100, override_unit: g, display_quantity: "100g (granel)",
+          usage_note: "4 g/dia em 2 tomadas — evidência sólida em SOP" }
+      - { ingredient: "ômega-3", tags: [shared, stock],
+          override_quantity: 1, override_unit: frasco, display_quantity: "1 frasco (120 cáps)",
+          usage_note: "EPA+DHA 2g/dia · marca nacional certificada (Sundown/Vitafor)" }
+      - { ingredient: "magnésio dimalato", tags: [her, stock],
+          override_quantity: 1, override_unit: pote, display_quantity: "1 pote",
+          usage_note: "300-400 mg/dia antes de dormir" }
+
+pantry_essentials:
+  - { name: "Azeite extra virgem", note: "Base de tudo. 1 fio = ~40 kcal" }
+  - { name: "Sal grosso + moedor", note: "Substitui sal rosa importado" }
+  - { name: "Pimenta-do-reino moída", note: "Universal" }
+  - { name: "Páprica defumada", note: "Sabor sem calorias" }
+  - { name: "Cominho", note: "Quibes e carne moída" }
+  - { name: "Chimichurri seco", note: "Transforma frango básico" }
+  - { name: "Orégano e tomilho", note: "Vegetais, pizzas, omeletes" }
+  - { name: "Whey Protein", note: "Coringa de proteína" }
+  - { name: "Goma de tapioca", note: "Base dos crepes" }
+  - { name: "Café em pó", note: "0 kcal, termogênico" }
+  - { name: "Fécula de batata", note: "Massas e molhos" }
+  - { name: "Shoyu + vinagre arroz", note: "Marinadas e umami" }
+  - { name: "Extrato + passata tomate", note: "Base de molhos" }
+  - { name: "Coco ralado seco", note: "Bolo fit" }
+  - { name: "Leite de coco light", note: "Bolo fit (molhar)" }
+  - { name: "Leite em pó desnatado", note: "Cobertura bolo fit" }
+  - { name: "Stevia", note: "Adoçante natural" }
+  - { name: "Marmitas com tampa", note: "Investir em bons potes" }
+  - { name: "Sacos zip + papel filme", note: "Congelamento organizado" }
+  - { name: "Etiquetas adesivas", note: "Cor + nome + data + porção" }
+  - { name: "Balança de cozinha", note: "Precisão nos macros" }
+
+# Tabela de substituições removida em v2 — a lista acima já contém apenas
+# as opções econômicas (não-econômicas foram retiradas inteiramente).
+# Histórico de comparações fica em git para referência.

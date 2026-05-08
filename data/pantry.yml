@@ -1,0 +1,16 @@
+# Itens da despensa que descontam do total da lista de compras.
+# Mantenha sincronizado com o que tem em casa hoje.
+
+items:
+  - { ingredient: sal,                quantity: 1000, unit: g }
+  - { ingredient: pimenta-do-reino,   quantity: 100,  unit: g }
+  - { ingredient: azeite,             quantity: 1000, unit: ml }
+  - { ingredient: alho,               quantity: 200,  unit: g }
+  - { ingredient: orégano,            quantity: 50,   unit: g }
+  - { ingredient: cominho,            quantity: 50,   unit: g }
+  - { ingredient: páprica defumada,   quantity: 50,   unit: g }
+  - { ingredient: canela,             quantity: 50,   unit: g }
+  - { ingredient: stevia,             quantity: 60,   unit: ml }
+  - { ingredient: fermento químico,   quantity: 100,  unit: g }
+  - { ingredient: amido de milho,     quantity: 200,  unit: g }
+  - { ingredient: bicarbonato,        quantity: 200,  unit: g }

@@ -1,0 +1,13 @@
+rules:
+  - { icon: "💧", title: "Hidratação 3,0 L/dia", description: "≈ 12 copos." }
+  - { icon: "🍞", title: "Carbo só com fibra+P+G", description: "Nunca carbo isolado." }
+  - { icon: "🥦", title: "Crucífera diária",      description: "Brócolis ou couve-flor (DIM)." }
+  - { icon: "🐟", title: "Peixe gordo 1-2×/sem", description: "Sardinha em lata é ótima opção." }
+  - { icon: "🚫", title: "Açúcar adicionado <25g/dia", description: "Próximo de zero. Sem refrigerante diet." }
+  - { icon: "💊", title: "Suplementos no mesmo horário", description: "Vit D no café, ômega-3 no almoço, magnésio à noite." }
+  - { icon: "📅", title: "Pesagem semanal",         description: "Mesma manhã, jejum, após urinar." }
+  - { icon: "📸", title: "Foto mensal",             description: "Frontal e lateral. Compara melhor que balança." }
+
+disclaimer: >-
+  Plano não substitui acompanhamento de endocrinologista, ginecologista e
+  nutricionista. Reavaliar a cada 4 semanas com profissional de saúde.

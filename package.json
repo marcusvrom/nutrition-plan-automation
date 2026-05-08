@@ -1,0 +1,30 @@
+{
+  "name": "nutrition-plan-automation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sistema versionado para gerenciar e refatorar planos alimentares com cálculo determinístico de macros, lista de compras e relatório HTML.",
+  "type": "module",
+  "scripts": {
+    "validate": "tsx src/cli/validate.ts",
+    "build": "tsx src/cli/build.ts",
+    "report": "tsx src/cli/report.ts",
+    "report:ai": "tsx src/cli/report-ai.ts",
+    "update-weight": "tsx src/cli/update-weight.ts",
+    "all": "npm run validate && npm run report",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "gray-matter": "^4.0.3",
+    "yaml": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
