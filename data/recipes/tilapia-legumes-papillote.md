@@ -33,6 +33,8 @@ portions:
     description: "180g tilápia + legumes + 120g batata-doce"
     servings: 0.9
     macros: { kcal: 380, protein_g: 40, carbs_g: 34, fat_g: 9 }
+source: manual
+needs_review: true
 preparation_steps:
   - "Tempere a tilápia com limão, alho, sal e pimenta."
   - "Corte abobrinha e cenoura em fatias finas."
